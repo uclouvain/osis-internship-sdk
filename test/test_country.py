@@ -31,7 +31,7 @@ class TestCountry(unittest.TestCase):
     def testCountry(self):
         """Test Country"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.country.Country()  # noqa: E501
+        # model = osis_internship_sdk.models.country.Country()  # noqa: E501
         pass
 
 

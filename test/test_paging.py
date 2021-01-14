@@ -31,7 +31,7 @@ class TestPaging(unittest.TestCase):
     def testPaging(self):
         """Test Paging"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.paging.Paging()  # noqa: E501
+        # model = osis_internship_sdk.models.paging.Paging()  # noqa: E501
         pass
 
 

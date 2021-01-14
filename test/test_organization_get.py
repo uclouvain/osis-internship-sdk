@@ -31,7 +31,7 @@ class TestOrganizationGet(unittest.TestCase):
     def testOrganizationGet(self):
         """Test OrganizationGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.organization_get.OrganizationGet()  # noqa: E501
+        # model = osis_internship_sdk.models.organization_get.OrganizationGet()  # noqa: E501
         pass
 
 

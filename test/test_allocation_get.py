@@ -31,7 +31,7 @@ class TestAllocationGet(unittest.TestCase):
     def testAllocationGet(self):
         """Test AllocationGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.allocation_get.AllocationGet()  # noqa: E501
+        # model = osis_internship_sdk.models.allocation_get.AllocationGet()  # noqa: E501
         pass
 
 

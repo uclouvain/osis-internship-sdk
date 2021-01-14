@@ -31,7 +31,7 @@ class TestMasterGet(unittest.TestCase):
     def testMasterGet(self):
         """Test MasterGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.master_get.MasterGet()  # noqa: E501
+        # model = osis_internship_sdk.models.master_get.MasterGet()  # noqa: E501
         pass
 
 

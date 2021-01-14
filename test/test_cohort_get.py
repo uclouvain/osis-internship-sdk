@@ -31,7 +31,7 @@ class TestCohortGet(unittest.TestCase):
     def testCohortGet(self):
         """Test CohortGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.cohort_get.CohortGet()  # noqa: E501
+        # model = osis_internship_sdk.models.cohort_get.CohortGet()  # noqa: E501
         pass
 
 

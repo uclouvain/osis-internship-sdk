@@ -31,7 +31,7 @@ class TestStudentAffectationGet(unittest.TestCase):
     def testStudentAffectationGet(self):
         """Test StudentAffectationGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.student_affectation_get.StudentAffectationGet()  # noqa: E501
+        # model = osis_internship_sdk.models.student_affectation_get.StudentAffectationGet()  # noqa: E501
         pass
 
 

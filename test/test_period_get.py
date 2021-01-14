@@ -31,7 +31,7 @@ class TestPeriodGet(unittest.TestCase):
     def testPeriodGet(self):
         """Test PeriodGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.period_get.PeriodGet()  # noqa: E501
+        # model = osis_internship_sdk.models.period_get.PeriodGet()  # noqa: E501
         pass
 
 

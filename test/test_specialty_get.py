@@ -31,7 +31,7 @@ class TestSpecialtyGet(unittest.TestCase):
     def testSpecialtyGet(self):
         """Test SpecialtyGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = osis-internship-sdk.models.specialty_get.SpecialtyGet()  # noqa: E501
+        # model = osis_internship_sdk.models.specialty_get.SpecialtyGet()  # noqa: E501
         pass
 
 
