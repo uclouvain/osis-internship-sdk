@@ -38,7 +38,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import openapi_client
+import osis_internship_sdk
 ```
 
 ## Getting Started
