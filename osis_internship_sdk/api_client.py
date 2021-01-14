@@ -22,9 +22,9 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from configuration import Configuration
-import models
-from openapi_client import rest
+from osis_internship_sdk.configuration import Configuration
+from osis_internship_sdk import models
+from osis_internship_sdk import rest
 
 
 class ApiClient(object):
