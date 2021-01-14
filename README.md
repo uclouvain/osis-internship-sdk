@@ -24,7 +24,7 @@ pip install git+https://github.com/uclouvain/osis-internship-sdk.git
 
 Then import the package:
 ```python
-import openapi_client 
+import osis_internship_sdk 
 ```
 
 ### Setuptools
