@@ -15,8 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.person import Person  # noqa: E501
-from openapi_client.rest import ApiException
+from models.person import Person  # noqa: E501
+from rest import ApiException
 
 
 class TestPerson(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPerson(unittest.TestCase):
     def testPerson(self):
         """Test Person"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = internship-sdk.models.person.Person()  # noqa: E501
+        # model = osis-internship-sdk.models.person.Person()  # noqa: E501
         pass
 
 

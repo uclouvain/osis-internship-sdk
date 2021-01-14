@@ -49,17 +49,17 @@ Please follow the [installation procedure](#installation--usage) and then run th
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.cohorts_get()

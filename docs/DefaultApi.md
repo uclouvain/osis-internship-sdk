@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# DefaultApi
 
 All URIs are relative to *https://dev.osis.uclouvain.be/api/v1/internship*
 
@@ -39,17 +39,17 @@ Obtain the list of cohorts
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.cohorts_get()
@@ -90,17 +90,17 @@ Obtain information about a specific cohort
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the cohort
 
 try:
@@ -145,17 +145,17 @@ Obtain the list of internships
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.internships_get()
@@ -196,17 +196,17 @@ Obtain information about a specific internship
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the internship
 
 try:
@@ -251,17 +251,17 @@ Obtain the list of internship-master allocations
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.masters_allocations_get()
@@ -302,17 +302,17 @@ Obtain information about a specific master allocation
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the master allocation
 
 try:
@@ -357,17 +357,17 @@ Obtain the list of internship masters
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 search = 'search_example' # str |  (optional)
 
 try:
@@ -412,17 +412,17 @@ Set master account activation status to ACTIVE
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the master
 
 try:
@@ -467,17 +467,17 @@ Obtain information about a specific master
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the master
 
 try:
@@ -522,17 +522,17 @@ Obtain the list of organizations
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.organizations_get()
@@ -573,17 +573,17 @@ Obtain information about a specific organization
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the organization
 
 try:
@@ -628,17 +628,17 @@ Obtain the list of periods
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.periods_get()
@@ -679,17 +679,17 @@ Obtain information about a specific period
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the period
 
 try:
@@ -734,17 +734,17 @@ Obtain the list of specialties
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.specialties_get()
@@ -785,17 +785,17 @@ Obtain information about a specific specialty
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the specialty
 
 try:
@@ -840,17 +840,17 @@ Obtain the list of students affectations
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.students_affectations_get()
@@ -891,17 +891,17 @@ Obtain information about a specific student's affectation
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the student's affectation
 
 try:
@@ -946,17 +946,17 @@ Obtain the list of students
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 
 try:
     api_response = api_instance.students_get()
@@ -997,17 +997,17 @@ Obtain information about a specific internship student
 from __future__ import print_function
 import time
 import openapi_client
-from openapi_client.rest import ApiException
+from rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = openapi_client.Configuration()
+configuration = Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = openapi_client.DefaultApi(openapi_client.ApiClient(configuration))
+api_instance = DefaultApi(ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the internship student
 
 try:

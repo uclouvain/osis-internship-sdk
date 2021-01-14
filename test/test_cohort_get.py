@@ -15,8 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.cohort_get import CohortGet  # noqa: E501
-from openapi_client.rest import ApiException
+from models.cohort_get import CohortGet  # noqa: E501
+from rest import ApiException
 
 
 class TestCohortGet(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestCohortGet(unittest.TestCase):
     def testCohortGet(self):
         """Test CohortGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = internship-sdk.models.cohort_get.CohortGet()  # noqa: E501
+        # model = osis-internship-sdk.models.cohort_get.CohortGet()  # noqa: E501
         pass
 
 

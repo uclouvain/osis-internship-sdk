@@ -15,8 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.allocation_get import AllocationGet  # noqa: E501
-from openapi_client.rest import ApiException
+from models.allocation_get import AllocationGet  # noqa: E501
+from rest import ApiException
 
 
 class TestAllocationGet(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestAllocationGet(unittest.TestCase):
     def testAllocationGet(self):
         """Test AllocationGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = internship-sdk.models.allocation_get.AllocationGet()  # noqa: E501
+        # model = osis-internship-sdk.models.allocation_get.AllocationGet()  # noqa: E501
         pass
 
 

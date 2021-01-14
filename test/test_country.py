@@ -15,8 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.country import Country  # noqa: E501
-from openapi_client.rest import ApiException
+from models.country import Country  # noqa: E501
+from rest import ApiException
 
 
 class TestCountry(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestCountry(unittest.TestCase):
     def testCountry(self):
         """Test Country"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = internship-sdk.models.country.Country()  # noqa: E501
+        # model = osis-internship-sdk.models.country.Country()  # noqa: E501
         pass
 
 

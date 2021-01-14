@@ -15,8 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.organization_get import OrganizationGet  # noqa: E501
-from openapi_client.rest import ApiException
+from models.organization_get import OrganizationGet  # noqa: E501
+from rest import ApiException
 
 
 class TestOrganizationGet(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestOrganizationGet(unittest.TestCase):
     def testOrganizationGet(self):
         """Test OrganizationGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = internship-sdk.models.organization_get.OrganizationGet()  # noqa: E501
+        # model = osis-internship-sdk.models.organization_get.OrganizationGet()  # noqa: E501
         pass
 
 

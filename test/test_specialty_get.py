@@ -15,8 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.specialty_get import SpecialtyGet  # noqa: E501
-from openapi_client.rest import ApiException
+from models.specialty_get import SpecialtyGet  # noqa: E501
+from rest import ApiException
 
 
 class TestSpecialtyGet(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSpecialtyGet(unittest.TestCase):
     def testSpecialtyGet(self):
         """Test SpecialtyGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = internship-sdk.models.specialty_get.SpecialtyGet()  # noqa: E501
+        # model = osis-internship-sdk.models.specialty_get.SpecialtyGet()  # noqa: E501
         pass
 
 

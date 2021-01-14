@@ -15,8 +15,8 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.models.paging import Paging  # noqa: E501
-from openapi_client.rest import ApiException
+from models.paging import Paging  # noqa: E501
+from rest import ApiException
 
 
 class TestPaging(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPaging(unittest.TestCase):
     def testPaging(self):
         """Test Paging"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = internship-sdk.models.paging.Paging()  # noqa: E501
+        # model = osis-internship-sdk.models.paging.Paging()  # noqa: E501
         pass
 
 

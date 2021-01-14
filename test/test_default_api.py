@@ -15,15 +15,15 @@ from __future__ import absolute_import
 import unittest
 
 import openapi_client
-from openapi_client.api.default_api import DefaultApi  # noqa: E501
-from openapi_client.rest import ApiException
+from api.default_api import DefaultApi  # noqa: E501
+from rest import ApiException
 
 
 class TestDefaultApi(unittest.TestCase):
     """DefaultApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.default_api.DefaultApi()  # noqa: E501
+        self.api = api.default_api.DefaultApi()  # noqa: E501
 
     def tearDown(self):
         pass
