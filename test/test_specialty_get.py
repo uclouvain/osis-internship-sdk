@@ -31,7 +31,7 @@ class TestSpecialtyGet(unittest.TestCase):
     def testSpecialtyGet(self):
         """Test SpecialtyGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.specialty_get.SpecialtyGet()  # noqa: E501
+        # model = internship-sdk.models.specialty_get.SpecialtyGet()  # noqa: E501
         pass
 
 

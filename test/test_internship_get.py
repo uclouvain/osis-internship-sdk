@@ -31,7 +31,7 @@ class TestInternshipGet(unittest.TestCase):
     def testInternshipGet(self):
         """Test InternshipGet"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.internship_get.InternshipGet()  # noqa: E501
+        # model = internship-sdk.models.internship_get.InternshipGet()  # noqa: E501
         pass
 
 

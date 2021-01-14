@@ -31,7 +31,7 @@ class TestStudent(unittest.TestCase):
     def testStudent(self):
         """Test Student"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.student.Student()  # noqa: E501
+        # model = internship-sdk.models.student.Student()  # noqa: E501
         pass
 
 
