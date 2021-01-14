@@ -17,22 +17,23 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
-from api.default_api import DefaultApi
+from osis_internship_sdk.api.default_api import DefaultApi
 
 # import ApiClient
-from api_client import ApiClient
-from configuration import Configuration
+from osis_internship_sdk.api_client import ApiClient
+from osis_internship_sdk.configuration import Configuration
 # import models into sdk package
-from models.allocation_get import AllocationGet
-from models.cohort_get import CohortGet
-from models.country import Country
-from models.internship_get import InternshipGet
-from models.master_get import MasterGet
-from models.organization_get import OrganizationGet
-from models.paging import Paging
-from models.period_get import PeriodGet
-from models.person import Person
-from models.specialty_get import SpecialtyGet
-from models.student import Student
-from models.student_affectation_get import StudentAffectationGet
-from models.student_get import StudentGet
+from osis_internship_sdk.models.allocation_get import AllocationGet
+from osis_internship_sdk.models.cohort_get import CohortGet
+from osis_internship_sdk.models.country import Country
+from osis_internship_sdk.models.internship_get import InternshipGet
+from osis_internship_sdk.models.master_get import MasterGet
+from osis_internship_sdk.models.organization_get import OrganizationGet
+from osis_internship_sdk.models.paging import Paging
+from osis_internship_sdk.models.period_get import PeriodGet
+from osis_internship_sdk.models.person import Person
+from osis_internship_sdk.models.specialty_get import SpecialtyGet
+from osis_internship_sdk.models.student import Student
+from osis_internship_sdk.models.student_affectation_get import StudentAffectationGet
+from osis_internship_sdk.models.student_get import StudentGet
+
