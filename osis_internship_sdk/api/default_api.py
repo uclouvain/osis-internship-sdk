@@ -400,94 +400,6 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def masters_allocations_get(self, **kwargs):  # noqa: E501
-        """masters_allocations_get  # noqa: E501
-
-        Obtain the list of internship-master allocations  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.masters_allocations_get(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: object
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.masters_allocations_get_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.masters_allocations_get_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def masters_allocations_get_with_http_info(self, **kwargs):  # noqa: E501
-        """masters_allocations_get  # noqa: E501
-
-        Obtain the list of internship-master allocations  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.masters_allocations_get_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: object
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method masters_allocations_get" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Token']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/masters_allocations', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='object',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def masters_allocations_uuid_get(self, uuid, **kwargs):  # noqa: E501
         """masters_allocations_uuid_get  # noqa: E501
 
@@ -757,7 +669,7 @@ class DefaultApi(object):
         auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/masters/{uuid}/activate_account', 'PUT',
+            '/masters/{uuid}/activate_account/', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -765,6 +677,94 @@ class DefaultApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='MasterGet',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def masters_uuid_allocations_get(self, **kwargs):  # noqa: E501
+        """masters_uuid_allocations_get  # noqa: E501
+
+        Obtain the list of internship-master allocations  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.masters_uuid_allocations_get(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.masters_uuid_allocations_get_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.masters_uuid_allocations_get_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def masters_uuid_allocations_get_with_http_info(self, **kwargs):  # noqa: E501
+        """masters_uuid_allocations_get  # noqa: E501
+
+        Obtain the list of internship-master allocations  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.masters_uuid_allocations_get_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method masters_uuid_allocations_get" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/masters/{uuid}/allocations/', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='object',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
