@@ -695,6 +695,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str uuid: The UUID of the master (required)
+        :param bool current:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -717,6 +718,7 @@ class DefaultApi(object):
 
         :param async_req bool
         :param str uuid: The UUID of the master (required)
+        :param bool current:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -724,7 +726,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['uuid']  # noqa: E501
+        all_params = ['uuid', 'current']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -750,6 +752,8 @@ class DefaultApi(object):
             path_params['uuid'] = local_var_params['uuid']  # noqa: E501
 
         query_params = []
+        if 'current' in local_var_params:
+            query_params.append(('current', local_var_params['current']))  # noqa: E501
 
         header_params = {}
 
