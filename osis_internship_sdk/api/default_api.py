@@ -684,37 +684,39 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def masters_uuid_allocations_get(self, **kwargs):  # noqa: E501
+    def masters_uuid_allocations_get(self, uuid, **kwargs):  # noqa: E501
         """masters_uuid_allocations_get  # noqa: E501
 
         Obtain the list of internship-master allocations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.masters_uuid_allocations_get(async_req=True)
+        >>> thread = api.masters_uuid_allocations_get(uuid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str uuid: The UUID of the master (required)
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.masters_uuid_allocations_get_with_http_info(**kwargs)  # noqa: E501
+            return self.masters_uuid_allocations_get_with_http_info(uuid, **kwargs)  # noqa: E501
         else:
-            (data) = self.masters_uuid_allocations_get_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.masters_uuid_allocations_get_with_http_info(uuid, **kwargs)  # noqa: E501
             return data
 
-    def masters_uuid_allocations_get_with_http_info(self, **kwargs):  # noqa: E501
+    def masters_uuid_allocations_get_with_http_info(self, uuid, **kwargs):  # noqa: E501
         """masters_uuid_allocations_get  # noqa: E501
 
         Obtain the list of internship-master allocations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.masters_uuid_allocations_get_with_http_info(async_req=True)
+        >>> thread = api.masters_uuid_allocations_get_with_http_info(uuid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str uuid: The UUID of the master (required)
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -722,7 +724,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['uuid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -736,10 +738,16 @@ class DefaultApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'uuid' is set
+        if ('uuid' not in local_var_params or
+                local_var_params['uuid'] is None):
+            raise ValueError("Missing the required parameter `uuid` when calling `masters_uuid_allocations_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'uuid' in local_var_params:
+            path_params['uuid'] = local_var_params['uuid']  # noqa: E501
 
         query_params = []
 
