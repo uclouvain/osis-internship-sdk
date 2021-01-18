@@ -13,7 +13,7 @@
 from setuptools import setup, find_packages  # noqa: H301
 
 NAME = "osis_internship_sdk"
-VERSION = "1.0.1"
+VERSION = "1.0.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -26,8 +26,8 @@ REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 setup(
     name=NAME,
     version=VERSION,
-    description="SDK for osis-internship API communication",
-    author_email="mathieu.zen@uclouvain.be",
+    description="Internship API",
+    author_email="",
     url="",
     keywords=["OpenAPI", "OpenAPI-Generator", "Internship API"],
     install_requires=REQUIRES,
