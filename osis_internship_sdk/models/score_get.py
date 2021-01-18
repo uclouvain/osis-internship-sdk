@@ -37,7 +37,22 @@ class ScoreGet(object):
         'cohort': 'CohortGet',
         'excused': 'bool',
         'reason': 'str',
-        'score': 'float'
+        'score': 'float',
+        'apd1': 'str',
+        'apd2': 'str',
+        'apd3': 'str',
+        'apd4': 'str',
+        'apd5': 'str',
+        'apd6': 'str',
+        'apd7': 'str',
+        'apd8': 'str',
+        'apd9': 'str',
+        'apd10': 'str',
+        'apd11': 'str',
+        'apd12': 'str',
+        'apd13': 'str',
+        'apd14': 'str',
+        'apd15': 'str'
     }
 
     attribute_map = {
@@ -47,10 +62,25 @@ class ScoreGet(object):
         'cohort': 'cohort',
         'excused': 'excused',
         'reason': 'reason',
-        'score': 'score'
+        'score': 'score',
+        'apd1': 'APD1',
+        'apd2': 'APD2',
+        'apd3': 'APD3',
+        'apd4': 'APD4',
+        'apd5': 'APD5',
+        'apd6': 'APD6',
+        'apd7': 'APD7',
+        'apd8': 'APD8',
+        'apd9': 'APD9',
+        'apd10': 'APD10',
+        'apd11': 'APD11',
+        'apd12': 'APD12',
+        'apd13': 'APD13',
+        'apd14': 'APD14',
+        'apd15': 'APD15'
     }
 
-    def __init__(self, uuid=None, student=None, period=None, cohort=None, excused=None, reason=None, score=None):  # noqa: E501
+    def __init__(self, uuid=None, student=None, period=None, cohort=None, excused=None, reason=None, score=None, apd1=None, apd2=None, apd3=None, apd4=None, apd5=None, apd6=None, apd7=None, apd8=None, apd9=None, apd10=None, apd11=None, apd12=None, apd13=None, apd14=None, apd15=None):  # noqa: E501
         """ScoreGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -60,6 +90,21 @@ class ScoreGet(object):
         self._excused = None
         self._reason = None
         self._score = None
+        self._apd1 = None
+        self._apd2 = None
+        self._apd3 = None
+        self._apd4 = None
+        self._apd5 = None
+        self._apd6 = None
+        self._apd7 = None
+        self._apd8 = None
+        self._apd9 = None
+        self._apd10 = None
+        self._apd11 = None
+        self._apd12 = None
+        self._apd13 = None
+        self._apd14 = None
+        self._apd15 = None
         self.discriminator = None
 
         if uuid is not None:
@@ -76,6 +121,36 @@ class ScoreGet(object):
             self.reason = reason
         if score is not None:
             self.score = score
+        if apd1 is not None:
+            self.apd1 = apd1
+        if apd2 is not None:
+            self.apd2 = apd2
+        if apd3 is not None:
+            self.apd3 = apd3
+        if apd4 is not None:
+            self.apd4 = apd4
+        if apd5 is not None:
+            self.apd5 = apd5
+        if apd6 is not None:
+            self.apd6 = apd6
+        if apd7 is not None:
+            self.apd7 = apd7
+        if apd8 is not None:
+            self.apd8 = apd8
+        if apd9 is not None:
+            self.apd9 = apd9
+        if apd10 is not None:
+            self.apd10 = apd10
+        if apd11 is not None:
+            self.apd11 = apd11
+        if apd12 is not None:
+            self.apd12 = apd12
+        if apd13 is not None:
+            self.apd13 = apd13
+        if apd14 is not None:
+            self.apd14 = apd14
+        if apd15 is not None:
+            self.apd15 = apd15
 
     @property
     def uuid(self):
@@ -223,6 +298,321 @@ class ScoreGet(object):
         """
 
         self._score = score
+
+    @property
+    def apd1(self):
+        """Gets the apd1 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd1 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd1
+
+    @apd1.setter
+    def apd1(self, apd1):
+        """Sets the apd1 of this ScoreGet.
+
+
+        :param apd1: The apd1 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd1 = apd1
+
+    @property
+    def apd2(self):
+        """Gets the apd2 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd2 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd2
+
+    @apd2.setter
+    def apd2(self, apd2):
+        """Sets the apd2 of this ScoreGet.
+
+
+        :param apd2: The apd2 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd2 = apd2
+
+    @property
+    def apd3(self):
+        """Gets the apd3 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd3 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd3
+
+    @apd3.setter
+    def apd3(self, apd3):
+        """Sets the apd3 of this ScoreGet.
+
+
+        :param apd3: The apd3 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd3 = apd3
+
+    @property
+    def apd4(self):
+        """Gets the apd4 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd4 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd4
+
+    @apd4.setter
+    def apd4(self, apd4):
+        """Sets the apd4 of this ScoreGet.
+
+
+        :param apd4: The apd4 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd4 = apd4
+
+    @property
+    def apd5(self):
+        """Gets the apd5 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd5 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd5
+
+    @apd5.setter
+    def apd5(self, apd5):
+        """Sets the apd5 of this ScoreGet.
+
+
+        :param apd5: The apd5 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd5 = apd5
+
+    @property
+    def apd6(self):
+        """Gets the apd6 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd6 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd6
+
+    @apd6.setter
+    def apd6(self, apd6):
+        """Sets the apd6 of this ScoreGet.
+
+
+        :param apd6: The apd6 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd6 = apd6
+
+    @property
+    def apd7(self):
+        """Gets the apd7 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd7 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd7
+
+    @apd7.setter
+    def apd7(self, apd7):
+        """Sets the apd7 of this ScoreGet.
+
+
+        :param apd7: The apd7 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd7 = apd7
+
+    @property
+    def apd8(self):
+        """Gets the apd8 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd8 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd8
+
+    @apd8.setter
+    def apd8(self, apd8):
+        """Sets the apd8 of this ScoreGet.
+
+
+        :param apd8: The apd8 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd8 = apd8
+
+    @property
+    def apd9(self):
+        """Gets the apd9 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd9 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd9
+
+    @apd9.setter
+    def apd9(self, apd9):
+        """Sets the apd9 of this ScoreGet.
+
+
+        :param apd9: The apd9 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd9 = apd9
+
+    @property
+    def apd10(self):
+        """Gets the apd10 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd10 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd10
+
+    @apd10.setter
+    def apd10(self, apd10):
+        """Sets the apd10 of this ScoreGet.
+
+
+        :param apd10: The apd10 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd10 = apd10
+
+    @property
+    def apd11(self):
+        """Gets the apd11 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd11 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd11
+
+    @apd11.setter
+    def apd11(self, apd11):
+        """Sets the apd11 of this ScoreGet.
+
+
+        :param apd11: The apd11 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd11 = apd11
+
+    @property
+    def apd12(self):
+        """Gets the apd12 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd12 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd12
+
+    @apd12.setter
+    def apd12(self, apd12):
+        """Sets the apd12 of this ScoreGet.
+
+
+        :param apd12: The apd12 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd12 = apd12
+
+    @property
+    def apd13(self):
+        """Gets the apd13 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd13 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd13
+
+    @apd13.setter
+    def apd13(self, apd13):
+        """Sets the apd13 of this ScoreGet.
+
+
+        :param apd13: The apd13 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd13 = apd13
+
+    @property
+    def apd14(self):
+        """Gets the apd14 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd14 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd14
+
+    @apd14.setter
+    def apd14(self, apd14):
+        """Sets the apd14 of this ScoreGet.
+
+
+        :param apd14: The apd14 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd14 = apd14
+
+    @property
+    def apd15(self):
+        """Gets the apd15 of this ScoreGet.  # noqa: E501
+
+
+        :return: The apd15 of this ScoreGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._apd15
+
+    @apd15.setter
+    def apd15(self, apd15):
+        """Sets the apd15 of this ScoreGet.
+
+
+        :param apd15: The apd15 of this ScoreGet.  # noqa: E501
+        :type: str
+        """
+
+        self._apd15 = apd15
 
     def to_dict(self):
         """Returns the model properties as a dict"""
