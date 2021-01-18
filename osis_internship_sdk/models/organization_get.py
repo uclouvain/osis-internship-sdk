@@ -32,6 +32,7 @@ class OrganizationGet(object):
     """
     openapi_types = {
         'url': 'str',
+        'uuid': 'str',
         'name': 'str',
         'acronym': 'str',
         'website': 'str',
@@ -46,6 +47,7 @@ class OrganizationGet(object):
 
     attribute_map = {
         'url': 'url',
+        'uuid': 'uuid',
         'name': 'name',
         'acronym': 'acronym',
         'website': 'website',
@@ -58,10 +60,11 @@ class OrganizationGet(object):
         'cohort': 'cohort'
     }
 
-    def __init__(self, url=None, name=None, acronym=None, website=None, reference=None, phone=None, location=None, postal_code=None, city=None, country=None, cohort=None):  # noqa: E501
+    def __init__(self, url=None, uuid=None, name=None, acronym=None, website=None, reference=None, phone=None, location=None, postal_code=None, city=None, country=None, cohort=None):  # noqa: E501
         """OrganizationGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._url = None
+        self._uuid = None
         self._name = None
         self._acronym = None
         self._website = None
@@ -76,6 +79,8 @@ class OrganizationGet(object):
 
         if url is not None:
             self.url = url
+        if uuid is not None:
+            self.uuid = uuid
         if name is not None:
             self.name = name
         if acronym is not None:
@@ -117,6 +122,27 @@ class OrganizationGet(object):
         """
 
         self._url = url
+
+    @property
+    def uuid(self):
+        """Gets the uuid of this OrganizationGet.  # noqa: E501
+
+
+        :return: The uuid of this OrganizationGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._uuid
+
+    @uuid.setter
+    def uuid(self, uuid):
+        """Sets the uuid of this OrganizationGet.
+
+
+        :param uuid: The uuid of this OrganizationGet.  # noqa: E501
+        :type: str
+        """
+
+        self._uuid = uuid
 
     @property
     def name(self):

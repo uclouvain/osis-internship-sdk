@@ -32,6 +32,7 @@ class SpecialtyGet(object):
     """
     openapi_types = {
         'url': 'str',
+        'uuid': 'str',
         'name': 'str',
         'acronym': 'str',
         'mandatory': 'bool',
@@ -42,6 +43,7 @@ class SpecialtyGet(object):
 
     attribute_map = {
         'url': 'url',
+        'uuid': 'uuid',
         'name': 'name',
         'acronym': 'acronym',
         'mandatory': 'mandatory',
@@ -50,10 +52,11 @@ class SpecialtyGet(object):
         'selectable': 'selectable'
     }
 
-    def __init__(self, url=None, name=None, acronym=None, mandatory=None, sequence=None, cohort=None, selectable=None):  # noqa: E501
+    def __init__(self, url=None, uuid=None, name=None, acronym=None, mandatory=None, sequence=None, cohort=None, selectable=None):  # noqa: E501
         """SpecialtyGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._url = None
+        self._uuid = None
         self._name = None
         self._acronym = None
         self._mandatory = None
@@ -64,6 +67,8 @@ class SpecialtyGet(object):
 
         if url is not None:
             self.url = url
+        if uuid is not None:
+            self.uuid = uuid
         if name is not None:
             self.name = name
         if acronym is not None:
@@ -97,6 +102,27 @@ class SpecialtyGet(object):
         """
 
         self._url = url
+
+    @property
+    def uuid(self):
+        """Gets the uuid of this SpecialtyGet.  # noqa: E501
+
+
+        :return: The uuid of this SpecialtyGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._uuid
+
+    @uuid.setter
+    def uuid(self, uuid):
+        """Sets the uuid of this SpecialtyGet.
+
+
+        :param uuid: The uuid of this SpecialtyGet.  # noqa: E501
+        :type: str
+        """
+
+        self._uuid = uuid
 
     @property
     def name(self):

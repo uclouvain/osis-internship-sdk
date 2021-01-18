@@ -32,8 +32,8 @@ from osis_internship_sdk.models.organization_get import OrganizationGet
 from osis_internship_sdk.models.paging import Paging
 from osis_internship_sdk.models.period_get import PeriodGet
 from osis_internship_sdk.models.person import Person
+from osis_internship_sdk.models.score_get import ScoreGet
 from osis_internship_sdk.models.specialty_get import SpecialtyGet
 from osis_internship_sdk.models.student import Student
 from osis_internship_sdk.models.student_affectation_get import StudentAffectationGet
 from osis_internship_sdk.models.student_get import StudentGet
-

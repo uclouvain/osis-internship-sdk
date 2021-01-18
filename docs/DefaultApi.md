@@ -1,4 +1,4 @@
-# DefaultApi
+# osis_internship_sdk.DefaultApi
 
 All URIs are relative to *https://dev.osis.uclouvain.be/api/v1/internship*
 
@@ -8,15 +8,16 @@ Method | HTTP request | Description
 [**cohorts_uuid_get**](DefaultApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
 [**internships_get**](DefaultApi.md#internships_get) | **GET** /internships | 
 [**internships_uuid_get**](DefaultApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
-[**masters_allocations_get**](DefaultApi.md#masters_allocations_get) | **GET** /masters_allocations | 
 [**masters_allocations_uuid_get**](DefaultApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
 [**masters_get**](DefaultApi.md#masters_get) | **GET** /masters | 
-[**masters_uuid_activate_account_put**](DefaultApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account | 
+[**masters_uuid_activate_account_put**](DefaultApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account/ | 
+[**masters_uuid_allocations_get**](DefaultApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations/ | 
 [**masters_uuid_get**](DefaultApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
 [**organizations_get**](DefaultApi.md#organizations_get) | **GET** /organizations | 
 [**organizations_uuid_get**](DefaultApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
 [**periods_get**](DefaultApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
+[**scores_student_uuid_period_uuid_get**](DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
 [**specialties_get**](DefaultApi.md#specialties_get) | **GET** /specialties | 
 [**specialties_uuid_get**](DefaultApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
 [**students_affectations_get**](DefaultApi.md#students_affectations_get) | **GET** /students_affectations | 
@@ -38,18 +39,18 @@ Obtain the list of cohorts
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 
 try:
     api_response = api_instance.cohorts_get()
@@ -89,18 +90,18 @@ Obtain information about a specific cohort
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the cohort
 
 try:
@@ -144,18 +145,18 @@ Obtain the list of internships
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 
 try:
     api_response = api_instance.internships_get()
@@ -195,18 +196,18 @@ Obtain information about a specific internship
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the internship
 
 try:
@@ -237,57 +238,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **masters_allocations_get**
-> object masters_allocations_get()
-
-
-
-Obtain the list of internship-master allocations
-
-### Example
-
-* Api Key Authentication (Token): 
-```python
-from __future__ import print_function
-import time
-import openapi_client
-from rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Token
-configuration = Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
-
-try:
-    api_response = api_instance.masters_allocations_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_allocations_get: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **masters_allocations_uuid_get**
 > AllocationGet masters_allocations_uuid_get(uuid)
 
@@ -301,18 +251,18 @@ Obtain information about a specific master allocation
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the master allocation
 
 try:
@@ -356,18 +306,18 @@ Obtain the list of internship masters
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 search = 'search_example' # str |  (optional)
 
 try:
@@ -411,18 +361,18 @@ Set master account activation status to ACTIVE
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the master
 
 try:
@@ -453,6 +403,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **masters_uuid_allocations_get**
+> object masters_uuid_allocations_get(uuid, current=current)
+
+
+
+Obtain the list of internship-master allocations
+
+### Example
+
+* Api Key Authentication (Token): 
+```python
+from __future__ import print_function
+import time
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = osis_internship_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+uuid = 'uuid_example' # str | The UUID of the master
+current = True # bool |  (optional)
+
+try:
+    api_response = api_instance.masters_uuid_allocations_get(uuid, current=current)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->masters_uuid_allocations_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)| The UUID of the master | 
+ **current** | **bool**|  | [optional] 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **masters_uuid_get**
 > MasterGet masters_uuid_get(uuid)
 
@@ -466,18 +473,18 @@ Obtain information about a specific master
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the master
 
 try:
@@ -521,18 +528,18 @@ Obtain the list of organizations
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 
 try:
     api_response = api_instance.organizations_get()
@@ -572,18 +579,18 @@ Obtain information about a specific organization
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the organization
 
 try:
@@ -627,18 +634,18 @@ Obtain the list of periods
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 
 try:
     api_response = api_instance.periods_get()
@@ -678,18 +685,18 @@ Obtain information about a specific period
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the period
 
 try:
@@ -720,6 +727,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **scores_student_uuid_period_uuid_get**
+> ScoreGet scores_student_uuid_period_uuid_get(student_uuid, period_uuid)
+
+
+
+Obtain information about a specific student's score for a given period
+
+### Example
+
+* Api Key Authentication (Token): 
+```python
+from __future__ import print_function
+import time
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = osis_internship_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+student_uuid = 'student_uuid_example' # str | The UUID of the student
+period_uuid = 'period_uuid_example' # str | The UUID of the period
+
+try:
+    api_response = api_instance.scores_student_uuid_period_uuid_get(student_uuid, period_uuid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **student_uuid** | [**str**](.md)| The UUID of the student | 
+ **period_uuid** | [**str**](.md)| The UUID of the period | 
+
+### Return type
+
+[**ScoreGet**](ScoreGet.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **specialties_get**
 > object specialties_get()
 
@@ -733,18 +797,18 @@ Obtain the list of specialties
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 
 try:
     api_response = api_instance.specialties_get()
@@ -784,18 +848,18 @@ Obtain information about a specific specialty
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the specialty
 
 try:
@@ -827,7 +891,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_affectations_get**
-> object students_affectations_get()
+> object students_affectations_get(organization, specialty)
 
 
 
@@ -839,28 +903,34 @@ Obtain the list of students affectations
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+organization = 'organization_example' # str | 
+specialty = 'specialty_example' # str | 
 
 try:
-    api_response = api_instance.students_affectations_get()
+    api_response = api_instance.students_affectations_get(organization, specialty)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->students_affectations_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organization** | **str**|  | 
+ **specialty** | **str**|  | 
 
 ### Return type
 
@@ -890,18 +960,18 @@ Obtain information about a specific student's affectation
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the student's affectation
 
 try:
@@ -945,18 +1015,18 @@ Obtain the list of students
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 
 try:
     api_response = api_instance.students_get()
@@ -996,18 +1066,18 @@ Obtain information about a specific internship student
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from rest import ApiException
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: Token
-configuration = Configuration()
+configuration = osis_internship_sdk.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = DefaultApi(ApiClient(configuration))
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 uuid = 'uuid_example' # str | The UUID of the internship student
 
 try:

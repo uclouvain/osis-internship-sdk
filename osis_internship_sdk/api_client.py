@@ -23,7 +23,7 @@ import six
 from six.moves.urllib.parse import quote
 
 from osis_internship_sdk.configuration import Configuration
-from osis_internship_sdk import models
+import osis_internship_sdk.models
 from osis_internship_sdk import rest
 
 
@@ -271,7 +271,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(models, klass)
+                klass = getattr(osis_internship_sdk.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)
