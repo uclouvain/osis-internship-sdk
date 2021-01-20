@@ -1548,6 +1548,7 @@ class DefaultApi(object):
         :param async_req bool
         :param str organization: (required)
         :param str specialty: (required)
+        :param str period:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1571,6 +1572,7 @@ class DefaultApi(object):
         :param async_req bool
         :param str organization: (required)
         :param str specialty: (required)
+        :param str period:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1578,7 +1580,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = ['organization', 'specialty']  # noqa: E501
+        all_params = ['organization', 'specialty', 'period']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1610,6 +1612,8 @@ class DefaultApi(object):
             query_params.append(('organization', local_var_params['organization']))  # noqa: E501
         if 'specialty' in local_var_params:
             query_params.append(('specialty', local_var_params['specialty']))  # noqa: E501
+        if 'period' in local_var_params:
+            query_params.append(('period', local_var_params['period']))  # noqa: E501
 
         header_params = {}
 
