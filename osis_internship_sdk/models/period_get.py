@@ -32,6 +32,7 @@ class PeriodGet(object):
     """
     openapi_types = {
         'url': 'str',
+        'uuid': 'str',
         'name': 'str',
         'date_start': 'str',
         'date_end': 'str'
@@ -39,15 +40,17 @@ class PeriodGet(object):
 
     attribute_map = {
         'url': 'url',
+        'uuid': 'uuid',
         'name': 'name',
         'date_start': 'date_start',
         'date_end': 'date_end'
     }
 
-    def __init__(self, url=None, name=None, date_start=None, date_end=None):  # noqa: E501
+    def __init__(self, url=None, uuid=None, name=None, date_start=None, date_end=None):  # noqa: E501
         """PeriodGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._url = None
+        self._uuid = None
         self._name = None
         self._date_start = None
         self._date_end = None
@@ -55,6 +58,8 @@ class PeriodGet(object):
 
         if url is not None:
             self.url = url
+        if uuid is not None:
+            self.uuid = uuid
         if name is not None:
             self.name = name
         if date_start is not None:
@@ -82,6 +87,27 @@ class PeriodGet(object):
         """
 
         self._url = url
+
+    @property
+    def uuid(self):
+        """Gets the uuid of this PeriodGet.  # noqa: E501
+
+
+        :return: The uuid of this PeriodGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._uuid
+
+    @uuid.setter
+    def uuid(self, uuid):
+        """Sets the uuid of this PeriodGet.
+
+
+        :param uuid: The uuid of this PeriodGet.  # noqa: E501
+        :type: str
+        """
+
+        self._uuid = uuid
 
     @property
     def name(self):

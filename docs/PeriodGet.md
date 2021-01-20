@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** |  | [optional] 
+**uuid** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **date_start** | **str** |  | [optional] 
 **date_end** | **str** |  | [optional] 
