@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**masters_uuid_get**](DefaultApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
 [**organizations_get**](DefaultApi.md#organizations_get) | **GET** /organizations | 
 [**organizations_uuid_get**](DefaultApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
+[**periods_active_get**](DefaultApi.md#periods_active_get) | **GET** /periods/active | 
 [**periods_get**](DefaultApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 [**scores_student_uuid_period_uuid_get**](DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
@@ -609,6 +610,57 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**OrganizationGet**](OrganizationGet.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **periods_active_get**
+> object periods_active_get()
+
+
+
+Obtain the list of active periods
+
+### Example
+
+* Api Key Authentication (Token): 
+```python
+from __future__ import print_function
+import time
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = osis_internship_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+
+try:
+    api_response = api_instance.periods_active_get()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->periods_active_get: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**object**
 
 ### Authorization
 
