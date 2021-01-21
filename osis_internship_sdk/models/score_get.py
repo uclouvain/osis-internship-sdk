@@ -39,6 +39,7 @@ class ScoreGet(object):
         'reason': 'str',
         'score': 'float',
         'comments': 'object',
+        'objectives': 'object',
         'apd_1': 'str',
         'apd_2': 'str',
         'apd_3': 'str',
@@ -65,6 +66,7 @@ class ScoreGet(object):
         'reason': 'reason',
         'score': 'score',
         'comments': 'comments',
+        'objectives': 'objectives',
         'apd_1': 'APD_1',
         'apd_2': 'APD_2',
         'apd_3': 'APD_3',
@@ -82,7 +84,7 @@ class ScoreGet(object):
         'apd_15': 'APD_15'
     }
 
-    def __init__(self, uuid=None, student=None, period=None, cohort=None, excused=None, reason=None, score=None, comments=None, apd_1=None, apd_2=None, apd_3=None, apd_4=None, apd_5=None, apd_6=None, apd_7=None, apd_8=None, apd_9=None, apd_10=None, apd_11=None, apd_12=None, apd_13=None, apd_14=None, apd_15=None):  # noqa: E501
+    def __init__(self, uuid=None, student=None, period=None, cohort=None, excused=None, reason=None, score=None, comments=None, objectives=None, apd_1=None, apd_2=None, apd_3=None, apd_4=None, apd_5=None, apd_6=None, apd_7=None, apd_8=None, apd_9=None, apd_10=None, apd_11=None, apd_12=None, apd_13=None, apd_14=None, apd_15=None):  # noqa: E501
         """ScoreGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -93,6 +95,7 @@ class ScoreGet(object):
         self._reason = None
         self._score = None
         self._comments = None
+        self._objectives = None
         self._apd_1 = None
         self._apd_2 = None
         self._apd_3 = None
@@ -126,6 +129,8 @@ class ScoreGet(object):
             self.score = score
         if comments is not None:
             self.comments = comments
+        if objectives is not None:
+            self.objectives = objectives
         if apd_1 is not None:
             self.apd_1 = apd_1
         if apd_2 is not None:
@@ -324,6 +329,27 @@ class ScoreGet(object):
         """
 
         self._comments = comments
+
+    @property
+    def objectives(self):
+        """Gets the objectives of this ScoreGet.  # noqa: E501
+
+
+        :return: The objectives of this ScoreGet.  # noqa: E501
+        :rtype: object
+        """
+        return self._objectives
+
+    @objectives.setter
+    def objectives(self, objectives):
+        """Sets the objectives of this ScoreGet.
+
+
+        :param objectives: The objectives of this ScoreGet.  # noqa: E501
+        :type: object
+        """
+
+        self._objectives = objectives
 
     @property
     def apd_1(self):
