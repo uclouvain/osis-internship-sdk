@@ -90,6 +90,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**periods_get**](docs/DefaultApi.md#periods_get) | **GET** /periods | 
 *DefaultApi* | [**periods_uuid_get**](docs/DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 *DefaultApi* | [**scores_student_uuid_period_uuid_get**](docs/DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
+*DefaultApi* | [**scores_student_uuid_period_uuid_post**](docs/DefaultApi.md#scores_student_uuid_period_uuid_post) | **POST** /scores/{student_uuid}/{period_uuid} | 
 *DefaultApi* | [**specialties_get**](docs/DefaultApi.md#specialties_get) | **GET** /specialties | 
 *DefaultApi* | [**specialties_uuid_get**](docs/DefaultApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
 *DefaultApi* | [**students_affectations_get**](docs/DefaultApi.md#students_affectations_get) | **GET** /students_affectations | 

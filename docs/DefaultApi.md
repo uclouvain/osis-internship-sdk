@@ -19,6 +19,7 @@ Method | HTTP request | Description
 [**periods_get**](DefaultApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 [**scores_student_uuid_period_uuid_get**](DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
+[**scores_student_uuid_period_uuid_post**](DefaultApi.md#scores_student_uuid_period_uuid_post) | **POST** /scores/{student_uuid}/{period_uuid} | 
 [**specialties_get**](DefaultApi.md#specialties_get) | **GET** /specialties | 
 [**specialties_uuid_get**](DefaultApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
 [**students_affectations_get**](DefaultApi.md#students_affectations_get) | **GET** /students_affectations | 
@@ -784,7 +785,7 @@ Name | Type | Description  | Notes
 
 
 
-Obtain information about a specific student's score for a given period
+Get or create information about a specific student's score for a given period
 
 ### Example
 
@@ -833,6 +834,64 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **scores_student_uuid_period_uuid_post**
+> scores_student_uuid_period_uuid_post(student_uuid, period_uuid, score_get)
+
+
+
+Update a student's score for a given period
+
+### Example
+
+* Api Key Authentication (Token): 
+```python
+from __future__ import print_function
+import time
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = osis_internship_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+student_uuid = 'student_uuid_example' # str | The UUID of the student
+period_uuid = 'period_uuid_example' # str | The UUID of the period
+score_get = osis_internship_sdk.ScoreGet() # ScoreGet | 
+
+try:
+    api_instance.scores_student_uuid_period_uuid_post(student_uuid, period_uuid, score_get)
+except ApiException as e:
+    print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **student_uuid** | [**str**](.md)| The UUID of the student | 
+ **period_uuid** | [**str**](.md)| The UUID of the period | 
+ **score_get** | [**ScoreGet**](ScoreGet.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
