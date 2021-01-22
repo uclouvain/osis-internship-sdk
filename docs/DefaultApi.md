@@ -19,7 +19,7 @@ Method | HTTP request | Description
 [**periods_get**](DefaultApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 [**scores_student_uuid_period_uuid_get**](DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
-[**scores_student_uuid_period_uuid_post**](DefaultApi.md#scores_student_uuid_period_uuid_post) | **POST** /scores/{student_uuid}/{period_uuid} | 
+[**scores_student_uuid_period_uuid_put**](DefaultApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
 [**specialties_get**](DefaultApi.md#specialties_get) | **GET** /specialties | 
 [**specialties_uuid_get**](DefaultApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
 [**students_affectations_get**](DefaultApi.md#students_affectations_get) | **GET** /students_affectations | 
@@ -837,8 +837,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **scores_student_uuid_period_uuid_post**
-> scores_student_uuid_period_uuid_post(student_uuid, period_uuid, score_get)
+# **scores_student_uuid_period_uuid_put**
+> scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get)
 
 
 
@@ -867,9 +867,9 @@ period_uuid = 'period_uuid_example' # str | The UUID of the period
 score_get = osis_internship_sdk.ScoreGet() # ScoreGet | 
 
 try:
-    api_instance.scores_student_uuid_period_uuid_post(student_uuid, period_uuid, score_get)
+    api_instance.scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get)
 except ApiException as e:
-    print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_post: %s\n" % e)
+    print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_put: %s\n" % e)
 ```
 
 ### Parameters

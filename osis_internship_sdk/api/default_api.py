@@ -1440,13 +1440,13 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def scores_student_uuid_period_uuid_post(self, student_uuid, period_uuid, score_get, **kwargs):  # noqa: E501
-        """scores_student_uuid_period_uuid_post  # noqa: E501
+    def scores_student_uuid_period_uuid_put(self, student_uuid, period_uuid, score_get, **kwargs):  # noqa: E501
+        """scores_student_uuid_period_uuid_put  # noqa: E501
 
         Update a student's score for a given period  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.scores_student_uuid_period_uuid_post(student_uuid, period_uuid, score_get, async_req=True)
+        >>> thread = api.scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1459,18 +1459,18 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.scores_student_uuid_period_uuid_post_with_http_info(student_uuid, period_uuid, score_get, **kwargs)  # noqa: E501
+            return self.scores_student_uuid_period_uuid_put_with_http_info(student_uuid, period_uuid, score_get, **kwargs)  # noqa: E501
         else:
-            (data) = self.scores_student_uuid_period_uuid_post_with_http_info(student_uuid, period_uuid, score_get, **kwargs)  # noqa: E501
+            (data) = self.scores_student_uuid_period_uuid_put_with_http_info(student_uuid, period_uuid, score_get, **kwargs)  # noqa: E501
             return data
 
-    def scores_student_uuid_period_uuid_post_with_http_info(self, student_uuid, period_uuid, score_get, **kwargs):  # noqa: E501
-        """scores_student_uuid_period_uuid_post  # noqa: E501
+    def scores_student_uuid_period_uuid_put_with_http_info(self, student_uuid, period_uuid, score_get, **kwargs):  # noqa: E501
+        """scores_student_uuid_period_uuid_put  # noqa: E501
 
         Update a student's score for a given period  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.scores_student_uuid_period_uuid_post_with_http_info(student_uuid, period_uuid, score_get, async_req=True)
+        >>> thread = api.scores_student_uuid_period_uuid_put_with_http_info(student_uuid, period_uuid, score_get, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1494,22 +1494,22 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method scores_student_uuid_period_uuid_post" % key
+                    " to method scores_student_uuid_period_uuid_put" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'student_uuid' is set
         if ('student_uuid' not in local_var_params or
                 local_var_params['student_uuid'] is None):
-            raise ValueError("Missing the required parameter `student_uuid` when calling `scores_student_uuid_period_uuid_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `student_uuid` when calling `scores_student_uuid_period_uuid_put`")  # noqa: E501
         # verify the required parameter 'period_uuid' is set
         if ('period_uuid' not in local_var_params or
                 local_var_params['period_uuid'] is None):
-            raise ValueError("Missing the required parameter `period_uuid` when calling `scores_student_uuid_period_uuid_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `period_uuid` when calling `scores_student_uuid_period_uuid_put`")  # noqa: E501
         # verify the required parameter 'score_get' is set
         if ('score_get' not in local_var_params or
                 local_var_params['score_get'] is None):
-            raise ValueError("Missing the required parameter `score_get` when calling `scores_student_uuid_period_uuid_post`")  # noqa: E501
+            raise ValueError("Missing the required parameter `score_get` when calling `scores_student_uuid_period_uuid_put`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1537,7 +1537,7 @@ class DefaultApi(object):
         auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/scores/{student_uuid}/{period_uuid}', 'POST',
+            '/scores/{student_uuid}/{period_uuid}', 'PUT',
             path_params,
             query_params,
             header_params,
