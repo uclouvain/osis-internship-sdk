@@ -86,14 +86,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**masters_uuid_get**](docs/DefaultApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
 *DefaultApi* | [**organizations_get**](docs/DefaultApi.md#organizations_get) | **GET** /organizations | 
 *DefaultApi* | [**organizations_uuid_get**](docs/DefaultApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
-*DefaultApi* | [**periods_active_get**](docs/DefaultApi.md#periods_active_get) | **GET** /periods/active | 
 *DefaultApi* | [**periods_get**](docs/DefaultApi.md#periods_get) | **GET** /periods | 
 *DefaultApi* | [**periods_uuid_get**](docs/DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 *DefaultApi* | [**scores_student_uuid_period_uuid_get**](docs/DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
 *DefaultApi* | [**scores_student_uuid_period_uuid_put**](docs/DefaultApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
 *DefaultApi* | [**specialties_get**](docs/DefaultApi.md#specialties_get) | **GET** /specialties | 
 *DefaultApi* | [**specialties_uuid_get**](docs/DefaultApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
-*DefaultApi* | [**students_affectations_get**](docs/DefaultApi.md#students_affectations_get) | **GET** /students_affectations | 
+*DefaultApi* | [**students_affectations_specialty_organization_get**](docs/DefaultApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
 *DefaultApi* | [**students_affectations_uuid_get**](docs/DefaultApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
 *DefaultApi* | [**students_get**](docs/DefaultApi.md#students_get) | **GET** /students | 
 *DefaultApi* | [**students_uuid_get**](docs/DefaultApi.md#students_uuid_get) | **GET** /students/{uuid} | 

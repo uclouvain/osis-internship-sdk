@@ -15,14 +15,13 @@ Method | HTTP request | Description
 [**masters_uuid_get**](DefaultApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
 [**organizations_get**](DefaultApi.md#organizations_get) | **GET** /organizations | 
 [**organizations_uuid_get**](DefaultApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
-[**periods_active_get**](DefaultApi.md#periods_active_get) | **GET** /periods/active | 
 [**periods_get**](DefaultApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 [**scores_student_uuid_period_uuid_get**](DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
 [**scores_student_uuid_period_uuid_put**](DefaultApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
 [**specialties_get**](DefaultApi.md#specialties_get) | **GET** /specialties | 
 [**specialties_uuid_get**](DefaultApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
-[**students_affectations_get**](DefaultApi.md#students_affectations_get) | **GET** /students_affectations | 
+[**students_affectations_specialty_organization_get**](DefaultApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
 [**students_affectations_uuid_get**](DefaultApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
 [**students_get**](DefaultApi.md#students_get) | **GET** /students | 
 [**students_uuid_get**](DefaultApi.md#students_uuid_get) | **GET** /students/{uuid} | 
@@ -623,59 +622,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **periods_active_get**
-> object periods_active_get()
-
-
-
-Obtain the list of active periods
-
-### Example
-
-* Api Key Authentication (Token): 
-```python
-from __future__ import print_function
-import time
-import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-
-try:
-    api_response = api_instance.periods_active_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->periods_active_get: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-**object**
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **periods_get**
-> object periods_get()
+> object periods_get(active=active)
 
 
 
@@ -699,16 +647,20 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+active = True # bool |  (optional)
 
 try:
-    api_response = api_instance.periods_get()
+    api_response = api_instance.periods_get(active=active)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->periods_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **active** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -1001,8 +953,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **students_affectations_get**
-> object students_affectations_get(organization, specialty, period=period)
+# **students_affectations_specialty_organization_get**
+> object students_affectations_specialty_organization_get(organization, specialty, period=period)
 
 
 
@@ -1031,10 +983,10 @@ specialty = 'specialty_example' # str |
 period = 'period_example' # str |  (optional)
 
 try:
-    api_response = api_instance.students_affectations_get(organization, specialty, period=period)
+    api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DefaultApi->students_affectations_get: %s\n" % e)
+    print("Exception when calling DefaultApi->students_affectations_specialty_organization_get: %s\n" % e)
 ```
 
 ### Parameters

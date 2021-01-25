@@ -1064,94 +1064,6 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def periods_active_get(self, **kwargs):  # noqa: E501
-        """periods_active_get  # noqa: E501
-
-        Obtain the list of active periods  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.periods_active_get(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: object
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.periods_active_get_with_http_info(**kwargs)  # noqa: E501
-        else:
-            (data) = self.periods_active_get_with_http_info(**kwargs)  # noqa: E501
-            return data
-
-    def periods_active_get_with_http_info(self, **kwargs):  # noqa: E501
-        """periods_active_get  # noqa: E501
-
-        Obtain the list of active periods  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.periods_active_get_with_http_info(async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :return: object
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = []  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method periods_active_get" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-
-        collection_formats = {}
-
-        path_params = {}
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Token']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/periods/active', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='object',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def periods_get(self, **kwargs):  # noqa: E501
         """periods_get  # noqa: E501
 
@@ -1162,6 +1074,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param bool active:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1183,6 +1096,7 @@ class DefaultApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param bool active:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1190,7 +1104,7 @@ class DefaultApi(object):
 
         local_var_params = locals()
 
-        all_params = []  # noqa: E501
+        all_params = ['active']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1210,6 +1124,8 @@ class DefaultApi(object):
         path_params = {}
 
         query_params = []
+        if 'active' in local_var_params:
+            query_params.append(('active', local_var_params['active']))  # noqa: E501
 
         header_params = {}
 
@@ -1736,13 +1652,13 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def students_affectations_get(self, organization, specialty, **kwargs):  # noqa: E501
-        """students_affectations_get  # noqa: E501
+    def students_affectations_specialty_organization_get(self, organization, specialty, **kwargs):  # noqa: E501
+        """students_affectations_specialty_organization_get  # noqa: E501
 
         Obtain the list of students affectations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.students_affectations_get(organization, specialty, async_req=True)
+        >>> thread = api.students_affectations_specialty_organization_get(organization, specialty, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1755,18 +1671,18 @@ class DefaultApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.students_affectations_get_with_http_info(organization, specialty, **kwargs)  # noqa: E501
+            return self.students_affectations_specialty_organization_get_with_http_info(organization, specialty, **kwargs)  # noqa: E501
         else:
-            (data) = self.students_affectations_get_with_http_info(organization, specialty, **kwargs)  # noqa: E501
+            (data) = self.students_affectations_specialty_organization_get_with_http_info(organization, specialty, **kwargs)  # noqa: E501
             return data
 
-    def students_affectations_get_with_http_info(self, organization, specialty, **kwargs):  # noqa: E501
-        """students_affectations_get  # noqa: E501
+    def students_affectations_specialty_organization_get_with_http_info(self, organization, specialty, **kwargs):  # noqa: E501
+        """students_affectations_specialty_organization_get  # noqa: E501
 
         Obtain the list of students affectations  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.students_affectations_get_with_http_info(organization, specialty, async_req=True)
+        >>> thread = api.students_affectations_specialty_organization_get_with_http_info(organization, specialty, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1790,28 +1706,28 @@ class DefaultApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method students_affectations_get" % key
+                    " to method students_affectations_specialty_organization_get" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'organization' is set
         if ('organization' not in local_var_params or
                 local_var_params['organization'] is None):
-            raise ValueError("Missing the required parameter `organization` when calling `students_affectations_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `organization` when calling `students_affectations_specialty_organization_get`")  # noqa: E501
         # verify the required parameter 'specialty' is set
         if ('specialty' not in local_var_params or
                 local_var_params['specialty'] is None):
-            raise ValueError("Missing the required parameter `specialty` when calling `students_affectations_get`")  # noqa: E501
+            raise ValueError("Missing the required parameter `specialty` when calling `students_affectations_specialty_organization_get`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'organization' in local_var_params:
+            path_params['organization'] = local_var_params['organization']  # noqa: E501
+        if 'specialty' in local_var_params:
+            path_params['specialty'] = local_var_params['specialty']  # noqa: E501
 
         query_params = []
-        if 'organization' in local_var_params:
-            query_params.append(('organization', local_var_params['organization']))  # noqa: E501
-        if 'specialty' in local_var_params:
-            query_params.append(('specialty', local_var_params['specialty']))  # noqa: E501
         if 'period' in local_var_params:
             query_params.append(('period', local_var_params['period']))  # noqa: E501
 
@@ -1829,7 +1745,7 @@ class DefaultApi(object):
         auth_settings = ['Token']  # noqa: E501
 
         return self.api_client.call_api(
-            '/students_affectations', 'GET',
+            '/students_affectations/{specialty}/{organization}', 'GET',
             path_params,
             query_params,
             header_params,
