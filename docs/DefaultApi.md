@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_affectations_specialty_organization_get**
-> object students_affectations_specialty_organization_get(organization, specialty, period=period)
+> object students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score)
 
 
 
@@ -981,9 +981,10 @@ api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(conf
 organization = 'organization_example' # str | 
 specialty = 'specialty_example' # str | 
 period = 'period_example' # str |  (optional)
+with_score = True # bool |  (optional)
 
 try:
-    api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period)
+    api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->students_affectations_specialty_organization_get: %s\n" % e)
@@ -996,6 +997,7 @@ Name | Type | Description  | Notes
  **organization** | **str**|  | 
  **specialty** | **str**|  | 
  **period** | **str**|  | [optional] 
+ **with_score** | **bool**|  | [optional] 
 
 ### Return type
 
