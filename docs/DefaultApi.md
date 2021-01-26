@@ -981,7 +981,7 @@ api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(conf
 organization = 'organization_example' # str | 
 specialty = 'specialty_example' # str | 
 period = 'period_example' # str |  (optional)
-with_score = True # bool |  (optional)
+with_score = False # bool |  (optional) (default to False)
 
 try:
     api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score)
@@ -997,7 +997,7 @@ Name | Type | Description  | Notes
  **organization** | **str**|  | 
  **specialty** | **str**|  | 
  **period** | **str**|  | [optional] 
- **with_score** | **bool**|  | [optional] 
+ **with_score** | **bool**|  | [optional] [default to False]
 
 ### Return type
 
