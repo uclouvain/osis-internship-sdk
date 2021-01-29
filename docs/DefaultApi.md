@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_affectations_specialty_organization_get**
-> object students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score)
+> object students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score, limit=limit, offset=offset)
 
 
 
@@ -982,9 +982,11 @@ organization = 'organization_example' # str |
 specialty = 'specialty_example' # str | 
 period = 'period_example' # str |  (optional)
 with_score = False # bool |  (optional) (default to False)
+limit = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 
 try:
-    api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score)
+    api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score, limit=limit, offset=offset)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DefaultApi->students_affectations_specialty_organization_get: %s\n" % e)
@@ -998,6 +1000,8 @@ Name | Type | Description  | Notes
  **specialty** | **str**|  | 
  **period** | **str**|  | [optional] 
  **with_score** | **bool**|  | [optional] [default to False]
+ **limit** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
 
 ### Return type
 
