@@ -980,7 +980,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
 organization = 'organization_example' # str | 
 specialty = 'specialty_example' # str | 
-period = 'period_example' # str |  (optional)
+period = 'all' # str |  (optional) (default to 'all')
 with_score = False # bool |  (optional) (default to False)
 limit = 56 # int |  (optional)
 offset = 56 # int |  (optional)
@@ -998,7 +998,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organization** | **str**|  | 
  **specialty** | **str**|  | 
- **period** | **str**|  | [optional] 
+ **period** | **str**|  | [optional] [default to &#39;all&#39;]
  **with_score** | **bool**|  | [optional] [default to False]
  **limit** | **int**|  | [optional] 
  **offset** | **int**|  | [optional] 
