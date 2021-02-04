@@ -34,23 +34,26 @@ class MasterGet(object):
         'url': 'str',
         'uuid': 'str',
         'person': 'Person',
-        'civility': 'str'
+        'civility': 'str',
+        'role': 'str'
     }
 
     attribute_map = {
         'url': 'url',
         'uuid': 'uuid',
         'person': 'person',
-        'civility': 'civility'
+        'civility': 'civility',
+        'role': 'role'
     }
 
-    def __init__(self, url=None, uuid=None, person=None, civility=None):  # noqa: E501
+    def __init__(self, url=None, uuid=None, person=None, civility=None, role=None):  # noqa: E501
         """MasterGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._url = None
         self._uuid = None
         self._person = None
         self._civility = None
+        self._role = None
         self.discriminator = None
 
         if url is not None:
@@ -61,6 +64,8 @@ class MasterGet(object):
             self.person = person
         if civility is not None:
             self.civility = civility
+        if role is not None:
+            self.role = role
 
     @property
     def url(self):
@@ -145,6 +150,27 @@ class MasterGet(object):
         """
 
         self._civility = civility
+
+    @property
+    def role(self):
+        """Gets the role of this MasterGet.  # noqa: E501
+
+
+        :return: The role of this MasterGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this MasterGet.
+
+
+        :param role: The role of this MasterGet.  # noqa: E501
+        :type: str
+        """
+
+        self._role = role
 
     def to_dict(self):
         """Returns the model properties as a dict"""
