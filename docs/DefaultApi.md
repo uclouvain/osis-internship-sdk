@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**cohorts_uuid_get**](DefaultApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
 [**internships_get**](DefaultApi.md#internships_get) | **GET** /internships | 
 [**internships_uuid_get**](DefaultApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
+[**masters_allocations_specialty_organization_get**](DefaultApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
 [**masters_allocations_uuid_get**](DefaultApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
 [**masters_get**](DefaultApi.md#masters_get) | **GET** /masters | 
 [**masters_uuid_activate_account_put**](DefaultApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account/ | 
@@ -227,6 +228,65 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**InternshipGet**](InternshipGet.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **masters_allocations_specialty_organization_get**
+> object masters_allocations_specialty_organization_get(organization, specialty, role=role)
+
+
+
+Obtain the list of master allocations filtered by specialty and organization
+
+### Example
+
+* Api Key Authentication (Token): 
+```python
+from __future__ import print_function
+import time
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = osis_internship_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+organization = 'organization_example' # str | 
+specialty = 'specialty_example' # str | 
+role = 'all' # str |  (optional) (default to 'all')
+
+try:
+    api_response = api_instance.masters_allocations_specialty_organization_get(organization, specialty, role=role)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->masters_allocations_specialty_organization_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organization** | **str**|  | 
+ **specialty** | **str**|  | 
+ **role** | **str**|  | [optional] [default to &#39;all&#39;]
+
+### Return type
+
+**object**
 
 ### Authorization
 
