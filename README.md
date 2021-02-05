@@ -81,7 +81,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**internships_uuid_get**](docs/DefaultApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
 *DefaultApi* | [**masters_allocations_specialty_organization_get**](docs/DefaultApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
 *DefaultApi* | [**masters_allocations_uuid_get**](docs/DefaultApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
-*DefaultApi* | [**masters_get**](docs/DefaultApi.md#masters_get) | **GET** /masters | 
+*DefaultApi* | [**masters_get**](docs/DefaultApi.md#masters_get) | **GET** /masters/ | 
+*DefaultApi* | [**masters_post**](docs/DefaultApi.md#masters_post) | **POST** /masters/ | 
 *DefaultApi* | [**masters_uuid_activate_account_put**](docs/DefaultApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account/ | 
 *DefaultApi* | [**masters_uuid_allocations_get**](docs/DefaultApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations/ | 
 *DefaultApi* | [**masters_uuid_get**](docs/DefaultApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
