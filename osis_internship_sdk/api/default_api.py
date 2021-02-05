@@ -508,6 +508,122 @@ class DefaultApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def masters_allocations_specialty_organization_post(self, organization, specialty, allocation_get, **kwargs):  # noqa: E501
+        """masters_allocations_specialty_organization_post  # noqa: E501
+
+        Create new internship allocation  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.masters_allocations_specialty_organization_post(organization, specialty, allocation_get, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str organization: (required)
+        :param str specialty: (required)
+        :param AllocationGet allocation_get: (required)
+        :return: AllocationGet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.masters_allocations_specialty_organization_post_with_http_info(organization, specialty, allocation_get, **kwargs)  # noqa: E501
+        else:
+            (data) = self.masters_allocations_specialty_organization_post_with_http_info(organization, specialty, allocation_get, **kwargs)  # noqa: E501
+            return data
+
+    def masters_allocations_specialty_organization_post_with_http_info(self, organization, specialty, allocation_get, **kwargs):  # noqa: E501
+        """masters_allocations_specialty_organization_post  # noqa: E501
+
+        Create new internship allocation  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.masters_allocations_specialty_organization_post_with_http_info(organization, specialty, allocation_get, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str organization: (required)
+        :param str specialty: (required)
+        :param AllocationGet allocation_get: (required)
+        :return: AllocationGet
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['organization', 'specialty', 'allocation_get']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method masters_allocations_specialty_organization_post" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'organization' is set
+        if ('organization' not in local_var_params or
+                local_var_params['organization'] is None):
+            raise ValueError("Missing the required parameter `organization` when calling `masters_allocations_specialty_organization_post`")  # noqa: E501
+        # verify the required parameter 'specialty' is set
+        if ('specialty' not in local_var_params or
+                local_var_params['specialty'] is None):
+            raise ValueError("Missing the required parameter `specialty` when calling `masters_allocations_specialty_organization_post`")  # noqa: E501
+        # verify the required parameter 'allocation_get' is set
+        if ('allocation_get' not in local_var_params or
+                local_var_params['allocation_get'] is None):
+            raise ValueError("Missing the required parameter `allocation_get` when calling `masters_allocations_specialty_organization_post`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'organization' in local_var_params:
+            path_params['organization'] = local_var_params['organization']  # noqa: E501
+        if 'specialty' in local_var_params:
+            path_params['specialty'] = local_var_params['specialty']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'allocation_get' in local_var_params:
+            body_params = local_var_params['allocation_get']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Token']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/masters_allocations/{specialty}/{organization}', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='AllocationGet',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def masters_allocations_uuid_get(self, uuid, **kwargs):  # noqa: E501
         """masters_allocations_uuid_get  # noqa: E501
 

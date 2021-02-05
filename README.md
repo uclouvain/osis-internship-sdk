@@ -80,6 +80,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**internships_get**](docs/DefaultApi.md#internships_get) | **GET** /internships | 
 *DefaultApi* | [**internships_uuid_get**](docs/DefaultApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
 *DefaultApi* | [**masters_allocations_specialty_organization_get**](docs/DefaultApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
+*DefaultApi* | [**masters_allocations_specialty_organization_post**](docs/DefaultApi.md#masters_allocations_specialty_organization_post) | **POST** /masters_allocations/{specialty}/{organization} | 
 *DefaultApi* | [**masters_allocations_uuid_get**](docs/DefaultApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
 *DefaultApi* | [**masters_get**](docs/DefaultApi.md#masters_get) | **GET** /masters/ | 
 *DefaultApi* | [**masters_post**](docs/DefaultApi.md#masters_post) | **POST** /masters/ | 
