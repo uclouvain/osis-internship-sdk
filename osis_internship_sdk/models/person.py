@@ -35,7 +35,8 @@ class Person(object):
         'first_name': 'str',
         'last_name': 'str',
         'email': 'str',
-        'gender': 'str'
+        'gender': 'str',
+        'birth_date': 'date'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class Person(object):
         'first_name': 'first_name',
         'last_name': 'last_name',
         'email': 'email',
-        'gender': 'gender'
+        'gender': 'gender',
+        'birth_date': 'birth_date'
     }
 
-    def __init__(self, uuid=None, first_name=None, last_name=None, email=None, gender=None):  # noqa: E501
+    def __init__(self, uuid=None, first_name=None, last_name=None, email=None, gender=None, birth_date=None):  # noqa: E501
         """Person - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -54,6 +56,7 @@ class Person(object):
         self._last_name = None
         self._email = None
         self._gender = None
+        self._birth_date = None
         self.discriminator = None
 
         if uuid is not None:
@@ -66,6 +69,8 @@ class Person(object):
             self.email = email
         if gender is not None:
             self.gender = gender
+        if birth_date is not None:
+            self.birth_date = birth_date
 
     @property
     def uuid(self):
@@ -171,6 +176,27 @@ class Person(object):
         """
 
         self._gender = gender
+
+    @property
+    def birth_date(self):
+        """Gets the birth_date of this Person.  # noqa: E501
+
+
+        :return: The birth_date of this Person.  # noqa: E501
+        :rtype: date
+        """
+        return self._birth_date
+
+    @birth_date.setter
+    def birth_date(self, birth_date):
+        """Sets the birth_date of this Person.
+
+
+        :param birth_date: The birth_date of this Person.  # noqa: E501
+        :type: date
+        """
+
+        self._birth_date = birth_date
 
     def to_dict(self):
         """Returns the model properties as a dict"""
