@@ -10,6 +10,7 @@ Method | HTTP request | Description
 [**internships_uuid_get**](DefaultApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
 [**masters_allocations_specialty_organization_get**](DefaultApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
 [**masters_allocations_specialty_organization_post**](DefaultApi.md#masters_allocations_specialty_organization_post) | **POST** /masters_allocations/{specialty}/{organization} | 
+[**masters_allocations_uuid_delete**](DefaultApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid} | 
 [**masters_allocations_uuid_get**](DefaultApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
 [**masters_get**](DefaultApi.md#masters_get) | **GET** /masters/ | 
 [**masters_post**](DefaultApi.md#masters_post) | **POST** /masters/ | 
@@ -356,6 +357,61 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **masters_allocations_uuid_delete**
+> AllocationGet masters_allocations_uuid_delete(uuid)
+
+
+
+Delete a master allocation
+
+### Example
+
+* Api Key Authentication (Token): 
+```python
+from __future__ import print_function
+import time
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = osis_internship_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+uuid = 'uuid_example' # str | The UUID of the master allocation
+
+try:
+    api_response = api_instance.masters_allocations_uuid_delete(uuid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DefaultApi->masters_allocations_uuid_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | [**str**](.md)| The UUID of the master allocation | 
+
+### Return type
+
+[**AllocationGet**](AllocationGet.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
