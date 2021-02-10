@@ -32,6 +32,7 @@ class AllocationGet(object):
     """
     openapi_types = {
         'url': 'str',
+        'uuid': 'str',
         'master': 'MasterGet',
         'organization': 'OrganizationGet',
         'specialty': 'SpecialtyGet'
@@ -39,15 +40,17 @@ class AllocationGet(object):
 
     attribute_map = {
         'url': 'url',
+        'uuid': 'uuid',
         'master': 'master',
         'organization': 'organization',
         'specialty': 'specialty'
     }
 
-    def __init__(self, url=None, master=None, organization=None, specialty=None):  # noqa: E501
+    def __init__(self, url=None, uuid=None, master=None, organization=None, specialty=None):  # noqa: E501
         """AllocationGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._url = None
+        self._uuid = None
         self._master = None
         self._organization = None
         self._specialty = None
@@ -55,6 +58,8 @@ class AllocationGet(object):
 
         if url is not None:
             self.url = url
+        if uuid is not None:
+            self.uuid = uuid
         if master is not None:
             self.master = master
         if organization is not None:
@@ -82,6 +87,27 @@ class AllocationGet(object):
         """
 
         self._url = url
+
+    @property
+    def uuid(self):
+        """Gets the uuid of this AllocationGet.  # noqa: E501
+
+
+        :return: The uuid of this AllocationGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._uuid
+
+    @uuid.setter
+    def uuid(self, uuid):
+        """Sets the uuid of this AllocationGet.
+
+
+        :param uuid: The uuid of this AllocationGet.  # noqa: E501
+        :type: str
+        """
+
+        self._uuid = uuid
 
     @property
     def master(self):

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** |  | [optional] 
+**uuid** | **str** |  | [optional] 
 **master** | [**MasterGet**](MasterGet.md) |  | [optional] 
 **organization** | [**OrganizationGet**](OrganizationGet.md) |  | [optional] 
 **specialty** | [**SpecialtyGet**](SpecialtyGet.md) |  | [optional] 
