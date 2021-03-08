@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**organizations_uuid_get**](DefaultApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
 [**periods_get**](DefaultApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
+[**scores_affectation_uuid_validate_get**](DefaultApi.md#scores_affectation_uuid_validate_get) | **GET** /scores/{affectation_uuid}/validate | 
 [**scores_student_uuid_period_uuid_get**](DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
 [**scores_student_uuid_period_uuid_put**](DefaultApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
 [**specialties_get**](DefaultApi.md#specialties_get) | **GET** /specialties | 
@@ -952,6 +953,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PeriodGet**](PeriodGet.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **scores_affectation_uuid_validate_get**
+> scores_affectation_uuid_validate_get(affectation_uuid)
+
+
+
+Validate a score
+
+### Example
+
+* Api Key Authentication (Token): 
+```python
+from __future__ import print_function
+import time
+import osis_internship_sdk
+from osis_internship_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Token
+configuration = osis_internship_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+affectation_uuid = 'affectation_uuid_example' # str | The UUID of the period
+
+try:
+    api_instance.scores_affectation_uuid_validate_get(affectation_uuid)
+except ApiException as e:
+    print("Exception when calling DefaultApi->scores_affectation_uuid_validate_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **affectation_uuid** | [**str**](.md)| The UUID of the period | 
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
