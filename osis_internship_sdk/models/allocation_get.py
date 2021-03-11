@@ -35,7 +35,8 @@ class AllocationGet(object):
         'uuid': 'str',
         'master': 'MasterGet',
         'organization': 'OrganizationGet',
-        'specialty': 'SpecialtyGet'
+        'specialty': 'SpecialtyGet',
+        'role': 'str'
     }
 
     attribute_map = {
@@ -43,10 +44,11 @@ class AllocationGet(object):
         'uuid': 'uuid',
         'master': 'master',
         'organization': 'organization',
-        'specialty': 'specialty'
+        'specialty': 'specialty',
+        'role': 'role'
     }
 
-    def __init__(self, url=None, uuid=None, master=None, organization=None, specialty=None):  # noqa: E501
+    def __init__(self, url=None, uuid=None, master=None, organization=None, specialty=None, role=None):  # noqa: E501
         """AllocationGet - a model defined in OpenAPI"""  # noqa: E501
 
         self._url = None
@@ -54,6 +56,7 @@ class AllocationGet(object):
         self._master = None
         self._organization = None
         self._specialty = None
+        self._role = None
         self.discriminator = None
 
         if url is not None:
@@ -66,6 +69,8 @@ class AllocationGet(object):
             self.organization = organization
         if specialty is not None:
             self.specialty = specialty
+        if role is not None:
+            self.role = role
 
     @property
     def url(self):
@@ -171,6 +176,27 @@ class AllocationGet(object):
         """
 
         self._specialty = specialty
+
+    @property
+    def role(self):
+        """Gets the role of this AllocationGet.  # noqa: E501
+
+
+        :return: The role of this AllocationGet.  # noqa: E501
+        :rtype: str
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this AllocationGet.
+
+
+        :param role: The role of this AllocationGet.  # noqa: E501
+        :type: str
+        """
+
+        self._role = role
 
     def to_dict(self):
         """Returns the model properties as a dict"""
