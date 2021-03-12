@@ -41,28 +41,40 @@ Obtain the list of cohorts
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
 
-try:
-    api_response = api_instance.cohorts_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->cohorts_get: %s\n" % e)
+    # example, this endpoint has no required or optional parameters
+    try:
+        api_response = api_instance.cohorts_get()
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->cohorts_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -81,6 +93,11 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of cohorts |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cohorts_uuid_get**
@@ -92,36 +109,49 @@ Obtain information about a specific cohort
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.cohort_get import CohortGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the cohort
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the cohort
 
-try:
-    api_response = api_instance.cohorts_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->cohorts_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.cohorts_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->cohorts_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the cohort | 
+ **uuid** | **str**| The UUID of the cohort |
 
 ### Return type
 
@@ -136,6 +166,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of a cohort&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **internships_get**
@@ -147,28 +182,40 @@ Obtain the list of internships
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
 
-try:
-    api_response = api_instance.internships_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->internships_get: %s\n" % e)
+    # example, this endpoint has no required or optional parameters
+    try:
+        api_response = api_instance.internships_get()
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->internships_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -187,6 +234,11 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of internships |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **internships_uuid_get**
@@ -198,36 +250,49 @@ Obtain information about a specific internship
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.internship_get import InternshipGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the internship
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the internship
 
-try:
-    api_response = api_instance.internships_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->internships_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.internships_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->internships_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the internship | 
+ **uuid** | **str**| The UUID of the internship |
 
 ### Return type
 
@@ -242,10 +307,15 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of an internship&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_allocations_specialty_organization_get**
-> object masters_allocations_specialty_organization_get(organization, specialty, role=role)
+> object masters_allocations_specialty_organization_get(organization, specialty)
 
 
 
@@ -253,40 +323,60 @@ Obtain the list of master allocations filtered by specialty and organization
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-organization = 'organization_example' # str | 
-specialty = 'specialty_example' # str | 
-role = 'all' # str |  (optional) (default to 'all')
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    organization = "organization_example" # str | 
+    specialty = "specialty_example" # str | 
+    role = "all" # str |  (optional) if omitted the server will use the default value of "all"
 
-try:
-    api_response = api_instance.masters_allocations_specialty_organization_get(organization, specialty, role=role)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_allocations_specialty_organization_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_allocations_specialty_organization_get(organization, specialty)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_allocations_specialty_organization_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_allocations_specialty_organization_get(organization, specialty, role=role)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_allocations_specialty_organization_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **organization** | **str**|  | 
- **specialty** | **str**|  | 
- **role** | **str**|  | [optional] [default to &#39;all&#39;]
+ **organization** | **str**|  |
+ **specialty** | **str**|  |
+ **role** | **str**|  | [optional] if omitted the server will use the default value of "all"
 
 ### Return type
 
@@ -300,6 +390,11 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of masters allocations |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -312,40 +407,114 @@ Create new internship allocation
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.allocation_get import AllocationGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-organization = 'organization_example' # str | 
-specialty = 'specialty_example' # str | 
-allocation_get = osis_internship_sdk.AllocationGet() # AllocationGet | 
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    organization = "organization_example" # str | 
+    specialty = "specialty_example" # str | 
+    allocation_get = AllocationGet(
+        url="url_example",
+        uuid="uuid_example",
+        master=MasterGet(
+            url="url_example",
+            uuid="uuid_example",
+            person=Person(
+                uuid="uuid_example",
+                first_name="Dupont",
+                last_name="Jacques",
+                email="jacques.dupont@mail.xyz",
+                gender="M",
+                birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
+            ),
+            civility="DOCTOR",
+        ),
+        organization=OrganizationGet(
+            url="url_example",
+            uuid="uuid_example",
+            name="CHU XYZ",
+            acronym="XYZ",
+            website="www.chuxyz.be",
+            reference="01",
+            phone="01/01.01.01",
+            location="Rue de l'hôpital",
+            postal_code="1000",
+            city="Bruxelles",
+            country=Country(
+                url="url_example",
+                uuid="uuid_example",
+                iso_code="BE",
+                name="Belgium",
+                nationality="Belgian",
+            ),
+            cohort=CohortGet(
+                url="url_example",
+                name="R6-2021",
+                description="Student cohort for academic year 2020-2021",
+                publication_start_date="01/04/2020",
+                subscription_start_date="01/02/2020",
+                subscription_end_date="01/03/2020",
+            ),
+        ),
+        specialty=SpecialtyGet(
+            url="url_example",
+            uuid="uuid_example",
+            name="Xyzetologie",
+            acronym="XYZ",
+            mandatory=True,
+            sequence=1,
+            cohort=CohortGet(
+                url="url_example",
+                name="R6-2021",
+                description="Student cohort for academic year 2020-2021",
+                publication_start_date="01/04/2020",
+                subscription_start_date="01/02/2020",
+                subscription_end_date="01/03/2020",
+            ),
+            selectable=True,
+        ),
+        role="MASTER",
+    ) # AllocationGet | 
 
-try:
-    api_response = api_instance.masters_allocations_specialty_organization_post(organization, specialty, allocation_get)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_allocations_specialty_organization_post: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_allocations_specialty_organization_post(organization, specialty, allocation_get)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_allocations_specialty_organization_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **organization** | **str**|  | 
- **specialty** | **str**|  | 
- **allocation_get** | [**AllocationGet**](AllocationGet.md)|  | 
+ **organization** | **str**|  |
+ **specialty** | **str**|  |
+ **allocation_get** | [**AllocationGet**](AllocationGet.md)|  |
 
 ### Return type
 
@@ -359,6 +528,11 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully created an internship master allocation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -371,36 +545,49 @@ Delete a master allocation
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.allocation_get import AllocationGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the master allocation
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the master allocation
 
-try:
-    api_response = api_instance.masters_allocations_uuid_delete(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_allocations_uuid_delete: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_allocations_uuid_delete(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_allocations_uuid_delete: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the master allocation | 
+ **uuid** | **str**| The UUID of the master allocation |
 
 ### Return type
 
@@ -414,6 +601,11 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful delete of a master allocation&#39;s data. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -426,36 +618,49 @@ Obtain information about a specific master allocation
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.allocation_get import AllocationGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the master allocation
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the master allocation
 
-try:
-    api_response = api_instance.masters_allocations_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_allocations_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_allocations_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_allocations_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the master allocation | 
+ **uuid** | **str**| The UUID of the master allocation |
 
 ### Return type
 
@@ -470,10 +675,15 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of a master allocation&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_get**
-> object masters_get(search=search)
+> object masters_get()
 
 
 
@@ -481,36 +691,49 @@ Obtain the list of internship masters
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-search = 'search_example' # str |  (optional)
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    search = "search_example" # str |  (optional)
 
-try:
-    api_response = api_instance.masters_get(search=search)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_get(search=search)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **search** | **str**|  | [optional] 
+ **search** | **str**|  | [optional]
 
 ### Return type
 
@@ -525,6 +748,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of internship masters |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_post**
@@ -536,36 +764,61 @@ Create new internship master
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.master_get import MasterGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-master_get = osis_internship_sdk.MasterGet() # MasterGet | 
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    master_get = MasterGet(
+        url="url_example",
+        uuid="uuid_example",
+        person=Person(
+            uuid="uuid_example",
+            first_name="Dupont",
+            last_name="Jacques",
+            email="jacques.dupont@mail.xyz",
+            gender="M",
+            birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
+        ),
+        civility="DOCTOR",
+    ) # MasterGet | 
 
-try:
-    api_response = api_instance.masters_post(master_get)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_post: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_post(master_get)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **master_get** | [**MasterGet**](MasterGet.md)|  | 
+ **master_get** | [**MasterGet**](MasterGet.md)|  |
 
 ### Return type
 
@@ -580,6 +833,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully created an internship master |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_uuid_activate_account_put**
@@ -591,36 +849,49 @@ Set master account activation status to ACTIVE
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.master_get import MasterGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the master
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the master
 
-try:
-    api_response = api_instance.masters_uuid_activate_account_put(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_uuid_activate_account_put: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_uuid_activate_account_put(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_uuid_activate_account_put: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the master | 
+ **uuid** | **str**| The UUID of the master |
 
 ### Return type
 
@@ -635,10 +906,15 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful master&#39;s account status update. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_uuid_allocations_get**
-> object masters_uuid_allocations_get(uuid, current=current)
+> object masters_uuid_allocations_get(uuid)
 
 
 
@@ -646,38 +922,58 @@ Obtain the list of internship-master allocations
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the master
-current = True # bool |  (optional)
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the master
+    current = True # bool |  (optional)
 
-try:
-    api_response = api_instance.masters_uuid_allocations_get(uuid, current=current)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_uuid_allocations_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_uuid_allocations_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_uuid_allocations_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_uuid_allocations_get(uuid, current=current)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_uuid_allocations_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the master | 
- **current** | **bool**|  | [optional] 
+ **uuid** | **str**| The UUID of the master |
+ **current** | **bool**|  | [optional]
 
 ### Return type
 
@@ -692,6 +988,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of allocations |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_uuid_get**
@@ -703,36 +1004,49 @@ Obtain information about a specific master
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.master_get import MasterGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the master
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the master
 
-try:
-    api_response = api_instance.masters_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->masters_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->masters_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the master | 
+ **uuid** | **str**| The UUID of the master |
 
 ### Return type
 
@@ -747,6 +1061,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of a master&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organizations_get**
@@ -758,28 +1077,40 @@ Obtain the list of organizations
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
 
-try:
-    api_response = api_instance.organizations_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->organizations_get: %s\n" % e)
+    # example, this endpoint has no required or optional parameters
+    try:
+        api_response = api_instance.organizations_get()
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->organizations_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -798,6 +1129,11 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of organizations |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organizations_uuid_get**
@@ -809,36 +1145,49 @@ Obtain information about a specific organization
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.organization_get import OrganizationGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the organization
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the organization
 
-try:
-    api_response = api_instance.organizations_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->organizations_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.organizations_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->organizations_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the organization | 
+ **uuid** | **str**| The UUID of the organization |
 
 ### Return type
 
@@ -853,10 +1202,15 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of an organization&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **periods_get**
-> object periods_get(active=active)
+> object periods_get()
 
 
 
@@ -864,36 +1218,49 @@ Obtain the list of periods
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-active = True # bool |  (optional)
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    active = True # bool |  (optional)
 
-try:
-    api_response = api_instance.periods_get(active=active)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->periods_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.periods_get(active=active)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->periods_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **active** | **bool**|  | [optional] 
+ **active** | **bool**|  | [optional]
 
 ### Return type
 
@@ -908,6 +1275,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of periods |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **periods_uuid_get**
@@ -919,36 +1291,49 @@ Obtain information about a specific period
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.period_get import PeriodGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the period
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the period
 
-try:
-    api_response = api_instance.periods_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->periods_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.periods_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->periods_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the period | 
+ **uuid** | **str**| The UUID of the period |
 
 ### Return type
 
@@ -963,6 +1348,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of a period&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **scores_affectation_uuid_validate_get**
@@ -974,35 +1364,48 @@ Validate a score
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-affectation_uuid = 'affectation_uuid_example' # str | The UUID of the period
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    affectation_uuid = "affectation_uuid_example" # str | The UUID of the period
 
-try:
-    api_instance.scores_affectation_uuid_validate_get(affectation_uuid)
-except ApiException as e:
-    print("Exception when calling DefaultApi->scores_affectation_uuid_validate_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.scores_affectation_uuid_validate_get(affectation_uuid)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->scores_affectation_uuid_validate_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **affectation_uuid** | [**str**](.md)| The UUID of the period | 
+ **affectation_uuid** | **str**| The UUID of the period |
 
 ### Return type
 
@@ -1017,6 +1420,12 @@ void (empty response body)
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successfully validated an internship score |  -  |
+**404** | Affectation or score not found, validation aborted |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **scores_student_uuid_period_uuid_get**
@@ -1028,38 +1437,51 @@ Get or create information about a specific student's score for a given period
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.score_get import ScoreGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-student_uuid = 'student_uuid_example' # str | The UUID of the student
-period_uuid = 'period_uuid_example' # str | The UUID of the period
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    student_uuid = "student_uuid_example" # str | The UUID of the student
+    period_uuid = "period_uuid_example" # str | The UUID of the period
 
-try:
-    api_response = api_instance.scores_student_uuid_period_uuid_get(student_uuid, period_uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.scores_student_uuid_period_uuid_get(student_uuid, period_uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **student_uuid** | [**str**](.md)| The UUID of the student | 
- **period_uuid** | [**str**](.md)| The UUID of the period | 
+ **student_uuid** | **str**| The UUID of the student |
+ **period_uuid** | **str**| The UUID of the period |
 
 ### Return type
 
@@ -1074,6 +1496,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get or create of a student&#39;s score for a given period. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **scores_student_uuid_period_uuid_put**
@@ -1085,39 +1512,102 @@ Update a student's score for a given period
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.score_get import ScoreGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-student_uuid = 'student_uuid_example' # str | The UUID of the student
-period_uuid = 'period_uuid_example' # str | The UUID of the period
-score_get = osis_internship_sdk.ScoreGet() # ScoreGet | 
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    student_uuid = "student_uuid_example" # str | The UUID of the student
+    period_uuid = "period_uuid_example" # str | The UUID of the period
+    score_get = ScoreGet(
+        uuid="uuid_example",
+        student=Student(
+            uuid="uuid_example",
+            registration_id="44444444444",
+            person=Person(
+                uuid="uuid_example",
+                first_name="Dupont",
+                last_name="Jacques",
+                email="jacques.dupont@mail.xyz",
+                gender="M",
+                birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
+            ),
+        ),
+        period=PeriodGet(
+            url="url_example",
+            uuid="uuid_example",
+            name="P1",
+            date_start="01/02/2020",
+            date_end="01/03/2020",
+        ),
+        cohort=CohortGet(
+            url="url_example",
+            name="R6-2021",
+            description="Student cohort for academic year 2020-2021",
+            publication_start_date="01/04/2020",
+            subscription_start_date="01/02/2020",
+            subscription_end_date="01/03/2020",
+        ),
+        excused=True,
+        reason="reason_example",
+        score=3.14,
+        comments={},
+        objectives={},
+        validated=True,
+        apd_1="apd_1_example",
+        apd_2="apd_2_example",
+        apd_3="apd_3_example",
+        apd_4="apd_4_example",
+        apd_5="apd_5_example",
+        apd_6="apd_6_example",
+        apd_7="apd_7_example",
+        apd_8="apd_8_example",
+        apd_9="apd_9_example",
+        apd_10="apd_10_example",
+        apd_11="apd_11_example",
+        apd_12="apd_12_example",
+        apd_13="apd_13_example",
+        apd_14="apd_14_example",
+        apd_15="apd_15_example",
+    ) # ScoreGet | 
 
-try:
-    api_instance.scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get)
-except ApiException as e:
-    print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_put: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->scores_student_uuid_period_uuid_put: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **student_uuid** | [**str**](.md)| The UUID of the student | 
- **period_uuid** | [**str**](.md)| The UUID of the period | 
- **score_get** | [**ScoreGet**](ScoreGet.md)|  | 
+ **student_uuid** | **str**| The UUID of the student |
+ **period_uuid** | **str**| The UUID of the period |
+ **score_get** | [**ScoreGet**](ScoreGet.md)|  |
 
 ### Return type
 
@@ -1132,6 +1622,11 @@ void (empty response body)
  - **Content-Type**: application/json
  - **Accept**: Not defined
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Successful update of a score for a given period |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **specialties_get**
@@ -1143,28 +1638,40 @@ Obtain the list of specialties
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
 
-try:
-    api_response = api_instance.specialties_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->specialties_get: %s\n" % e)
+    # example, this endpoint has no required or optional parameters
+    try:
+        api_response = api_instance.specialties_get()
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->specialties_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -1183,6 +1690,11 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of specialties |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **specialties_uuid_get**
@@ -1194,36 +1706,49 @@ Obtain information about a specific specialty
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.specialty_get import SpecialtyGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the specialty
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the specialty
 
-try:
-    api_response = api_instance.specialties_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->specialties_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.specialties_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->specialties_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the specialty | 
+ **uuid** | **str**| The UUID of the specialty |
 
 ### Return type
 
@@ -1238,10 +1763,15 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of a specialty&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_affectations_specialty_organization_get**
-> object students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score, limit=limit, offset=offset)
+> object students_affectations_specialty_organization_get(organization, specialty)
 
 
 
@@ -1249,46 +1779,66 @@ Obtain the list of students affectations
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-organization = 'organization_example' # str | 
-specialty = 'specialty_example' # str | 
-period = 'all' # str |  (optional) (default to 'all')
-with_score = False # bool |  (optional) (default to False)
-limit = 56 # int |  (optional)
-offset = 56 # int |  (optional)
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    organization = "organization_example" # str | 
+    specialty = "specialty_example" # str | 
+    period = "all" # str |  (optional) if omitted the server will use the default value of "all"
+    with_score = False # bool |  (optional) if omitted the server will use the default value of False
+    limit = 1 # int |  (optional)
+    offset = 1 # int |  (optional)
 
-try:
-    api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score, limit=limit, offset=offset)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->students_affectations_specialty_organization_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->students_affectations_specialty_organization_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score, limit=limit, offset=offset)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->students_affectations_specialty_organization_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **organization** | **str**|  | 
- **specialty** | **str**|  | 
- **period** | **str**|  | [optional] [default to &#39;all&#39;]
- **with_score** | **bool**|  | [optional] [default to False]
- **limit** | **int**|  | [optional] 
- **offset** | **int**|  | [optional] 
+ **organization** | **str**|  |
+ **specialty** | **str**|  |
+ **period** | **str**|  | [optional] if omitted the server will use the default value of "all"
+ **with_score** | **bool**|  | [optional] if omitted the server will use the default value of False
+ **limit** | **int**|  | [optional]
+ **offset** | **int**|  | [optional]
 
 ### Return type
 
@@ -1303,6 +1853,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of students affectations |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_affectations_uuid_get**
@@ -1314,36 +1869,49 @@ Obtain information about a specific student's affectation
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.student_affectation_get import StudentAffectationGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the student's affectation
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the student's affectation
 
-try:
-    api_response = api_instance.students_affectations_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->students_affectations_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.students_affectations_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->students_affectations_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the student&#39;s affectation | 
+ **uuid** | **str**| The UUID of the student&#39;s affectation |
 
 ### Return type
 
@@ -1358,6 +1926,11 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of a student&#39;s affectation&#39;s data. |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_get**
@@ -1369,28 +1942,40 @@ Obtain the list of students
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
 
-try:
-    api_response = api_instance.students_get()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->students_get: %s\n" % e)
+    # example, this endpoint has no required or optional parameters
+    try:
+        api_response = api_instance.students_get()
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->students_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -1409,6 +1994,11 @@ This endpoint does not need any parameter.
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of the list of students |  -  |
+
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_uuid_get**
@@ -1420,36 +2010,49 @@ Obtain information about a specific internship student
 
 ### Example
 
-* Api Key Authentication (Token): 
+* Api Key Authentication (Token):
 ```python
-from __future__ import print_function
 import time
 import osis_internship_sdk
-from osis_internship_sdk.rest import ApiException
+from osis_internship_sdk.api import default_api
+from osis_internship_sdk.model.student_get import StudentGet
 from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
 
 # Configure API key authorization: Token
-configuration = osis_internship_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Token'] = 'Bearer'
 
-# create an instance of the API class
-api_instance = osis_internship_sdk.DefaultApi(osis_internship_sdk.ApiClient(configuration))
-uuid = 'uuid_example' # str | The UUID of the internship student
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = default_api.DefaultApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the internship student
 
-try:
-    api_response = api_instance.students_uuid_get(uuid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling DefaultApi->students_uuid_get: %s\n" % e)
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.students_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling DefaultApi->students_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | [**str**](.md)| The UUID of the internship student | 
+ **uuid** | **str**| The UUID of the internship student |
 
 ### Return type
 
@@ -1463,6 +2066,11 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of a internship student&#39;s data. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

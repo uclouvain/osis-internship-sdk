@@ -1,4 +1,5 @@
 {
   "packageName": "osis_internship_sdk",
-  "projectName": "osis_internship_sdk"
+  "projectName": "osis-internship-sdk",
+  "packageVersion": "1.0.11"
 }
