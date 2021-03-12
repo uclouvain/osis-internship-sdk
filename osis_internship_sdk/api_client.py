@@ -761,7 +761,7 @@ class Endpoint(object):
         """ This method is invoked when endpoints are called
         Example:
 
-        api_instance = DefaultApi()
+        api_instance = InternshipApi()
         api_instance.cohorts_get  # this is an instance of the class Endpoint
         api_instance.cohorts_get()  # this invokes api_instance.cohorts_get.__call__()
         which then invokes the callable functions stored in that endpoint at

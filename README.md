@@ -10,7 +10,7 @@ For more information, please visit [https://github.com/uclouvain/osis](https://g
 
 ## Requirements.
 
-Python >= 3.5
+Python >= 3.6
 
 ## Installation & Usage
 ### pip install
@@ -50,7 +50,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 import time
 import osis_internship_sdk
 from pprint import pprint
-from osis_internship_sdk.api import default_api
+from osis_internship_sdk.api import internship_api
 from osis_internship_sdk.model.allocation_get import AllocationGet
 from osis_internship_sdk.model.cohort_get import CohortGet
 from osis_internship_sdk.model.inline_response404 import InlineResponse404
@@ -83,13 +83,13 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 # Enter a context with an instance of the API client
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = default_api.DefaultApi(api_client)
+    api_instance = internship_api.InternshipApi(api_client)
     
     try:
         api_response = api_instance.cohorts_get()
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling DefaultApi->cohorts_get: %s\n" % e)
+        print("Exception when calling InternshipApi->cohorts_get: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -98,32 +98,32 @@ All URIs are relative to *https://dev.osis.uclouvain.be/api/v1/internship*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**cohorts_get**](docs/DefaultApi.md#cohorts_get) | **GET** /cohorts | 
-*DefaultApi* | [**cohorts_uuid_get**](docs/DefaultApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
-*DefaultApi* | [**internships_get**](docs/DefaultApi.md#internships_get) | **GET** /internships | 
-*DefaultApi* | [**internships_uuid_get**](docs/DefaultApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
-*DefaultApi* | [**masters_allocations_specialty_organization_get**](docs/DefaultApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
-*DefaultApi* | [**masters_allocations_specialty_organization_post**](docs/DefaultApi.md#masters_allocations_specialty_organization_post) | **POST** /masters_allocations/{specialty}/{organization} | 
-*DefaultApi* | [**masters_allocations_uuid_delete**](docs/DefaultApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid} | 
-*DefaultApi* | [**masters_allocations_uuid_get**](docs/DefaultApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
-*DefaultApi* | [**masters_get**](docs/DefaultApi.md#masters_get) | **GET** /masters/ | 
-*DefaultApi* | [**masters_post**](docs/DefaultApi.md#masters_post) | **POST** /masters/ | 
-*DefaultApi* | [**masters_uuid_activate_account_put**](docs/DefaultApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account/ | 
-*DefaultApi* | [**masters_uuid_allocations_get**](docs/DefaultApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations/ | 
-*DefaultApi* | [**masters_uuid_get**](docs/DefaultApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
-*DefaultApi* | [**organizations_get**](docs/DefaultApi.md#organizations_get) | **GET** /organizations | 
-*DefaultApi* | [**organizations_uuid_get**](docs/DefaultApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
-*DefaultApi* | [**periods_get**](docs/DefaultApi.md#periods_get) | **GET** /periods | 
-*DefaultApi* | [**periods_uuid_get**](docs/DefaultApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
-*DefaultApi* | [**scores_affectation_uuid_validate_get**](docs/DefaultApi.md#scores_affectation_uuid_validate_get) | **GET** /scores/{affectation_uuid}/validate | 
-*DefaultApi* | [**scores_student_uuid_period_uuid_get**](docs/DefaultApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
-*DefaultApi* | [**scores_student_uuid_period_uuid_put**](docs/DefaultApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
-*DefaultApi* | [**specialties_get**](docs/DefaultApi.md#specialties_get) | **GET** /specialties | 
-*DefaultApi* | [**specialties_uuid_get**](docs/DefaultApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
-*DefaultApi* | [**students_affectations_specialty_organization_get**](docs/DefaultApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
-*DefaultApi* | [**students_affectations_uuid_get**](docs/DefaultApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
-*DefaultApi* | [**students_get**](docs/DefaultApi.md#students_get) | **GET** /students | 
-*DefaultApi* | [**students_uuid_get**](docs/DefaultApi.md#students_uuid_get) | **GET** /students/{uuid} | 
+*InternshipApi* | [**cohorts_get**](docs/InternshipApi.md#cohorts_get) | **GET** /cohorts | 
+*InternshipApi* | [**cohorts_uuid_get**](docs/InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
+*InternshipApi* | [**internships_get**](docs/InternshipApi.md#internships_get) | **GET** /internships | 
+*InternshipApi* | [**internships_uuid_get**](docs/InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
+*InternshipApi* | [**masters_allocations_specialty_organization_get**](docs/InternshipApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
+*InternshipApi* | [**masters_allocations_specialty_organization_post**](docs/InternshipApi.md#masters_allocations_specialty_organization_post) | **POST** /masters_allocations/{specialty}/{organization} | 
+*InternshipApi* | [**masters_allocations_uuid_delete**](docs/InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid} | 
+*InternshipApi* | [**masters_allocations_uuid_get**](docs/InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
+*InternshipApi* | [**masters_get**](docs/InternshipApi.md#masters_get) | **GET** /masters/ | 
+*InternshipApi* | [**masters_post**](docs/InternshipApi.md#masters_post) | **POST** /masters/ | 
+*InternshipApi* | [**masters_uuid_activate_account_put**](docs/InternshipApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account/ | 
+*InternshipApi* | [**masters_uuid_allocations_get**](docs/InternshipApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations/ | 
+*InternshipApi* | [**masters_uuid_get**](docs/InternshipApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
+*InternshipApi* | [**organizations_get**](docs/InternshipApi.md#organizations_get) | **GET** /organizations | 
+*InternshipApi* | [**organizations_uuid_get**](docs/InternshipApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
+*InternshipApi* | [**periods_get**](docs/InternshipApi.md#periods_get) | **GET** /periods | 
+*InternshipApi* | [**periods_uuid_get**](docs/InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
+*InternshipApi* | [**scores_affectation_uuid_validate_get**](docs/InternshipApi.md#scores_affectation_uuid_validate_get) | **GET** /scores/{affectation_uuid}/validate | 
+*InternshipApi* | [**scores_student_uuid_period_uuid_get**](docs/InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
+*InternshipApi* | [**scores_student_uuid_period_uuid_put**](docs/InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
+*InternshipApi* | [**specialties_get**](docs/InternshipApi.md#specialties_get) | **GET** /specialties | 
+*InternshipApi* | [**specialties_uuid_get**](docs/InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
+*InternshipApi* | [**students_affectations_specialty_organization_get**](docs/InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
+*InternshipApi* | [**students_affectations_uuid_get**](docs/InternshipApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
+*InternshipApi* | [**students_get**](docs/InternshipApi.md#students_get) | **GET** /students | 
+*InternshipApi* | [**students_uuid_get**](docs/InternshipApi.md#students_uuid_get) | **GET** /students/{uuid} | 
 
 
 ## Documentation For Models

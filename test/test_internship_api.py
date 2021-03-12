@@ -11,14 +11,14 @@
 import unittest
 
 import osis_internship_sdk
-from osis_internship_sdk.api.default_api import DefaultApi  # noqa: E501
+from osis_internship_sdk.api.internship_api import InternshipApi  # noqa: E501
 
 
-class TestDefaultApi(unittest.TestCase):
-    """DefaultApi unit test stubs"""
+class TestInternshipApi(unittest.TestCase):
+    """InternshipApi unit test stubs"""
 
     def setUp(self):
-        self.api = DefaultApi()  # noqa: E501
+        self.api = InternshipApi()  # noqa: E501
 
     def tearDown(self):
         pass

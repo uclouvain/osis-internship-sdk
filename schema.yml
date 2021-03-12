@@ -43,6 +43,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/MasterGet'
+      tags:
+        - internship
     post:
       description: Create new internship master
       requestBody:
@@ -58,7 +60,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MasterGet'
-
+      tags:
+        - internship
   /masters/{uuid}:
     get:
       description: Obtain information about a specific master
@@ -76,7 +79,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MasterGet'
-
+      tags:
+        - internship
   /masters/{uuid}/activate_account/:
     put:
       description: Set master account activation status to ACTIVE
@@ -94,7 +98,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/MasterGet'
-
+      tags:
+        - internship
   /masters/{uuid}/allocations/:
     get:
       description: Obtain the list of internship-master allocations
@@ -124,7 +129,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/AllocationGet'
-
+      tags:
+        - internship
   /masters_allocations/{uuid}:
     get:
       description: Obtain information about a specific master allocation
@@ -142,6 +148,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AllocationGet'
+      tags:
+        - internship
     delete:
       description: Delete a master allocation
       parameters:
@@ -158,7 +166,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AllocationGet'
-
+      tags:
+        - internship
   /masters_allocations/{specialty}/{organization}:
     get:
       description: Obtain the list of master allocations filtered by specialty and organization
@@ -193,6 +202,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/SpecialtyGet'
+      tags:
+        - internship
     post:
       description: Create new internship allocation
       parameters:
@@ -219,7 +230,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/AllocationGet'
-
+      tags:
+        - internship
   /specialties:
     get:
       description: Obtain the list of specialties
@@ -237,7 +249,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/SpecialtyGet'
-
+      tags:
+        - internship
   /specialties/{uuid}:
     get:
       description: Obtain information about a specific specialty
@@ -255,7 +268,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/SpecialtyGet'
-
+      tags:
+        - internship
   /cohorts:
     get:
       description: Obtain the list of cohorts
@@ -273,7 +287,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/CohortGet'
-
+      tags:
+        - internship
   /cohorts/{uuid}:
     get:
       description: Obtain information about a specific cohort
@@ -291,7 +306,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/CohortGet'
-
+      tags:
+        - internship
   /organizations:
     get:
       description: Obtain the list of organizations
@@ -309,7 +325,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/OrganizationGet'
-
+      tags:
+        - internship
   /organizations/{uuid}:
     get:
       description: Obtain information about a specific organization
@@ -327,7 +344,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/OrganizationGet'
-
+      tags:
+        - internship
   /internships:
     get:
       description: Obtain the list of internships
@@ -345,7 +363,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/InternshipGet'
-
+      tags:
+        - internship
   /internships/{uuid}:
     get:
       description: Obtain information about a specific internship
@@ -363,7 +382,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/InternshipGet'
-
+      tags:
+        - internship
   /periods:
     get:
       description: Obtain the list of periods
@@ -387,7 +407,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/PeriodGet'
-
+      tags:
+        - internship
   /periods/{uuid}:
     get:
       description: Obtain information about a specific period
@@ -405,7 +426,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PeriodGet'
-
+      tags:
+        - internship
   /students:
     get:
       description: Obtain the list of students
@@ -423,7 +445,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/StudentGet'
-
+      tags:
+        - internship
   /students/{uuid}:
     get:
       description: Obtain information about a specific internship student
@@ -441,7 +464,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StudentGet'
-
+      tags:
+        - internship
   /students_affectations/{specialty}/{organization}:
     get:
       description: Obtain the list of students affectations
@@ -478,7 +502,6 @@ paths:
           schema:
             type: integer
           required: false
-
       responses:
         200:
           description: Successful get of the list of students affectations
@@ -493,7 +516,8 @@ paths:
                         type: array
                         items:
                           $ref: '#/components/schemas/StudentAffectationGet'
-
+      tags:
+        - internship
   /students_affectations/{uuid}:
     get:
       description: Obtain information about a specific student's affectation
@@ -511,7 +535,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/StudentAffectationGet'
-
+      tags:
+        - internship
   /scores/{student_uuid}/{period_uuid}:
     get:
       description: Get or create information about a specific student's score for a given period
@@ -535,6 +560,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ScoreGet'
+      tags:
+        - internship
     put:
       description: Update a student's score for a given period
       parameters:
@@ -559,7 +586,8 @@ paths:
       responses:
         201:
           description: Successful update of a score for a given period
-
+      tags:
+        - internship
 
   /scores/{affectation_uuid}/validate:
     get:
@@ -584,7 +612,8 @@ paths:
                   error:
                     type: string
                     description: The message describing the error
-
+      tags:
+        - internship
 components:
   securitySchemes:
     Token:
