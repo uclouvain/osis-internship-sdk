@@ -78,8 +78,8 @@ class PeriodPaging(ModelNormal):
         lazy_import()
         return {
             'count': (float,),  # noqa: E501
-            'next': (str,),  # noqa: E501
-            'previous': (str,),  # noqa: E501
+            'next': (str, none_type,),  # noqa: E501
+            'previous': (str, none_type,),  # noqa: E501
             'results': ([PeriodGet],),  # noqa: E501
         }
 
@@ -142,8 +142,8 @@ class PeriodPaging(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             count (float): [optional]  # noqa: E501
-            next (str): [optional]  # noqa: E501
-            previous (str): [optional]  # noqa: E501
+            next (str, none_type): [optional]  # noqa: E501
+            previous (str, none_type): [optional]  # noqa: E501
             results ([PeriodGet]): [optional]  # noqa: E501
         """
 

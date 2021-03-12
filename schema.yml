@@ -881,8 +881,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -893,8 +895,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -905,8 +909,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -917,8 +923,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -929,8 +937,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -941,8 +951,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -953,8 +965,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -965,8 +979,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
@@ -977,8 +993,10 @@ components:
           type: number
         next:
           type: string
+          nullable: true
         previous:
           type: string
+          nullable: true
         results:
           type: array
           items:
