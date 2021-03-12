@@ -33,7 +33,7 @@ Method | HTTP request | Description
 
 
 # **cohorts_get**
-> object cohorts_get()
+> CohortPaging cohorts_get()
 
 
 
@@ -46,6 +46,7 @@ Obtain the list of cohorts
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.cohort_paging import CohortPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -82,7 +83,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**CohortPaging**](CohortPaging.md)
 
 ### Authorization
 
@@ -174,7 +175,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **internships_get**
-> object internships_get()
+> InternshipPaging internships_get()
 
 
 
@@ -187,6 +188,7 @@ Obtain the list of internships
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.internship_paging import InternshipPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -223,7 +225,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**InternshipPaging**](InternshipPaging.md)
 
 ### Authorization
 
@@ -315,7 +317,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_allocations_specialty_organization_get**
-> object masters_allocations_specialty_organization_get(organization, specialty)
+> AllocationPaging masters_allocations_specialty_organization_get(organization, specialty)
 
 
 
@@ -328,6 +330,7 @@ Obtain the list of master allocations filtered by specialty and organization
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -380,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**AllocationPaging**](AllocationPaging.md)
 
 ### Authorization
 
@@ -683,7 +686,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_get**
-> object masters_get()
+> MasterPaging masters_get()
 
 
 
@@ -696,6 +699,7 @@ Obtain the list of internship masters
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.master_paging import MasterPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -737,7 +741,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**MasterPaging**](MasterPaging.md)
 
 ### Authorization
 
@@ -914,7 +918,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_uuid_allocations_get**
-> object masters_uuid_allocations_get(uuid)
+> AllocationPaging masters_uuid_allocations_get(uuid)
 
 
 
@@ -927,6 +931,7 @@ Obtain the list of internship-master allocations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -977,7 +982,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**AllocationPaging**](AllocationPaging.md)
 
 ### Authorization
 
@@ -1069,7 +1074,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **organizations_get**
-> object organizations_get()
+> OrganizationPaging organizations_get()
 
 
 
@@ -1082,6 +1087,7 @@ Obtain the list of organizations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.organization_paging import OrganizationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1118,7 +1124,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**OrganizationPaging**](OrganizationPaging.md)
 
 ### Authorization
 
@@ -1210,7 +1216,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **periods_get**
-> object periods_get()
+> PeriodPaging periods_get()
 
 
 
@@ -1223,6 +1229,7 @@ Obtain the list of periods
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.period_paging import PeriodPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1264,7 +1271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**PeriodPaging**](PeriodPaging.md)
 
 ### Authorization
 
@@ -1630,7 +1637,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **specialties_get**
-> object specialties_get()
+> SpecialtyPaging specialties_get()
 
 
 
@@ -1643,6 +1650,7 @@ Obtain the list of specialties
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.specialty_paging import SpecialtyPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1679,7 +1687,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**SpecialtyPaging**](SpecialtyPaging.md)
 
 ### Authorization
 
@@ -1771,7 +1779,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_affectations_specialty_organization_get**
-> object students_affectations_specialty_organization_get(organization, specialty)
+> StudentAffectationPaging students_affectations_specialty_organization_get(organization, specialty)
 
 
 
@@ -1784,6 +1792,7 @@ Obtain the list of students affectations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.student_affectation_paging import StudentAffectationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1842,7 +1851,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**StudentAffectationPaging**](StudentAffectationPaging.md)
 
 ### Authorization
 
@@ -1934,7 +1943,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_get**
-> object students_get()
+> StudentPaging students_get()
 
 
 
@@ -1947,6 +1956,7 @@ Obtain the list of students
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.student_paging import StudentPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1983,7 +1993,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**object**
+[**StudentPaging**](StudentPaging.md)
 
 ### Authorization
 

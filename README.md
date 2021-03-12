@@ -52,16 +52,25 @@ import osis_internship_sdk
 from pprint import pprint
 from osis_internship_sdk.api import internship_api
 from osis_internship_sdk.model.allocation_get import AllocationGet
+from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from osis_internship_sdk.model.cohort_get import CohortGet
+from osis_internship_sdk.model.cohort_paging import CohortPaging
 from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from osis_internship_sdk.model.internship_get import InternshipGet
+from osis_internship_sdk.model.internship_paging import InternshipPaging
 from osis_internship_sdk.model.master_get import MasterGet
+from osis_internship_sdk.model.master_paging import MasterPaging
 from osis_internship_sdk.model.organization_get import OrganizationGet
+from osis_internship_sdk.model.organization_paging import OrganizationPaging
 from osis_internship_sdk.model.period_get import PeriodGet
+from osis_internship_sdk.model.period_paging import PeriodPaging
 from osis_internship_sdk.model.score_get import ScoreGet
 from osis_internship_sdk.model.specialty_get import SpecialtyGet
+from osis_internship_sdk.model.specialty_paging import SpecialtyPaging
 from osis_internship_sdk.model.student_affectation_get import StudentAffectationGet
+from osis_internship_sdk.model.student_affectation_paging import StudentAffectationPaging
 from osis_internship_sdk.model.student_get import StudentGet
+from osis_internship_sdk.model.student_paging import StudentPaging
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
 configuration = osis_internship_sdk.Configuration(
@@ -129,20 +138,28 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [AllocationGet](docs/AllocationGet.md)
+ - [AllocationPaging](docs/AllocationPaging.md)
  - [CohortGet](docs/CohortGet.md)
+ - [CohortPaging](docs/CohortPaging.md)
  - [Country](docs/Country.md)
  - [InlineResponse404](docs/InlineResponse404.md)
  - [InternshipGet](docs/InternshipGet.md)
+ - [InternshipPaging](docs/InternshipPaging.md)
  - [MasterGet](docs/MasterGet.md)
+ - [MasterPaging](docs/MasterPaging.md)
  - [OrganizationGet](docs/OrganizationGet.md)
- - [Paging](docs/Paging.md)
+ - [OrganizationPaging](docs/OrganizationPaging.md)
  - [PeriodGet](docs/PeriodGet.md)
+ - [PeriodPaging](docs/PeriodPaging.md)
  - [Person](docs/Person.md)
  - [ScoreGet](docs/ScoreGet.md)
  - [SpecialtyGet](docs/SpecialtyGet.md)
+ - [SpecialtyPaging](docs/SpecialtyPaging.md)
  - [Student](docs/Student.md)
  - [StudentAffectationGet](docs/StudentAffectationGet.md)
+ - [StudentAffectationPaging](docs/StudentAffectationPaging.md)
  - [StudentGet](docs/StudentGet.md)
+ - [StudentPaging](docs/StudentPaging.md)
 
 
 ## Documentation For Authorization

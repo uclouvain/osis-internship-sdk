@@ -22,16 +22,25 @@ from osis_internship_sdk.model_utils import (  # noqa: F401
     validate_and_convert_types
 )
 from osis_internship_sdk.model.allocation_get import AllocationGet
+from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from osis_internship_sdk.model.cohort_get import CohortGet
+from osis_internship_sdk.model.cohort_paging import CohortPaging
 from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from osis_internship_sdk.model.internship_get import InternshipGet
+from osis_internship_sdk.model.internship_paging import InternshipPaging
 from osis_internship_sdk.model.master_get import MasterGet
+from osis_internship_sdk.model.master_paging import MasterPaging
 from osis_internship_sdk.model.organization_get import OrganizationGet
+from osis_internship_sdk.model.organization_paging import OrganizationPaging
 from osis_internship_sdk.model.period_get import PeriodGet
+from osis_internship_sdk.model.period_paging import PeriodPaging
 from osis_internship_sdk.model.score_get import ScoreGet
 from osis_internship_sdk.model.specialty_get import SpecialtyGet
+from osis_internship_sdk.model.specialty_paging import SpecialtyPaging
 from osis_internship_sdk.model.student_affectation_get import StudentAffectationGet
+from osis_internship_sdk.model.student_affectation_paging import StudentAffectationPaging
 from osis_internship_sdk.model.student_get import StudentGet
+from osis_internship_sdk.model.student_paging import StudentPaging
 
 
 class InternshipApi(object):
@@ -82,7 +91,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                CohortPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -109,7 +118,7 @@ class InternshipApi(object):
 
         self.cohorts_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (CohortPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -308,7 +317,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                InternshipPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -335,7 +344,7 @@ class InternshipApi(object):
 
         self.internships_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (InternshipPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -540,7 +549,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                AllocationPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -571,7 +580,7 @@ class InternshipApi(object):
 
         self.masters_allocations_specialty_organization_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (AllocationPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -1048,7 +1057,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                MasterPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -1075,7 +1084,7 @@ class InternshipApi(object):
 
         self.masters_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (MasterPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -1403,7 +1412,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                AllocationPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -1432,7 +1441,7 @@ class InternshipApi(object):
 
         self.masters_uuid_allocations_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (AllocationPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -1643,7 +1652,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                OrganizationPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -1670,7 +1679,7 @@ class InternshipApi(object):
 
         self.organizations_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (OrganizationPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -1870,7 +1879,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                PeriodPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -1897,7 +1906,7 @@ class InternshipApi(object):
 
         self.periods_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (PeriodPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -2487,7 +2496,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                SpecialtyPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -2514,7 +2523,7 @@ class InternshipApi(object):
 
         self.specialties_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (SpecialtyPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -2722,7 +2731,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                StudentAffectationPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -2753,7 +2762,7 @@ class InternshipApi(object):
 
         self.students_affectations_specialty_organization_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (StudentAffectationPaging,),
                 'auth': [
                     'Token'
                 ],
@@ -2985,7 +2994,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                object
+                StudentPaging
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -3012,7 +3021,7 @@ class InternshipApi(object):
 
         self.students_get = _Endpoint(
             settings={
-                'response_type': (object,),
+                'response_type': (StudentPaging,),
                 'auth': [
                     'Token'
                 ],
