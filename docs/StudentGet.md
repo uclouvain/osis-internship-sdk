@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** |  | [optional] 
+**uuid** | **str** |  | [optional] 
 **person** | [**Person**](Person.md) |  | [optional] 
 **location** | **str, none_type** |  | [optional] 
 **postal_code** | **str, none_type** |  | [optional] 

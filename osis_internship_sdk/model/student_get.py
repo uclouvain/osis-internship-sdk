@@ -80,6 +80,7 @@ class StudentGet(ModelNormal):
         lazy_import()
         return {
             'url': (str,),  # noqa: E501
+            'uuid': (str,),  # noqa: E501
             'person': (Person,),  # noqa: E501
             'location': (str, none_type,),  # noqa: E501
             'postal_code': (str, none_type,),  # noqa: E501
@@ -100,6 +101,7 @@ class StudentGet(ModelNormal):
 
     attribute_map = {
         'url': 'url',  # noqa: E501
+        'uuid': 'uuid',  # noqa: E501
         'person': 'person',  # noqa: E501
         'location': 'location',  # noqa: E501
         'postal_code': 'postal_code',  # noqa: E501
@@ -160,6 +162,7 @@ class StudentGet(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             url (str): [optional]  # noqa: E501
+            uuid (str): [optional]  # noqa: E501
             person (Person): [optional]  # noqa: E501
             location (str, none_type): [optional]  # noqa: E501
             postal_code (str, none_type): [optional]  # noqa: E501

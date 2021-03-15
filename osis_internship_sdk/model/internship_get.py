@@ -80,6 +80,7 @@ class InternshipGet(ModelNormal):
         lazy_import()
         return {
             'url': (str,),  # noqa: E501
+            'uuid': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'speciality': (SpecialtyGet,),  # noqa: E501
             'cohort': (CohortGet,),  # noqa: E501
@@ -94,6 +95,7 @@ class InternshipGet(ModelNormal):
 
     attribute_map = {
         'url': 'url',  # noqa: E501
+        'uuid': 'uuid',  # noqa: E501
         'name': 'name',  # noqa: E501
         'speciality': 'speciality',  # noqa: E501
         'cohort': 'cohort',  # noqa: E501
@@ -148,6 +150,7 @@ class InternshipGet(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             url (str): [optional]  # noqa: E501
+            uuid (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             speciality (SpecialtyGet): [optional]  # noqa: E501
             cohort (CohortGet): [optional]  # noqa: E501

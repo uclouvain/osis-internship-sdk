@@ -86,6 +86,7 @@ class StudentAffectationGet(ModelNormal):
         lazy_import()
         return {
             'url': (str,),  # noqa: E501
+            'uuid': (str,),  # noqa: E501
             'student': (Student,),  # noqa: E501
             'organization': (OrganizationGet,),  # noqa: E501
             'specialty': (SpecialtyGet,),  # noqa: E501
@@ -100,6 +101,7 @@ class StudentAffectationGet(ModelNormal):
 
     attribute_map = {
         'url': 'url',  # noqa: E501
+        'uuid': 'uuid',  # noqa: E501
         'student': 'student',  # noqa: E501
         'organization': 'organization',  # noqa: E501
         'specialty': 'specialty',  # noqa: E501
@@ -154,6 +156,7 @@ class StudentAffectationGet(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             url (str): [optional]  # noqa: E501
+            uuid (str): [optional]  # noqa: E501
             student (Student): [optional]  # noqa: E501
             organization (OrganizationGet): [optional]  # noqa: E501
             specialty (SpecialtyGet): [optional]  # noqa: E501

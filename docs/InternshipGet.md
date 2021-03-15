@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** |  | [optional] 
+**uuid** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **speciality** | [**SpecialtyGet**](SpecialtyGet.md) |  | [optional] 
 **cohort** | [**CohortGet**](CohortGet.md) |  | [optional] 
