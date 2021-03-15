@@ -811,9 +811,9 @@ components:
         student:
           $ref: '#/components/schemas/Student'
         organization:
-          $ref: '#/components/schemas/OrganizationGet'
+          $ref: '#/components/schemas/Uuid'
         speciality:
-          $ref: '#/components/schemas/SpecialtyGet'
+          $ref: '#/components/schemas/Uuid'
         period:
           $ref: '#/components/schemas/PeriodGet'
         internship:

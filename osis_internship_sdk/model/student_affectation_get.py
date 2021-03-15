@@ -28,14 +28,10 @@ from osis_internship_sdk.model_utils import (  # noqa: F401
 
 def lazy_import():
     from osis_internship_sdk.model.internship_get import InternshipGet
-    from osis_internship_sdk.model.organization_get import OrganizationGet
     from osis_internship_sdk.model.period_get import PeriodGet
-    from osis_internship_sdk.model.specialty_get import SpecialtyGet
     from osis_internship_sdk.model.student import Student
     globals()['InternshipGet'] = InternshipGet
-    globals()['OrganizationGet'] = OrganizationGet
     globals()['PeriodGet'] = PeriodGet
-    globals()['SpecialtyGet'] = SpecialtyGet
     globals()['Student'] = Student
 
 
@@ -88,8 +84,8 @@ class StudentAffectationGet(ModelNormal):
             'url': (str,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
             'student': (Student,),  # noqa: E501
-            'organization': (OrganizationGet,),  # noqa: E501
-            'speciality': (SpecialtyGet,),  # noqa: E501
+            'organization': (str,),  # noqa: E501
+            'speciality': (str,),  # noqa: E501
             'period': (PeriodGet,),  # noqa: E501
             'internship': (InternshipGet,),  # noqa: E501
         }
@@ -158,8 +154,8 @@ class StudentAffectationGet(ModelNormal):
             url (str): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             student (Student): [optional]  # noqa: E501
-            organization (OrganizationGet): [optional]  # noqa: E501
-            speciality (SpecialtyGet): [optional]  # noqa: E501
+            organization (str): [optional]  # noqa: E501
+            speciality (str): [optional]  # noqa: E501
             period (PeriodGet): [optional]  # noqa: E501
             internship (InternshipGet): [optional]  # noqa: E501
         """

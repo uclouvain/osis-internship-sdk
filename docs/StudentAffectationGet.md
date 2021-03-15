@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **url** | **str** |  | [optional] 
 **uuid** | **str** |  | [optional] 
 **student** | [**Student**](Student.md) |  | [optional] 
-**organization** | [**OrganizationGet**](OrganizationGet.md) |  | [optional] 
-**speciality** | [**SpecialtyGet**](SpecialtyGet.md) |  | [optional] 
+**organization** | **str** |  | [optional] 
+**speciality** | **str** |  | [optional] 
 **period** | [**PeriodGet**](PeriodGet.md) |  | [optional] 
 **internship** | [**InternshipGet**](InternshipGet.md) |  | [optional] 
 
