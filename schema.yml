@@ -611,6 +611,7 @@ components:
           example: true
         sequence:
           type: integer
+          nullable: true
           example: 1
         cohort:
           $ref: '#/components/schemas/CohortGet'

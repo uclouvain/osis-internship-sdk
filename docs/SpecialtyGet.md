@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **acronym** | **str** |  | [optional] 
 **mandatory** | **bool** |  | [optional] 
-**sequence** | **int** |  | [optional] 
+**sequence** | **int, none_type** |  | [optional] 
 **cohort** | [**CohortGet**](CohortGet.md) |  | [optional] 
 **selectable** | **bool** |  | [optional] 
 

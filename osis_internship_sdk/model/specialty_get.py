@@ -82,7 +82,7 @@ class SpecialtyGet(ModelNormal):
             'name': (str,),  # noqa: E501
             'acronym': (str,),  # noqa: E501
             'mandatory': (bool,),  # noqa: E501
-            'sequence': (int,),  # noqa: E501
+            'sequence': (int, none_type,),  # noqa: E501
             'cohort': (CohortGet,),  # noqa: E501
             'selectable': (bool,),  # noqa: E501
         }
@@ -154,7 +154,7 @@ class SpecialtyGet(ModelNormal):
             name (str): [optional]  # noqa: E501
             acronym (str): [optional]  # noqa: E501
             mandatory (bool): [optional]  # noqa: E501
-            sequence (int): [optional]  # noqa: E501
+            sequence (int, none_type): [optional]  # noqa: E501
             cohort (CohortGet): [optional]  # noqa: E501
             selectable (bool): [optional]  # noqa: E501
         """
