@@ -424,12 +424,6 @@ paths:
             default: all
           required: false
         - in: query
-          name: with_score
-          schema:
-            type: boolean
-            default: false
-          required: false
-        - in: query
           name: limit
           schema:
             type: integer
@@ -446,6 +440,33 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/StudentAffectationPaging"
+      tags:
+        - internship
+  /students_affectations/{specialty}/{organization}/stats/:
+    get:
+      description: Obtain the list of students affectations
+      parameters:
+        - in: path
+          name: organization
+          schema:
+            type: string
+          required: true
+        - in: path
+          name: specialty
+          schema:
+            type: string
+          required: true
+      responses:
+        200:
+          description: Successful get of students affectations stats
+          content:
+            application/json:
+              schema:
+                properties:
+                  total_count:
+                    type: number
+                  validated_count:
+                    type: number
       tags:
         - internship
   /students_affectations/{uuid}:

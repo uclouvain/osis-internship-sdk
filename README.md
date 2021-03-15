@@ -130,6 +130,7 @@ Class | Method | HTTP request | Description
 *InternshipApi* | [**specialties_get**](docs/InternshipApi.md#specialties_get) | **GET** /specialties | 
 *InternshipApi* | [**specialties_uuid_get**](docs/InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
 *InternshipApi* | [**students_affectations_specialty_organization_get**](docs/InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
+*InternshipApi* | [**students_affectations_specialty_organization_stats_get**](docs/InternshipApi.md#students_affectations_specialty_organization_stats_get) | **GET** /students_affectations/{specialty}/{organization}/stats/ | 
 *InternshipApi* | [**students_affectations_uuid_get**](docs/InternshipApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
 *InternshipApi* | [**students_get**](docs/InternshipApi.md#students_get) | **GET** /students | 
 *InternshipApi* | [**students_uuid_get**](docs/InternshipApi.md#students_uuid_get) | **GET** /students/{uuid} | 

@@ -2707,7 +2707,6 @@ class InternshipApi(object):
 
             Keyword Args:
                 period (str): [optional] if omitted the server will use the default value of "all"
-                with_score (bool): [optional] if omitted the server will use the default value of False
                 limit (int): [optional]
                 offset (int): [optional]
                 _return_http_data_only (bool): response data without head status
@@ -2776,7 +2775,6 @@ class InternshipApi(object):
                     'organization',
                     'specialty',
                     'period',
-                    'with_score',
                     'limit',
                     'offset',
                 ],
@@ -2803,8 +2801,6 @@ class InternshipApi(object):
                         (str,),
                     'period':
                         (str,),
-                    'with_score':
-                        (bool,),
                     'limit':
                         (int,),
                     'offset':
@@ -2814,7 +2810,6 @@ class InternshipApi(object):
                     'organization': 'organization',
                     'specialty': 'specialty',
                     'period': 'period',
-                    'with_score': 'with_score',
                     'limit': 'limit',
                     'offset': 'offset',
                 },
@@ -2822,7 +2817,6 @@ class InternshipApi(object):
                     'organization': 'path',
                     'specialty': 'path',
                     'period': 'query',
-                    'with_score': 'query',
                     'limit': 'query',
                     'offset': 'query',
                 },
@@ -2837,6 +2831,135 @@ class InternshipApi(object):
             },
             api_client=api_client,
             callable=__students_affectations_specialty_organization_get
+        )
+
+        def __students_affectations_specialty_organization_stats_get(
+            self,
+            organization,
+            specialty,
+            **kwargs
+        ):
+            """students_affectations_specialty_organization_stats_get  # noqa: E501
+
+            Obtain the list of students affectations  # noqa: E501
+            This method makes a synchronous HTTP request by default. To make an
+            asynchronous HTTP request, please pass async_req=True
+
+            >>> thread = api.students_affectations_specialty_organization_stats_get(organization, specialty, async_req=True)
+            >>> result = thread.get()
+
+            Args:
+                organization (str):
+                specialty (str):
+
+            Keyword Args:
+                _return_http_data_only (bool): response data without head status
+                    code and headers. Default is True.
+                _preload_content (bool): if False, the urllib3.HTTPResponse object
+                    will be returned without reading/decoding response data.
+                    Default is True.
+                _request_timeout (float/tuple): timeout setting for this request. If one
+                    number provided, it will be total request timeout. It can also
+                    be a pair (tuple) of (connection, read) timeouts.
+                    Default is None.
+                _check_input_type (bool): specifies if type checking
+                    should be done one the data sent to the server.
+                    Default is True.
+                _check_return_type (bool): specifies if type checking
+                    should be done one the data received from the server.
+                    Default is True.
+                _host_index (int/None): specifies the index of the server
+                    that we want to use.
+                    Default is read from the configuration.
+                async_req (bool): execute request asynchronously
+
+            Returns:
+                object
+                    If the method is called asynchronously, returns the request
+                    thread.
+            """
+            kwargs['async_req'] = kwargs.get(
+                'async_req', False
+            )
+            kwargs['_return_http_data_only'] = kwargs.get(
+                '_return_http_data_only', True
+            )
+            kwargs['_preload_content'] = kwargs.get(
+                '_preload_content', True
+            )
+            kwargs['_request_timeout'] = kwargs.get(
+                '_request_timeout', None
+            )
+            kwargs['_check_input_type'] = kwargs.get(
+                '_check_input_type', True
+            )
+            kwargs['_check_return_type'] = kwargs.get(
+                '_check_return_type', True
+            )
+            kwargs['_host_index'] = kwargs.get('_host_index')
+            kwargs['organization'] = \
+                organization
+            kwargs['specialty'] = \
+                specialty
+            return self.call_with_http_info(**kwargs)
+
+        self.students_affectations_specialty_organization_stats_get = _Endpoint(
+            settings={
+                'response_type': (object,),
+                'auth': [
+                    'Token'
+                ],
+                'endpoint_path': '/students_affectations/{specialty}/{organization}/stats/',
+                'operation_id': 'students_affectations_specialty_organization_stats_get',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'organization',
+                    'specialty',
+                ],
+                'required': [
+                    'organization',
+                    'specialty',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'organization':
+                        (str,),
+                    'specialty':
+                        (str,),
+                },
+                'attribute_map': {
+                    'organization': 'organization',
+                    'specialty': 'specialty',
+                },
+                'location_map': {
+                    'organization': 'path',
+                    'specialty': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client,
+            callable=__students_affectations_specialty_organization_stats_get
         )
 
         def __students_affectations_uuid_get(

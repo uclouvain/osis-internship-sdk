@@ -27,6 +27,7 @@ Method | HTTP request | Description
 [**specialties_get**](InternshipApi.md#specialties_get) | **GET** /specialties | 
 [**specialties_uuid_get**](InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
 [**students_affectations_specialty_organization_get**](InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
+[**students_affectations_specialty_organization_stats_get**](InternshipApi.md#students_affectations_specialty_organization_stats_get) | **GET** /students_affectations/{specialty}/{organization}/stats/ | 
 [**students_affectations_uuid_get**](InternshipApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
 [**students_get**](InternshipApi.md#students_get) | **GET** /students | 
 [**students_uuid_get**](InternshipApi.md#students_uuid_get) | **GET** /students/{uuid} | 
@@ -1832,7 +1833,6 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     organization = "organization_example" # str | 
     specialty = "specialty_example" # str | 
     period = "all" # str |  (optional) if omitted the server will use the default value of "all"
-    with_score = False # bool |  (optional) if omitted the server will use the default value of False
     limit = 1 # int |  (optional)
     offset = 1 # int |  (optional)
 
@@ -1846,7 +1846,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, with_score=with_score, limit=limit, offset=offset)
+        api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, limit=limit, offset=offset)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->students_affectations_specialty_organization_get: %s\n" % e)
@@ -1859,7 +1859,6 @@ Name | Type | Description  | Notes
  **organization** | **str**|  |
  **specialty** | **str**|  |
  **period** | **str**|  | [optional] if omitted the server will use the default value of "all"
- **with_score** | **bool**|  | [optional] if omitted the server will use the default value of False
  **limit** | **int**|  | [optional]
  **offset** | **int**|  | [optional]
 
@@ -1880,6 +1879,80 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful get of the list of students affectations |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **students_affectations_specialty_organization_stats_get**
+> object students_affectations_specialty_organization_stats_get(organization, specialty)
+
+
+
+Obtain the list of students affectations
+
+### Example
+
+* Api Key Authentication (Token):
+```python
+import time
+import osis_internship_sdk
+from osis_internship_sdk.api import internship_api
+from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Token
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = internship_api.InternshipApi(api_client)
+    organization = "organization_example" # str | 
+    specialty = "specialty_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.students_affectations_specialty_organization_stats_get(organization, specialty)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->students_affectations_specialty_organization_stats_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organization** | **str**|  |
+ **specialty** | **str**|  |
+
+### Return type
+
+**object**
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get of students affectations stats |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
