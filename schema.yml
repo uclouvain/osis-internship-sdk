@@ -465,9 +465,9 @@ paths:
                 type: object
                 properties:
                   total_count:
-                    type: number
+                    type: integer
                   validated_count:
-                    type: number
+                    type: integer
       tags:
         - internship
   /students_affectations/{uuid}:

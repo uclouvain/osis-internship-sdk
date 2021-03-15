@@ -72,8 +72,8 @@ class InlineResponse200(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'total_count': (float,),  # noqa: E501
-            'validated_count': (float,),  # noqa: E501
+            'total_count': (int,),  # noqa: E501
+            'validated_count': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -132,8 +132,8 @@ class InlineResponse200(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            total_count (float): [optional]  # noqa: E501
-            validated_count (float): [optional]  # noqa: E501
+            total_count (int): [optional]  # noqa: E501
+            validated_count (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
