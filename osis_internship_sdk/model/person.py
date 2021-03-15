@@ -73,11 +73,11 @@ class Person(ModelNormal):
         """
         return {
             'uuid': (str,),  # noqa: E501
-            'first_name': (str,),  # noqa: E501
+            'first_name': (str, none_type,),  # noqa: E501
             'last_name': (str,),  # noqa: E501
-            'email': (str,),  # noqa: E501
-            'gender': (str,),  # noqa: E501
-            'birth_date': (date,),  # noqa: E501
+            'email': (str, none_type,),  # noqa: E501
+            'gender': (str, none_type,),  # noqa: E501
+            'birth_date': (date, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -141,11 +141,11 @@ class Person(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             uuid (str): [optional]  # noqa: E501
-            first_name (str): [optional]  # noqa: E501
+            first_name (str, none_type): [optional]  # noqa: E501
             last_name (str): [optional]  # noqa: E501
-            email (str): [optional]  # noqa: E501
-            gender (str): [optional]  # noqa: E501
-            birth_date (date): [optional]  # noqa: E501
+            email (str, none_type): [optional]  # noqa: E501
+            gender (str, none_type): [optional]  # noqa: E501
+            birth_date (date, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

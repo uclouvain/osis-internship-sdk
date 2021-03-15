@@ -86,26 +86,26 @@ class ScoreGet(ModelNormal):
             'period': (PeriodGet,),  # noqa: E501
             'cohort': (CohortGet,),  # noqa: E501
             'excused': (bool,),  # noqa: E501
-            'reason': (str,),  # noqa: E501
-            'score': (float,),  # noqa: E501
-            'comments': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
-            'objectives': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'reason': (str, none_type,),  # noqa: E501
+            'score': (float, none_type,),  # noqa: E501
+            'comments': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
+            'objectives': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type,),  # noqa: E501
             'validated': (bool,),  # noqa: E501
-            'apd_1': (str,),  # noqa: E501
-            'apd_2': (str,),  # noqa: E501
-            'apd_3': (str,),  # noqa: E501
-            'apd_4': (str,),  # noqa: E501
-            'apd_5': (str,),  # noqa: E501
-            'apd_6': (str,),  # noqa: E501
-            'apd_7': (str,),  # noqa: E501
-            'apd_8': (str,),  # noqa: E501
-            'apd_9': (str,),  # noqa: E501
-            'apd_10': (str,),  # noqa: E501
-            'apd_11': (str,),  # noqa: E501
-            'apd_12': (str,),  # noqa: E501
-            'apd_13': (str,),  # noqa: E501
-            'apd_14': (str,),  # noqa: E501
-            'apd_15': (str,),  # noqa: E501
+            'apd_1': (str, none_type,),  # noqa: E501
+            'apd_2': (str, none_type,),  # noqa: E501
+            'apd_3': (str, none_type,),  # noqa: E501
+            'apd_4': (str, none_type,),  # noqa: E501
+            'apd_5': (str, none_type,),  # noqa: E501
+            'apd_6': (str, none_type,),  # noqa: E501
+            'apd_7': (str, none_type,),  # noqa: E501
+            'apd_8': (str, none_type,),  # noqa: E501
+            'apd_9': (str, none_type,),  # noqa: E501
+            'apd_10': (str, none_type,),  # noqa: E501
+            'apd_11': (str, none_type,),  # noqa: E501
+            'apd_12': (str, none_type,),  # noqa: E501
+            'apd_13': (str, none_type,),  # noqa: E501
+            'apd_14': (str, none_type,),  # noqa: E501
+            'apd_15': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -192,26 +192,26 @@ class ScoreGet(ModelNormal):
             period (PeriodGet): [optional]  # noqa: E501
             cohort (CohortGet): [optional]  # noqa: E501
             excused (bool): [optional]  # noqa: E501
-            reason (str): [optional]  # noqa: E501
-            score (float): [optional]  # noqa: E501
-            comments ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
-            objectives ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            reason (str, none_type): [optional]  # noqa: E501
+            score (float, none_type): [optional]  # noqa: E501
+            comments ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): [optional]  # noqa: E501
+            objectives ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}, none_type): [optional]  # noqa: E501
             validated (bool): [optional]  # noqa: E501
-            apd_1 (str): [optional]  # noqa: E501
-            apd_2 (str): [optional]  # noqa: E501
-            apd_3 (str): [optional]  # noqa: E501
-            apd_4 (str): [optional]  # noqa: E501
-            apd_5 (str): [optional]  # noqa: E501
-            apd_6 (str): [optional]  # noqa: E501
-            apd_7 (str): [optional]  # noqa: E501
-            apd_8 (str): [optional]  # noqa: E501
-            apd_9 (str): [optional]  # noqa: E501
-            apd_10 (str): [optional]  # noqa: E501
-            apd_11 (str): [optional]  # noqa: E501
-            apd_12 (str): [optional]  # noqa: E501
-            apd_13 (str): [optional]  # noqa: E501
-            apd_14 (str): [optional]  # noqa: E501
-            apd_15 (str): [optional]  # noqa: E501
+            apd_1 (str, none_type): [optional]  # noqa: E501
+            apd_2 (str, none_type): [optional]  # noqa: E501
+            apd_3 (str, none_type): [optional]  # noqa: E501
+            apd_4 (str, none_type): [optional]  # noqa: E501
+            apd_5 (str, none_type): [optional]  # noqa: E501
+            apd_6 (str, none_type): [optional]  # noqa: E501
+            apd_7 (str, none_type): [optional]  # noqa: E501
+            apd_8 (str, none_type): [optional]  # noqa: E501
+            apd_9 (str, none_type): [optional]  # noqa: E501
+            apd_10 (str, none_type): [optional]  # noqa: E501
+            apd_11 (str, none_type): [optional]  # noqa: E501
+            apd_12 (str, none_type): [optional]  # noqa: E501
+            apd_13 (str, none_type): [optional]  # noqa: E501
+            apd_14 (str, none_type): [optional]  # noqa: E501
+            apd_15 (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

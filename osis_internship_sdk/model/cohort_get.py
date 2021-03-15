@@ -74,7 +74,7 @@ class CohortGet(ModelNormal):
         return {
             'url': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
             'publication_start_date': (str,),  # noqa: E501
             'subscription_start_date': (str,),  # noqa: E501
             'subscription_end_date': (str,),  # noqa: E501
@@ -142,7 +142,7 @@ class CohortGet(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             url (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
+            description (str, none_type): [optional]  # noqa: E501
             publication_start_date (str): [optional]  # noqa: E501
             subscription_start_date (str): [optional]  # noqa: E501
             subscription_end_date (str): [optional]  # noqa: E501

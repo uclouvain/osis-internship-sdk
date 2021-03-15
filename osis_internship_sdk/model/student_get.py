@@ -81,16 +81,16 @@ class StudentGet(ModelNormal):
         return {
             'url': (str,),  # noqa: E501
             'person': (Person,),  # noqa: E501
-            'location': (str,),  # noqa: E501
-            'postal_code': (str,),  # noqa: E501
-            'city': (str,),  # noqa: E501
-            'country': (str,),  # noqa: E501
-            'email': (str,),  # noqa: E501
-            'phone_mobile': (str,),  # noqa: E501
-            'contest': (str,),  # noqa: E501
+            'location': (str, none_type,),  # noqa: E501
+            'postal_code': (str, none_type,),  # noqa: E501
+            'city': (str, none_type,),  # noqa: E501
+            'country': (str, none_type,),  # noqa: E501
+            'email': (str, none_type,),  # noqa: E501
+            'phone_mobile': (str, none_type,),  # noqa: E501
+            'contest': (str, none_type,),  # noqa: E501
             'cohort': (CohortGet,),  # noqa: E501
-            'evolution_score': (float,),  # noqa: E501
-            'evolution_score_reason': (str,),  # noqa: E501
+            'evolution_score': (float, none_type,),  # noqa: E501
+            'evolution_score_reason': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -161,16 +161,16 @@ class StudentGet(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             url (str): [optional]  # noqa: E501
             person (Person): [optional]  # noqa: E501
-            location (str): [optional]  # noqa: E501
-            postal_code (str): [optional]  # noqa: E501
-            city (str): [optional]  # noqa: E501
-            country (str): [optional]  # noqa: E501
-            email (str): [optional]  # noqa: E501
-            phone_mobile (str): [optional]  # noqa: E501
-            contest (str): [optional]  # noqa: E501
+            location (str, none_type): [optional]  # noqa: E501
+            postal_code (str, none_type): [optional]  # noqa: E501
+            city (str, none_type): [optional]  # noqa: E501
+            country (str, none_type): [optional]  # noqa: E501
+            email (str, none_type): [optional]  # noqa: E501
+            phone_mobile (str, none_type): [optional]  # noqa: E501
+            contest (str, none_type): [optional]  # noqa: E501
             cohort (CohortGet): [optional]  # noqa: E501
-            evolution_score (float): [optional]  # noqa: E501
-            evolution_score_reason (str): [optional]  # noqa: E501
+            evolution_score (float, none_type): [optional]  # noqa: E501
+            evolution_score_reason (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

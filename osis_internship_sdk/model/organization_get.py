@@ -83,12 +83,12 @@ class OrganizationGet(ModelNormal):
             'uuid': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'acronym': (str,),  # noqa: E501
-            'website': (str,),  # noqa: E501
+            'website': (str, none_type,),  # noqa: E501
             'reference': (str,),  # noqa: E501
-            'phone': (str,),  # noqa: E501
-            'location': (str,),  # noqa: E501
-            'postal_code': (str,),  # noqa: E501
-            'city': (str,),  # noqa: E501
+            'phone': (str, none_type,),  # noqa: E501
+            'location': (str, none_type,),  # noqa: E501
+            'postal_code': (str, none_type,),  # noqa: E501
+            'city': (str, none_type,),  # noqa: E501
             'country': (Country,),  # noqa: E501
             'cohort': (CohortGet,),  # noqa: E501
         }
@@ -163,12 +163,12 @@ class OrganizationGet(ModelNormal):
             uuid (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             acronym (str): [optional]  # noqa: E501
-            website (str): [optional]  # noqa: E501
+            website (str, none_type): [optional]  # noqa: E501
             reference (str): [optional]  # noqa: E501
-            phone (str): [optional]  # noqa: E501
-            location (str): [optional]  # noqa: E501
-            postal_code (str): [optional]  # noqa: E501
-            city (str): [optional]  # noqa: E501
+            phone (str, none_type): [optional]  # noqa: E501
+            location (str, none_type): [optional]  # noqa: E501
+            postal_code (str, none_type): [optional]  # noqa: E501
+            city (str, none_type): [optional]  # noqa: E501
             country (Country): [optional]  # noqa: E501
             cohort (CohortGet): [optional]  # noqa: E501
         """

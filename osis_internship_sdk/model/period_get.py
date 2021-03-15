@@ -74,7 +74,7 @@ class PeriodGet(ModelNormal):
         return {
             'url': (str,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
-            'name': (str,),  # noqa: E501
+            'name': (str, none_type,),  # noqa: E501
             'date_start': (str,),  # noqa: E501
             'date_end': (str,),  # noqa: E501
         }
@@ -140,7 +140,7 @@ class PeriodGet(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             url (str): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
-            name (str): [optional]  # noqa: E501
+            name (str, none_type): [optional]  # noqa: E501
             date_start (str): [optional]  # noqa: E501
             date_end (str): [optional]  # noqa: E501
         """

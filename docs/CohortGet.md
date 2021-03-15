@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
+**description** | **str, none_type** |  | [optional] 
 **publication_start_date** | **str** |  | [optional] 
 **subscription_start_date** | **str** |  | [optional] 
 **subscription_end_date** | **str** |  | [optional] 

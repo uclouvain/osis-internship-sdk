@@ -85,7 +85,7 @@ class MasterGet(ModelNormal):
             'url': (str,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
             'person': (Person,),  # noqa: E501
-            'civility': (str,),  # noqa: E501
+            'civility': (str, none_type,),  # noqa: E501
             'user_account_status': (str,),  # noqa: E501
         }
 
@@ -151,7 +151,7 @@ class MasterGet(ModelNormal):
             url (str): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             person (Person): [optional]  # noqa: E501
-            civility (str): [optional]  # noqa: E501
+            civility (str, none_type): [optional]  # noqa: E501
             user_account_status (str): [optional]  # noqa: E501
         """
 

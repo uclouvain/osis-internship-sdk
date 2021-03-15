@@ -565,6 +565,7 @@ components:
             $ref: '#/components/schemas/Person'
           civility:
             type: string
+            nullable: true
             example: "DOCTOR"
           user_account_status:
             type: string
@@ -628,6 +629,7 @@ components:
           example: "R6-2021"
         description:
           type: string
+          nullable: true
           example: "Student cohort for academic year 2020-2021"
         publication_start_date:
           type: string
@@ -655,21 +657,26 @@ components:
           example: "XYZ"
         website:
           type: string
+          nullable: true
           example: "www.chuxyz.be"
         reference:
           type: string
           example: "01"
         phone:
           type: string
+          nullable: true
           example: "01/01.01.01"
         location:
           type: string
+          nullable: true
           example: "Rue de l'hôpital"
         postal_code:
           type: string
+          nullable: true
           example: "1000"
         city:
           type: string
+          nullable: true
           example: "Bruxelles"
         country:
           $ref: '#/components/schemas/Country'
@@ -706,32 +713,41 @@ components:
           $ref: '#/components/schemas/Person'
         location:
           type: string
+          nullable: true
           example: "Rue de la maison, 10"
         postal_code:
           type: string
+          nullable: true
           example: "1000"
         city:
           type: string
+          nullable: true
           example: "Bruxelles"
         country:
           type: string
+          nullable: true
           example: "Belgique"
         email:
           type: string
+          nullable: true
           example: "jean.pondu@mail.be"
         phone_mobile:
           type: string
+          nullable: true
           example: "0411/11.11.11"
         contest:
           type: string
+          nullable: true
           example: "SPECIALIST"
         cohort:
           $ref: '#/components/schemas/CohortGet'
         evolution_score:
           type: number
+          nullable: true
           example: 17
         evolution_score_reason:
           type: string
+          nullable: true
           example: "reason"
 
     PeriodGet:
@@ -744,6 +760,7 @@ components:
           $ref: '#/components/schemas/Uuid'
         name:
           type: string
+          nullable: true
           example: "P1"
         date_start:
           type: string
@@ -784,44 +801,63 @@ components:
           type: boolean
         reason:
           type: string
+          nullable: true
         score:
           type: number
+          nullable: true
         comments:
           type: object
+          nullable: true
         objectives:
           type: object
+          nullable: true
         validated:
           type: boolean
         APD_1:
           type: string
+          nullable: true
         APD_2:
           type: string
+          nullable: true
         APD_3:
           type: string
+          nullable: true
         APD_4:
           type: string
+          nullable: true
         APD_5:
           type: string
+          nullable: true
         APD_6:
           type: string
+          nullable: true
         APD_7:
           type: string
+          nullable: true
         APD_8:
           type: string
+          nullable: true
         APD_9:
           type: string
+          nullable: true
         APD_10:
           type: string
+          nullable: true
         APD_11:
           type: string
+          nullable: true
         APD_12:
           type: string
+          nullable: true
         APD_13:
           type: string
+          nullable: true
         APD_14:
           type: string
+          nullable: true
         APD_15:
           type: string
+          nullable: true
 
 
     Uuid:
@@ -847,18 +883,22 @@ components:
           $ref: '#/components/schemas/Uuid'
         first_name:
           type: string
+          nullable: true
           example: "Dupont"
         last_name:
           type: string
           example: "Jacques"
         email:
           type: string
+          nullable: true
           example: "jacques.dupont@mail.xyz"
         gender:
           type: string
+          nullable: true
           example: "M"
         birth_date:
           type: string
+          nullable: true
           format: date
           example: "1989-01-01"
 
