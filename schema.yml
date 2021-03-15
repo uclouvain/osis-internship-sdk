@@ -775,6 +775,8 @@ components:
         date_end:
           type: string
           example: "01/03/2020"
+        cohort:
+          $ref: '#/components/schemas/CohortGet'
 
     StudentAffectationGet:
       type: object

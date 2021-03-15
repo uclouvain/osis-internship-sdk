@@ -1573,6 +1573,15 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
             name="P1",
             date_start="01/02/2020",
             date_end="01/03/2020",
+            cohort=CohortGet(
+                url="url_example",
+                uuid="uuid_example",
+                name="R6-2021",
+                description="Student cohort for academic year 2020-2021",
+                publication_start_date="01/04/2020",
+                subscription_start_date="01/02/2020",
+                subscription_end_date="01/03/2020",
+            ),
         ),
         cohort=CohortGet(
             url="url_example",
