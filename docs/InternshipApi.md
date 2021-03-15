@@ -477,6 +477,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
             ),
             cohort=CohortGet(
                 url="url_example",
+                uuid="uuid_example",
                 name="R6-2021",
                 description="Student cohort for academic year 2020-2021",
                 publication_start_date="01/04/2020",
@@ -493,6 +494,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
             sequence=1,
             cohort=CohortGet(
                 url="url_example",
+                uuid="uuid_example",
                 name="R6-2021",
                 description="Student cohort for academic year 2020-2021",
                 publication_start_date="01/04/2020",
@@ -1574,6 +1576,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         ),
         cohort=CohortGet(
             url="url_example",
+            uuid="uuid_example",
             name="R6-2021",
             description="Student cohort for academic year 2020-2021",
             publication_start_date="01/04/2020",

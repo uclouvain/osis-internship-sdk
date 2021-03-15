@@ -73,6 +73,7 @@ class CohortGet(ModelNormal):
         """
         return {
             'url': (str,),  # noqa: E501
+            'uuid': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'publication_start_date': (str,),  # noqa: E501
@@ -87,6 +88,7 @@ class CohortGet(ModelNormal):
 
     attribute_map = {
         'url': 'url',  # noqa: E501
+        'uuid': 'uuid',  # noqa: E501
         'name': 'name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'publication_start_date': 'publication_start_date',  # noqa: E501
@@ -141,6 +143,7 @@ class CohortGet(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             url (str): [optional]  # noqa: E501
+            uuid (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             publication_start_date (str): [optional]  # noqa: E501
