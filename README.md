@@ -55,6 +55,7 @@ from osis_internship_sdk.model.allocation_get import AllocationGet
 from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from osis_internship_sdk.model.cohort_get import CohortGet
 from osis_internship_sdk.model.cohort_paging import CohortPaging
+from osis_internship_sdk.model.inline_response200 import InlineResponse200
 from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from osis_internship_sdk.model.internship_get import InternshipGet
 from osis_internship_sdk.model.internship_paging import InternshipPaging
@@ -143,6 +144,7 @@ Class | Method | HTTP request | Description
  - [CohortGet](docs/CohortGet.md)
  - [CohortPaging](docs/CohortPaging.md)
  - [Country](docs/Country.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse404](docs/InlineResponse404.md)
  - [InternshipGet](docs/InternshipGet.md)
  - [InternshipPaging](docs/InternshipPaging.md)

@@ -1883,7 +1883,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **students_affectations_specialty_organization_stats_get**
-> object students_affectations_specialty_organization_stats_get(organization, specialty)
+> InlineResponse200 students_affectations_specialty_organization_stats_get(organization, specialty)
 
 
 
@@ -1896,6 +1896,7 @@ Obtain the list of students affectations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.inline_response200 import InlineResponse200
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1938,7 +1939,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**object**
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
