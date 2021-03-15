@@ -26,6 +26,7 @@ from osis_internship_sdk.model.period_get import PeriodGet
 from osis_internship_sdk.model.period_paging import PeriodPaging
 from osis_internship_sdk.model.person import Person
 from osis_internship_sdk.model.score_get import ScoreGet
+from osis_internship_sdk.model.score_paging import ScorePaging
 from osis_internship_sdk.model.specialty_get import SpecialtyGet
 from osis_internship_sdk.model.specialty_paging import SpecialtyPaging
 from osis_internship_sdk.model.student import Student

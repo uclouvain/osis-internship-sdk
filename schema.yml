@@ -489,6 +489,45 @@ paths:
                 $ref: '#/components/schemas/StudentAffectationGet'
       tags:
         - internship
+  /scores/{specialty}/{organization}:
+    get:
+      description: Obtain the list of scores
+      parameters:
+        - in: path
+          name: organization
+          schema:
+            type: string
+          required: true
+        - in: path
+          name: specialty
+          schema:
+            type: string
+          required: true
+        - in: query
+          name: period
+          schema:
+            type: string
+            default: all
+          required: false
+        - in: query
+          name: limit
+          schema:
+            type: integer
+          required: false
+        - in: query
+          name: offset
+          schema:
+            type: integer
+          required: false
+      responses:
+        200:
+          description: Successful get of the list of scores
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ScorePaging"
+      tags:
+        - internship
   /scores/{student_uuid}/{period_uuid}:
     get:
       description: Get or create information about a specific student's score for a given period
@@ -1079,6 +1118,20 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/StudentAffectationGet'
+    ScorePaging:
+      properties:
+        count:
+          type: number
+        next:
+          type: string
+          nullable: true
+        previous:
+          type: string
+          nullable: true
+        results:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScoreGet'
 
 security:
   - Token: []
