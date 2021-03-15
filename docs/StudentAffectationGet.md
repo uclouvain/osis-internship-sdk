@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **uuid** | **str** |  | [optional] 
 **student** | [**Student**](Student.md) |  | [optional] 
 **organization** | [**OrganizationGet**](OrganizationGet.md) |  | [optional] 
-**specialty** | [**SpecialtyGet**](SpecialtyGet.md) |  | [optional] 
+**speciality** | [**SpecialtyGet**](SpecialtyGet.md) |  | [optional] 
 **period** | [**PeriodGet**](PeriodGet.md) |  | [optional] 
 **internship** | [**InternshipGet**](InternshipGet.md) |  | [optional] 
 

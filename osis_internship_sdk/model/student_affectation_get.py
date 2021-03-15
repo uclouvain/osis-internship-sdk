@@ -89,7 +89,7 @@ class StudentAffectationGet(ModelNormal):
             'uuid': (str,),  # noqa: E501
             'student': (Student,),  # noqa: E501
             'organization': (OrganizationGet,),  # noqa: E501
-            'specialty': (SpecialtyGet,),  # noqa: E501
+            'speciality': (SpecialtyGet,),  # noqa: E501
             'period': (PeriodGet,),  # noqa: E501
             'internship': (InternshipGet,),  # noqa: E501
         }
@@ -104,7 +104,7 @@ class StudentAffectationGet(ModelNormal):
         'uuid': 'uuid',  # noqa: E501
         'student': 'student',  # noqa: E501
         'organization': 'organization',  # noqa: E501
-        'specialty': 'specialty',  # noqa: E501
+        'speciality': 'speciality',  # noqa: E501
         'period': 'period',  # noqa: E501
         'internship': 'internship',  # noqa: E501
     }
@@ -159,7 +159,7 @@ class StudentAffectationGet(ModelNormal):
             uuid (str): [optional]  # noqa: E501
             student (Student): [optional]  # noqa: E501
             organization (OrganizationGet): [optional]  # noqa: E501
-            specialty (SpecialtyGet): [optional]  # noqa: E501
+            speciality (SpecialtyGet): [optional]  # noqa: E501
             period (PeriodGet): [optional]  # noqa: E501
             internship (InternshipGet): [optional]  # noqa: E501
         """
