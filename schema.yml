@@ -857,6 +857,8 @@ components:
           $ref: '#/components/schemas/PeriodGet'
         internship:
           $ref: '#/components/schemas/InternshipGet'
+        score:
+          $ref: '#/components/schemas/ScoreGet'
 
     ScoreGet:
       type: object
