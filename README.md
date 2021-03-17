@@ -66,7 +66,6 @@ from osis_internship_sdk.model.organization_paging import OrganizationPaging
 from osis_internship_sdk.model.period_get import PeriodGet
 from osis_internship_sdk.model.period_paging import PeriodPaging
 from osis_internship_sdk.model.score_get import ScoreGet
-from osis_internship_sdk.model.score_paging import ScorePaging
 from osis_internship_sdk.model.specialty_get import SpecialtyGet
 from osis_internship_sdk.model.specialty_paging import SpecialtyPaging
 from osis_internship_sdk.model.student_affectation_get import StudentAffectationGet
@@ -127,7 +126,6 @@ Class | Method | HTTP request | Description
 *InternshipApi* | [**periods_get**](docs/InternshipApi.md#periods_get) | **GET** /periods | 
 *InternshipApi* | [**periods_uuid_get**](docs/InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 *InternshipApi* | [**scores_affectation_uuid_validate_get**](docs/InternshipApi.md#scores_affectation_uuid_validate_get) | **GET** /scores/{affectation_uuid}/validate | 
-*InternshipApi* | [**scores_specialty_organization_get**](docs/InternshipApi.md#scores_specialty_organization_get) | **GET** /scores/{specialty}/{organization} | 
 *InternshipApi* | [**scores_student_uuid_period_uuid_get**](docs/InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
 *InternshipApi* | [**scores_student_uuid_period_uuid_put**](docs/InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
 *InternshipApi* | [**specialties_get**](docs/InternshipApi.md#specialties_get) | **GET** /specialties | 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **organization** | **str** |  | [optional] 
 **speciality** | **str** |  | [optional] 
 **period** | [**PeriodGet**](PeriodGet.md) |  | [optional] 
-**internship** | [**InternshipGet**](InternshipGet.md) |  | [optional] 
+**internship** | **str** |  | [optional] 
 **score** | [**ScoreGet**](ScoreGet.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

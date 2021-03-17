@@ -27,11 +27,7 @@ from osis_internship_sdk.model_utils import (  # noqa: F401
 )
 
 def lazy_import():
-    from osis_internship_sdk.model.cohort_get import CohortGet
-    from osis_internship_sdk.model.period_get import PeriodGet
     from osis_internship_sdk.model.student import Student
-    globals()['CohortGet'] = CohortGet
-    globals()['PeriodGet'] = PeriodGet
     globals()['Student'] = Student
 
 
@@ -83,8 +79,8 @@ class ScoreGet(ModelNormal):
         return {
             'uuid': (str,),  # noqa: E501
             'student': (Student,),  # noqa: E501
-            'period': (PeriodGet,),  # noqa: E501
-            'cohort': (CohortGet,),  # noqa: E501
+            'period': (str,),  # noqa: E501
+            'cohort': (str,),  # noqa: E501
             'excused': (bool,),  # noqa: E501
             'reason': (str, none_type,),  # noqa: E501
             'score': (float, none_type,),  # noqa: E501
@@ -189,8 +185,8 @@ class ScoreGet(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             uuid (str): [optional]  # noqa: E501
             student (Student): [optional]  # noqa: E501
-            period (PeriodGet): [optional]  # noqa: E501
-            cohort (CohortGet): [optional]  # noqa: E501
+            period (str): [optional]  # noqa: E501
+            cohort (str): [optional]  # noqa: E501
             excused (bool): [optional]  # noqa: E501
             reason (str, none_type): [optional]  # noqa: E501
             score (float, none_type): [optional]  # noqa: E501

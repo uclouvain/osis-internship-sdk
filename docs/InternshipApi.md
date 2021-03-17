@@ -22,7 +22,6 @@ Method | HTTP request | Description
 [**periods_get**](InternshipApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
 [**scores_affectation_uuid_validate_get**](InternshipApi.md#scores_affectation_uuid_validate_get) | **GET** /scores/{affectation_uuid}/validate | 
-[**scores_specialty_organization_get**](InternshipApi.md#scores_specialty_organization_get) | **GET** /scores/{specialty}/{organization} | 
 [**scores_student_uuid_period_uuid_get**](InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
 [**scores_student_uuid_period_uuid_put**](InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
 [**specialties_get**](InternshipApi.md#specialties_get) | **GET** /specialties | 
@@ -1441,95 +1440,6 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **scores_specialty_organization_get**
-> ScorePaging scores_specialty_organization_get(organization, specialty)
-
-
-
-Obtain the list of scores
-
-### Example
-
-* Api Key Authentication (Token):
-```python
-import time
-import osis_internship_sdk
-from osis_internship_sdk.api import internship_api
-from osis_internship_sdk.model.score_paging import ScorePaging
-from pprint import pprint
-# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
-# See configuration.py for a list of all supported configuration parameters.
-configuration = osis_internship_sdk.Configuration(
-    host = "https://dev.osis.uclouvain.be/api/v1/internship"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Token
-configuration.api_key['Token'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with osis_internship_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = internship_api.InternshipApi(api_client)
-    organization = "organization_example" # str | 
-    specialty = "specialty_example" # str | 
-    period = "all" # str |  (optional) if omitted the server will use the default value of "all"
-    limit = 1 # int |  (optional)
-    offset = 1 # int |  (optional)
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_response = api_instance.scores_specialty_organization_get(organization, specialty)
-        pprint(api_response)
-    except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->scores_specialty_organization_get: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        api_response = api_instance.scores_specialty_organization_get(organization, specialty, period=period, limit=limit, offset=offset)
-        pprint(api_response)
-    except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->scores_specialty_organization_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organization** | **str**|  |
- **specialty** | **str**|  |
- **period** | **str**|  | [optional] if omitted the server will use the default value of "all"
- **limit** | **int**|  | [optional]
- **offset** | **int**|  | [optional]
-
-### Return type
-
-[**ScorePaging**](ScorePaging.md)
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful get of the list of scores |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **scores_student_uuid_period_uuid_get**
 > ScoreGet scores_student_uuid_period_uuid_get(student_uuid, period_uuid)
 
@@ -1648,41 +1558,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         uuid="uuid_example",
         student=Student(
             uuid="uuid_example",
-            registration_id="44444444444",
-            person=Person(
-                uuid="uuid_example",
-                first_name="Dupont",
-                last_name="Jacques",
-                email="jacques.dupont@mail.xyz",
-                gender="M",
-                birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
-            ),
+            first_name="first_name_example",
+            last_name="last_name_example",
         ),
-        period=PeriodGet(
-            url="url_example",
-            uuid="uuid_example",
-            name="P1",
-            date_start="01/02/2020",
-            date_end="01/03/2020",
-            cohort=CohortGet(
-                url="url_example",
-                uuid="uuid_example",
-                name="R6-2021",
-                description="Student cohort for academic year 2020-2021",
-                publication_start_date="01/04/2020",
-                subscription_start_date="01/02/2020",
-                subscription_end_date="01/03/2020",
-            ),
-        ),
-        cohort=CohortGet(
-            url="url_example",
-            uuid="uuid_example",
-            name="R6-2021",
-            description="Student cohort for academic year 2020-2021",
-            publication_start_date="01/04/2020",
-            subscription_start_date="01/02/2020",
-            subscription_end_date="01/03/2020",
-        ),
+        period="period_example",
+        cohort="cohort_example",
         excused=True,
         reason="reason_example",
         score=3.14,

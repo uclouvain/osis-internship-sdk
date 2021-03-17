@@ -489,45 +489,6 @@ paths:
                 $ref: '#/components/schemas/StudentAffectationGet'
       tags:
         - internship
-  /scores/{specialty}/{organization}:
-    get:
-      description: Obtain the list of scores
-      parameters:
-        - in: path
-          name: organization
-          schema:
-            type: string
-          required: true
-        - in: path
-          name: specialty
-          schema:
-            type: string
-          required: true
-        - in: query
-          name: period
-          schema:
-            type: string
-            default: all
-          required: false
-        - in: query
-          name: limit
-          schema:
-            type: integer
-          required: false
-        - in: query
-          name: offset
-          schema:
-            type: integer
-          required: false
-      responses:
-        200:
-          description: Successful get of the list of scores
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/ScorePaging"
-      tags:
-        - internship
   /scores/{student_uuid}/{period_uuid}:
     get:
       description: Get or create information about a specific student's score for a given period
@@ -856,7 +817,7 @@ components:
         period:
           $ref: '#/components/schemas/PeriodGet'
         internship:
-          $ref: '#/components/schemas/InternshipGet'
+          type: string
         score:
           $ref: '#/components/schemas/ScoreGet'
 
@@ -868,9 +829,9 @@ components:
         student:
           $ref: '#/components/schemas/Student'
         period:
-          $ref: '#/components/schemas/PeriodGet'
+          type: string
         cohort:
-          $ref: '#/components/schemas/CohortGet'
+          type: string
         excused:
           type: boolean
         reason:
@@ -944,11 +905,10 @@ components:
       properties:
         uuid:
           $ref: '#/components/schemas/Uuid'
-        registration_id:
+        first_name:
           type: string
-          example: "44444444444"
-        person:
-          $ref: '#/components/schemas/Person'
+        last_name:
+          type: string
 
     Person:
       type: object
