@@ -1368,7 +1368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **scores_affectation_uuid_validate_get**
-> scores_affectation_uuid_validate_get(affectation_uuid)
+> InlineResponse2001 scores_affectation_uuid_validate_get(affectation_uuid)
 
 
 
@@ -1381,6 +1381,7 @@ Validate a score
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.inline_response2001 import InlineResponse2001
 from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1408,7 +1409,8 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_instance.scores_affectation_uuid_validate_get(affectation_uuid)
+        api_response = api_instance.scores_affectation_uuid_validate_get(affectation_uuid)
+        pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->scores_affectation_uuid_validate_get: %s\n" % e)
 ```
@@ -1421,7 +1423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 

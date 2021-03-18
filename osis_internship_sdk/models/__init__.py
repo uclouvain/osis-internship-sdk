@@ -15,6 +15,7 @@ from osis_internship_sdk.model.cohort_get import CohortGet
 from osis_internship_sdk.model.cohort_paging import CohortPaging
 from osis_internship_sdk.model.country import Country
 from osis_internship_sdk.model.inline_response200 import InlineResponse200
+from osis_internship_sdk.model.inline_response2001 import InlineResponse2001
 from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from osis_internship_sdk.model.internship_get import InternshipGet
 from osis_internship_sdk.model.internship_paging import InternshipPaging

@@ -554,6 +554,13 @@ paths:
       responses:
         200:
           description: Successfully validated an internship score
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
         404:
           description: Affectation or score not found, validation aborted
           content:
@@ -561,6 +568,8 @@ paths:
               schema:
                 type: object
                 properties:
+                  success:
+                    type: boolean
                   error:
                     type: string
                     description: The message describing the error
