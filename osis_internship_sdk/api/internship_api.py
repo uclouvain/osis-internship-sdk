@@ -509,19 +509,19 @@ class InternshipApi(object):
             callable=__internships_uuid_get
         )
 
-        def __masters_allocations_specialty_organization_get(
+        def __masters_allocations_get(
             self,
             organization,
             specialty,
             **kwargs
         ):
-            """masters_allocations_specialty_organization_get  # noqa: E501
+            """masters_allocations_get  # noqa: E501
 
             Obtain the list of master allocations filtered by specialty and organization  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.masters_allocations_specialty_organization_get(organization, specialty, async_req=True)
+            >>> thread = api.masters_allocations_get(organization, specialty, async_req=True)
             >>> result = thread.get()
 
             Args:
@@ -580,14 +580,14 @@ class InternshipApi(object):
                 specialty
             return self.call_with_http_info(**kwargs)
 
-        self.masters_allocations_specialty_organization_get = _Endpoint(
+        self.masters_allocations_get = _Endpoint(
             settings={
                 'response_type': (AllocationPaging,),
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters_allocations/{specialty}/{organization}',
-                'operation_id': 'masters_allocations_specialty_organization_get',
+                'endpoint_path': '/masters_allocations/',
+                'operation_id': 'masters_allocations_get',
                 'http_method': 'GET',
                 'servers': None,
             },
@@ -627,8 +627,8 @@ class InternshipApi(object):
                     'role': 'role',
                 },
                 'location_map': {
-                    'organization': 'path',
-                    'specialty': 'path',
+                    'organization': 'query',
+                    'specialty': 'query',
                     'role': 'query',
                 },
                 'collection_format_map': {
@@ -641,23 +641,23 @@ class InternshipApi(object):
                 'content_type': [],
             },
             api_client=api_client,
-            callable=__masters_allocations_specialty_organization_get
+            callable=__masters_allocations_get
         )
 
-        def __masters_allocations_specialty_organization_post(
+        def __masters_allocations_post(
             self,
             organization,
             specialty,
             allocation_get,
             **kwargs
         ):
-            """masters_allocations_specialty_organization_post  # noqa: E501
+            """masters_allocations_post  # noqa: E501
 
             Create new internship allocation  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.masters_allocations_specialty_organization_post(organization, specialty, allocation_get, async_req=True)
+            >>> thread = api.masters_allocations_post(organization, specialty, allocation_get, async_req=True)
             >>> result = thread.get()
 
             Args:
@@ -718,14 +718,14 @@ class InternshipApi(object):
                 allocation_get
             return self.call_with_http_info(**kwargs)
 
-        self.masters_allocations_specialty_organization_post = _Endpoint(
+        self.masters_allocations_post = _Endpoint(
             settings={
                 'response_type': (AllocationGet,),
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters_allocations/{specialty}/{organization}',
-                'operation_id': 'masters_allocations_specialty_organization_post',
+                'endpoint_path': '/masters_allocations/',
+                'operation_id': 'masters_allocations_post',
                 'http_method': 'POST',
                 'servers': None,
             },
@@ -781,7 +781,7 @@ class InternshipApi(object):
                 ]
             },
             api_client=api_client,
-            callable=__masters_allocations_specialty_organization_post
+            callable=__masters_allocations_post
         )
 
         def __masters_allocations_uuid_delete(

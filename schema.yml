@@ -154,16 +154,16 @@ paths:
                 $ref: '#/components/schemas/AllocationGet'
       tags:
         - internship
-  /masters_allocations/{specialty}/{organization}:
+  /masters_allocations/:
     get:
       description: Obtain the list of master allocations filtered by specialty and organization
       parameters:
-        - in: path
+        - in: query
           name: organization
           schema:
             type: string
           required: true
-        - in: path
+        - in: query
           name: specialty
           schema:
             type: string

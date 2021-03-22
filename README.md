@@ -113,8 +113,8 @@ Class | Method | HTTP request | Description
 *InternshipApi* | [**cohorts_uuid_get**](docs/InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
 *InternshipApi* | [**internships_get**](docs/InternshipApi.md#internships_get) | **GET** /internships | 
 *InternshipApi* | [**internships_uuid_get**](docs/InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
-*InternshipApi* | [**masters_allocations_specialty_organization_get**](docs/InternshipApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
-*InternshipApi* | [**masters_allocations_specialty_organization_post**](docs/InternshipApi.md#masters_allocations_specialty_organization_post) | **POST** /masters_allocations/{specialty}/{organization} | 
+*InternshipApi* | [**masters_allocations_get**](docs/InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations/ | 
+*InternshipApi* | [**masters_allocations_post**](docs/InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations/ | 
 *InternshipApi* | [**masters_allocations_uuid_delete**](docs/InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid} | 
 *InternshipApi* | [**masters_allocations_uuid_get**](docs/InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
 *InternshipApi* | [**masters_get**](docs/InternshipApi.md#masters_get) | **GET** /masters/ | 

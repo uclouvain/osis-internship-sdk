@@ -8,8 +8,8 @@ Method | HTTP request | Description
 [**cohorts_uuid_get**](InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
 [**internships_get**](InternshipApi.md#internships_get) | **GET** /internships | 
 [**internships_uuid_get**](InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
-[**masters_allocations_specialty_organization_get**](InternshipApi.md#masters_allocations_specialty_organization_get) | **GET** /masters_allocations/{specialty}/{organization} | 
-[**masters_allocations_specialty_organization_post**](InternshipApi.md#masters_allocations_specialty_organization_post) | **POST** /masters_allocations/{specialty}/{organization} | 
+[**masters_allocations_get**](InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations/ | 
+[**masters_allocations_post**](InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations/ | 
 [**masters_allocations_uuid_delete**](InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid} | 
 [**masters_allocations_uuid_get**](InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
 [**masters_get**](InternshipApi.md#masters_get) | **GET** /masters/ | 
@@ -317,8 +317,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **masters_allocations_specialty_organization_get**
-> AllocationPaging masters_allocations_specialty_organization_get(organization, specialty)
+# **masters_allocations_get**
+> AllocationPaging masters_allocations_get(organization, specialty)
 
 
 
@@ -360,18 +360,18 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.masters_allocations_specialty_organization_get(organization, specialty)
+        api_response = api_instance.masters_allocations_get(organization, specialty)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->masters_allocations_specialty_organization_get: %s\n" % e)
+        print("Exception when calling InternshipApi->masters_allocations_get: %s\n" % e)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.masters_allocations_specialty_organization_get(organization, specialty, role=role)
+        api_response = api_instance.masters_allocations_get(organization, specialty, role=role)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->masters_allocations_specialty_organization_get: %s\n" % e)
+        print("Exception when calling InternshipApi->masters_allocations_get: %s\n" % e)
 ```
 
 ### Parameters
@@ -402,8 +402,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **masters_allocations_specialty_organization_post**
-> AllocationGet masters_allocations_specialty_organization_post(organization, specialty, allocation_get)
+# **masters_allocations_post**
+> AllocationGet masters_allocations_post(organization, specialty, allocation_get)
 
 
 
@@ -509,10 +509,10 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.masters_allocations_specialty_organization_post(organization, specialty, allocation_get)
+        api_response = api_instance.masters_allocations_post(organization, specialty, allocation_get)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->masters_allocations_specialty_organization_post: %s\n" % e)
+        print("Exception when calling InternshipApi->masters_allocations_post: %s\n" % e)
 ```
 
 ### Parameters
