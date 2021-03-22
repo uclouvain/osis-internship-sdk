@@ -800,7 +800,7 @@ components:
         internship:
           type: string
         score:
-          $ref: '#/components/schemas/ScoreGet'
+          $ref: '#/components/schemas/ScoreListGet'
 
     ScoreGet:
       type: object
@@ -823,6 +823,59 @@ components:
         objectives:
           type: object
           nullable: true
+        validated:
+          type: boolean
+        APD_1:
+          type: string
+          nullable: true
+        APD_2:
+          type: string
+          nullable: true
+        APD_3:
+          type: string
+          nullable: true
+        APD_4:
+          type: string
+          nullable: true
+        APD_5:
+          type: string
+          nullable: true
+        APD_6:
+          type: string
+          nullable: true
+        APD_7:
+          type: string
+          nullable: true
+        APD_8:
+          type: string
+          nullable: true
+        APD_9:
+          type: string
+          nullable: true
+        APD_10:
+          type: string
+          nullable: true
+        APD_11:
+          type: string
+          nullable: true
+        APD_12:
+          type: string
+          nullable: true
+        APD_13:
+          type: string
+          nullable: true
+        APD_14:
+          type: string
+          nullable: true
+        APD_15:
+          type: string
+          nullable: true
+
+    ScoreListGet:
+      type: object
+      properties:
+        uuid:
+          $ref: '#/components/schemas/Uuid'
         validated:
           type: boolean
         APD_1:

@@ -154,6 +154,7 @@ Class | Method | HTTP request | Description
  - [PeriodPaging](docs/PeriodPaging.md)
  - [Person](docs/Person.md)
  - [ScoreGet](docs/ScoreGet.md)
+ - [ScoreListGet](docs/ScoreListGet.md)
  - [ScorePaging](docs/ScorePaging.md)
  - [SpecialtyGet](docs/SpecialtyGet.md)
  - [SpecialtyPaging](docs/SpecialtyPaging.md)
