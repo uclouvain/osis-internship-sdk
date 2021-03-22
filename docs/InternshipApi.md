@@ -456,7 +456,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
                 birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
             ),
             civility="DOCTOR",
-            user_account_status="ACTIVE",
+            user_account_status="active",
         ),
         organization=OrganizationGet(
             url="url_example",
@@ -812,7 +812,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
             birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
         ),
         civility="DOCTOR",
-        user_account_status="ACTIVE",
+        user_account_status="active",
     ) # MasterGet | 
 
     # example passing only required values which don't have defaults set

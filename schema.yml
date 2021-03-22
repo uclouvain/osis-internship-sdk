@@ -584,9 +584,9 @@ components:
           user_account_status:
             type: string
             enum:
-              - "ACTIVE"
-              - "PENDING"
-              - "INACTIVE"
+              - "active"
+              - "pending"
+              - "inactive"
 
     AllocationGet:
       type: object

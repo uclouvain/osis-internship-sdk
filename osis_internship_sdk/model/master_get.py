@@ -57,9 +57,9 @@ class MasterGet(ModelNormal):
 
     allowed_values = {
         ('user_account_status',): {
-            'ACTIVE': "ACTIVE",
-            'PENDING': "PENDING",
-            'INACTIVE': "INACTIVE",
+            'ACTIVE': "active",
+            'PENDING': "pending",
+            'INACTIVE': "inactive",
         },
     }
 
