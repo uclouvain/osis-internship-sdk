@@ -5,32 +5,32 @@ All URIs are relative to *https://dev.osis.uclouvain.be/api/v1/internship*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cohorts_get**](InternshipApi.md#cohorts_get) | **GET** /cohorts | 
-[**cohorts_uuid_get**](InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
+[**cohorts_uuid_get**](InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid}/ | 
 [**internships_get**](InternshipApi.md#internships_get) | **GET** /internships | 
-[**internships_uuid_get**](InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
-[**masters_allocations_get**](InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations/ | 
-[**masters_allocations_post**](InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations/ | 
-[**masters_allocations_uuid_delete**](InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid} | 
-[**masters_allocations_uuid_get**](InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
-[**masters_get**](InternshipApi.md#masters_get) | **GET** /masters/ | 
-[**masters_post**](InternshipApi.md#masters_post) | **POST** /masters/ | 
-[**masters_uuid_activate_account_put**](InternshipApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account/ | 
-[**masters_uuid_allocations_get**](InternshipApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations/ | 
-[**masters_uuid_get**](InternshipApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
+[**internships_uuid_get**](InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid}/ | 
+[**masters_allocations_get**](InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations | 
+[**masters_allocations_post**](InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations | 
+[**masters_allocations_uuid_delete**](InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid}/ | 
+[**masters_allocations_uuid_get**](InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid}/ | 
+[**masters_get**](InternshipApi.md#masters_get) | **GET** /masters | 
+[**masters_post**](InternshipApi.md#masters_post) | **POST** /masters | 
+[**masters_uuid_activate_account_post**](InternshipApi.md#masters_uuid_activate_account_post) | **POST** /masters/{uuid}/activate_account/ | 
+[**masters_uuid_allocations_get**](InternshipApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations | 
+[**masters_uuid_get**](InternshipApi.md#masters_uuid_get) | **GET** /masters/{uuid}/ | 
 [**organizations_get**](InternshipApi.md#organizations_get) | **GET** /organizations | 
-[**organizations_uuid_get**](InternshipApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
+[**organizations_uuid_get**](InternshipApi.md#organizations_uuid_get) | **GET** /organizations/{uuid}/ | 
 [**periods_get**](InternshipApi.md#periods_get) | **GET** /periods | 
-[**periods_uuid_get**](InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
-[**scores_affectation_uuid_validate_get**](InternshipApi.md#scores_affectation_uuid_validate_get) | **GET** /scores/{affectation_uuid}/validate | 
-[**scores_student_uuid_period_uuid_get**](InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
-[**scores_student_uuid_period_uuid_put**](InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
+[**periods_uuid_get**](InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid}/ | 
+[**scores_affectation_uuid_validate_post**](InternshipApi.md#scores_affectation_uuid_validate_post) | **POST** /scores/{affectation_uuid}/validate/ | 
+[**scores_student_uuid_period_uuid_get**](InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid}/ | 
+[**scores_student_uuid_period_uuid_put**](InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid}/ | 
 [**specialties_get**](InternshipApi.md#specialties_get) | **GET** /specialties | 
-[**specialties_uuid_get**](InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
+[**specialties_uuid_get**](InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid}/ | 
 [**students_affectations_specialty_organization_get**](InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
 [**students_affectations_specialty_organization_stats_get**](InternshipApi.md#students_affectations_specialty_organization_stats_get) | **GET** /students_affectations/{specialty}/{organization}/stats/ | 
-[**students_affectations_uuid_get**](InternshipApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
+[**students_affectations_uuid_get**](InternshipApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid}/ | 
 [**students_get**](InternshipApi.md#students_get) | **GET** /students | 
-[**students_uuid_get**](InternshipApi.md#students_uuid_get) | **GET** /students/{uuid} | 
+[**students_uuid_get**](InternshipApi.md#students_uuid_get) | **GET** /students/{uuid}/ | 
 
 
 # **cohorts_get**
@@ -456,7 +456,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
                 birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
             ),
             civility="DOCTOR",
-            user_account_status="active",
+            user_account_status="ACTIVE",
         ),
         organization=OrganizationGet(
             url="url_example",
@@ -812,7 +812,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
             birth_date=dateutil_parser('Sun Jan 01 01:00:00 CET 1989').date(),
         ),
         civility="DOCTOR",
-        user_account_status="active",
+        user_account_status="ACTIVE",
     ) # MasterGet | 
 
     # example passing only required values which don't have defaults set
@@ -849,8 +849,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **masters_uuid_activate_account_put**
-> MasterGet masters_uuid_activate_account_put(uuid)
+# **masters_uuid_activate_account_post**
+> MasterGet masters_uuid_activate_account_post(uuid)
 
 
 
@@ -890,10 +890,10 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.masters_uuid_activate_account_put(uuid)
+        api_response = api_instance.masters_uuid_activate_account_post(uuid)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->masters_uuid_activate_account_put: %s\n" % e)
+        print("Exception when calling InternshipApi->masters_uuid_activate_account_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -1367,8 +1367,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **scores_affectation_uuid_validate_get**
-> InlineResponse2001 scores_affectation_uuid_validate_get(affectation_uuid)
+# **scores_affectation_uuid_validate_post**
+> scores_affectation_uuid_validate_post(affectation_uuid)
 
 
 
@@ -1381,8 +1381,6 @@ Validate a score
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
-from osis_internship_sdk.model.inline_response2001 import InlineResponse2001
-from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1409,10 +1407,9 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.scores_affectation_uuid_validate_get(affectation_uuid)
-        pprint(api_response)
+        api_instance.scores_affectation_uuid_validate_post(affectation_uuid)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->scores_affectation_uuid_validate_get: %s\n" % e)
+        print("Exception when calling InternshipApi->scores_affectation_uuid_validate_post: %s\n" % e)
 ```
 
 ### Parameters
@@ -1423,7 +1420,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+void (empty response body)
 
 ### Authorization
 
@@ -1432,12 +1429,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successfully validated an internship score |  -  |
+**204** | Successfully validated an internship score |  -  |
 **404** | Affectation or score not found, validation aborted |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1859,7 +1856,7 @@ Name | Type | Description  | Notes
 
 
 
-Obtain the list of students affectations
+Obtain the stats of students affectations
 
 ### Example
 

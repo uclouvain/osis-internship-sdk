@@ -56,8 +56,6 @@ from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from osis_internship_sdk.model.cohort_get import CohortGet
 from osis_internship_sdk.model.cohort_paging import CohortPaging
 from osis_internship_sdk.model.inline_response200 import InlineResponse200
-from osis_internship_sdk.model.inline_response2001 import InlineResponse2001
-from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from osis_internship_sdk.model.internship_get import InternshipGet
 from osis_internship_sdk.model.internship_paging import InternshipPaging
 from osis_internship_sdk.model.master_get import MasterGet
@@ -110,32 +108,32 @@ All URIs are relative to *https://dev.osis.uclouvain.be/api/v1/internship*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *InternshipApi* | [**cohorts_get**](docs/InternshipApi.md#cohorts_get) | **GET** /cohorts | 
-*InternshipApi* | [**cohorts_uuid_get**](docs/InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid} | 
+*InternshipApi* | [**cohorts_uuid_get**](docs/InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid}/ | 
 *InternshipApi* | [**internships_get**](docs/InternshipApi.md#internships_get) | **GET** /internships | 
-*InternshipApi* | [**internships_uuid_get**](docs/InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid} | 
-*InternshipApi* | [**masters_allocations_get**](docs/InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations/ | 
-*InternshipApi* | [**masters_allocations_post**](docs/InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations/ | 
-*InternshipApi* | [**masters_allocations_uuid_delete**](docs/InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid} | 
-*InternshipApi* | [**masters_allocations_uuid_get**](docs/InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid} | 
-*InternshipApi* | [**masters_get**](docs/InternshipApi.md#masters_get) | **GET** /masters/ | 
-*InternshipApi* | [**masters_post**](docs/InternshipApi.md#masters_post) | **POST** /masters/ | 
-*InternshipApi* | [**masters_uuid_activate_account_put**](docs/InternshipApi.md#masters_uuid_activate_account_put) | **PUT** /masters/{uuid}/activate_account/ | 
-*InternshipApi* | [**masters_uuid_allocations_get**](docs/InternshipApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations/ | 
-*InternshipApi* | [**masters_uuid_get**](docs/InternshipApi.md#masters_uuid_get) | **GET** /masters/{uuid} | 
+*InternshipApi* | [**internships_uuid_get**](docs/InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid}/ | 
+*InternshipApi* | [**masters_allocations_get**](docs/InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations | 
+*InternshipApi* | [**masters_allocations_post**](docs/InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations | 
+*InternshipApi* | [**masters_allocations_uuid_delete**](docs/InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid}/ | 
+*InternshipApi* | [**masters_allocations_uuid_get**](docs/InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid}/ | 
+*InternshipApi* | [**masters_get**](docs/InternshipApi.md#masters_get) | **GET** /masters | 
+*InternshipApi* | [**masters_post**](docs/InternshipApi.md#masters_post) | **POST** /masters | 
+*InternshipApi* | [**masters_uuid_activate_account_post**](docs/InternshipApi.md#masters_uuid_activate_account_post) | **POST** /masters/{uuid}/activate_account/ | 
+*InternshipApi* | [**masters_uuid_allocations_get**](docs/InternshipApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations | 
+*InternshipApi* | [**masters_uuid_get**](docs/InternshipApi.md#masters_uuid_get) | **GET** /masters/{uuid}/ | 
 *InternshipApi* | [**organizations_get**](docs/InternshipApi.md#organizations_get) | **GET** /organizations | 
-*InternshipApi* | [**organizations_uuid_get**](docs/InternshipApi.md#organizations_uuid_get) | **GET** /organizations/{uuid} | 
+*InternshipApi* | [**organizations_uuid_get**](docs/InternshipApi.md#organizations_uuid_get) | **GET** /organizations/{uuid}/ | 
 *InternshipApi* | [**periods_get**](docs/InternshipApi.md#periods_get) | **GET** /periods | 
-*InternshipApi* | [**periods_uuid_get**](docs/InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid} | 
-*InternshipApi* | [**scores_affectation_uuid_validate_get**](docs/InternshipApi.md#scores_affectation_uuid_validate_get) | **GET** /scores/{affectation_uuid}/validate | 
-*InternshipApi* | [**scores_student_uuid_period_uuid_get**](docs/InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid} | 
-*InternshipApi* | [**scores_student_uuid_period_uuid_put**](docs/InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid} | 
+*InternshipApi* | [**periods_uuid_get**](docs/InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid}/ | 
+*InternshipApi* | [**scores_affectation_uuid_validate_post**](docs/InternshipApi.md#scores_affectation_uuid_validate_post) | **POST** /scores/{affectation_uuid}/validate/ | 
+*InternshipApi* | [**scores_student_uuid_period_uuid_get**](docs/InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid}/ | 
+*InternshipApi* | [**scores_student_uuid_period_uuid_put**](docs/InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid}/ | 
 *InternshipApi* | [**specialties_get**](docs/InternshipApi.md#specialties_get) | **GET** /specialties | 
-*InternshipApi* | [**specialties_uuid_get**](docs/InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid} | 
+*InternshipApi* | [**specialties_uuid_get**](docs/InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid}/ | 
 *InternshipApi* | [**students_affectations_specialty_organization_get**](docs/InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
 *InternshipApi* | [**students_affectations_specialty_organization_stats_get**](docs/InternshipApi.md#students_affectations_specialty_organization_stats_get) | **GET** /students_affectations/{specialty}/{organization}/stats/ | 
-*InternshipApi* | [**students_affectations_uuid_get**](docs/InternshipApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid} | 
+*InternshipApi* | [**students_affectations_uuid_get**](docs/InternshipApi.md#students_affectations_uuid_get) | **GET** /students_affectations/{uuid}/ | 
 *InternshipApi* | [**students_get**](docs/InternshipApi.md#students_get) | **GET** /students | 
-*InternshipApi* | [**students_uuid_get**](docs/InternshipApi.md#students_uuid_get) | **GET** /students/{uuid} | 
+*InternshipApi* | [**students_uuid_get**](docs/InternshipApi.md#students_uuid_get) | **GET** /students/{uuid}/ | 
 
 
 ## Documentation For Models
@@ -146,8 +144,6 @@ Class | Method | HTTP request | Description
  - [CohortPaging](docs/CohortPaging.md)
  - [Country](docs/Country.md)
  - [InlineResponse200](docs/InlineResponse200.md)
- - [InlineResponse2001](docs/InlineResponse2001.md)
- - [InlineResponse404](docs/InlineResponse404.md)
  - [InternshipGet](docs/InternshipGet.md)
  - [InternshipPaging](docs/InternshipPaging.md)
  - [MasterGet](docs/MasterGet.md)

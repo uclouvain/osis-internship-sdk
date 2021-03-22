@@ -26,8 +26,6 @@ from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from osis_internship_sdk.model.cohort_get import CohortGet
 from osis_internship_sdk.model.cohort_paging import CohortPaging
 from osis_internship_sdk.model.inline_response200 import InlineResponse200
-from osis_internship_sdk.model.inline_response2001 import InlineResponse2001
-from osis_internship_sdk.model.inline_response404 import InlineResponse404
 from osis_internship_sdk.model.internship_get import InternshipGet
 from osis_internship_sdk.model.internship_paging import InternshipPaging
 from osis_internship_sdk.model.master_get import MasterGet
@@ -236,7 +234,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/cohorts/{uuid}',
+                'endpoint_path': '/cohorts/{uuid}/',
                 'operation_id': 'cohorts_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -462,7 +460,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/internships/{uuid}',
+                'endpoint_path': '/internships/{uuid}/',
                 'operation_id': 'internships_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -586,7 +584,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters_allocations/',
+                'endpoint_path': '/masters_allocations',
                 'operation_id': 'masters_allocations_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -724,7 +722,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters_allocations/',
+                'endpoint_path': '/masters_allocations',
                 'operation_id': 'masters_allocations_post',
                 'http_method': 'POST',
                 'servers': None,
@@ -856,7 +854,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters_allocations/{uuid}',
+                'endpoint_path': '/masters_allocations/{uuid}/',
                 'operation_id': 'masters_allocations_uuid_delete',
                 'http_method': 'DELETE',
                 'servers': None,
@@ -975,7 +973,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters_allocations/{uuid}',
+                'endpoint_path': '/masters_allocations/{uuid}/',
                 'operation_id': 'masters_allocations_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -1090,7 +1088,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters/',
+                'endpoint_path': '/masters',
                 'operation_id': 'masters_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -1207,7 +1205,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters/',
+                'endpoint_path': '/masters',
                 'operation_id': 'masters_post',
                 'http_method': 'POST',
                 'servers': None,
@@ -1255,18 +1253,18 @@ class InternshipApi(object):
             callable=__masters_post
         )
 
-        def __masters_uuid_activate_account_put(
+        def __masters_uuid_activate_account_post(
             self,
             uuid,
             **kwargs
         ):
-            """masters_uuid_activate_account_put  # noqa: E501
+            """masters_uuid_activate_account_post  # noqa: E501
 
             Set master account activation status to ACTIVE  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.masters_uuid_activate_account_put(uuid, async_req=True)
+            >>> thread = api.masters_uuid_activate_account_post(uuid, async_req=True)
             >>> result = thread.get()
 
             Args:
@@ -1321,15 +1319,15 @@ class InternshipApi(object):
                 uuid
             return self.call_with_http_info(**kwargs)
 
-        self.masters_uuid_activate_account_put = _Endpoint(
+        self.masters_uuid_activate_account_post = _Endpoint(
             settings={
                 'response_type': (MasterGet,),
                 'auth': [
                     'Token'
                 ],
                 'endpoint_path': '/masters/{uuid}/activate_account/',
-                'operation_id': 'masters_uuid_activate_account_put',
-                'http_method': 'PUT',
+                'operation_id': 'masters_uuid_activate_account_post',
+                'http_method': 'POST',
                 'servers': None,
             },
             params_map={
@@ -1371,7 +1369,7 @@ class InternshipApi(object):
                 'content_type': [],
             },
             api_client=api_client,
-            callable=__masters_uuid_activate_account_put
+            callable=__masters_uuid_activate_account_post
         )
 
         def __masters_uuid_allocations_get(
@@ -1447,7 +1445,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters/{uuid}/allocations/',
+                'endpoint_path': '/masters/{uuid}/allocations',
                 'operation_id': 'masters_uuid_allocations_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -1571,7 +1569,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/masters/{uuid}',
+                'endpoint_path': '/masters/{uuid}/',
                 'operation_id': 'masters_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -1797,7 +1795,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/organizations/{uuid}',
+                'endpoint_path': '/organizations/{uuid}/',
                 'operation_id': 'organizations_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -2029,7 +2027,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/periods/{uuid}',
+                'endpoint_path': '/periods/{uuid}/',
                 'operation_id': 'periods_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -2076,18 +2074,18 @@ class InternshipApi(object):
             callable=__periods_uuid_get
         )
 
-        def __scores_affectation_uuid_validate_get(
+        def __scores_affectation_uuid_validate_post(
             self,
             affectation_uuid,
             **kwargs
         ):
-            """scores_affectation_uuid_validate_get  # noqa: E501
+            """scores_affectation_uuid_validate_post  # noqa: E501
 
             Validate a score  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.scores_affectation_uuid_validate_get(affectation_uuid, async_req=True)
+            >>> thread = api.scores_affectation_uuid_validate_post(affectation_uuid, async_req=True)
             >>> result = thread.get()
 
             Args:
@@ -2115,7 +2113,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                InlineResponse2001
+                None
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -2142,15 +2140,15 @@ class InternshipApi(object):
                 affectation_uuid
             return self.call_with_http_info(**kwargs)
 
-        self.scores_affectation_uuid_validate_get = _Endpoint(
+        self.scores_affectation_uuid_validate_post = _Endpoint(
             settings={
-                'response_type': (InlineResponse2001,),
+                'response_type': None,
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/scores/{affectation_uuid}/validate',
-                'operation_id': 'scores_affectation_uuid_validate_get',
-                'http_method': 'GET',
+                'endpoint_path': '/scores/{affectation_uuid}/validate/',
+                'operation_id': 'scores_affectation_uuid_validate_post',
+                'http_method': 'POST',
                 'servers': None,
             },
             params_map={
@@ -2186,13 +2184,11 @@ class InternshipApi(object):
                 }
             },
             headers_map={
-                'accept': [
-                    'application/json'
-                ],
+                'accept': [],
                 'content_type': [],
             },
             api_client=api_client,
-            callable=__scores_affectation_uuid_validate_get
+            callable=__scores_affectation_uuid_validate_post
         )
 
         def __scores_student_uuid_period_uuid_get(
@@ -2271,7 +2267,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/scores/{student_uuid}/{period_uuid}',
+                'endpoint_path': '/scores/{student_uuid}/{period_uuid}/',
                 'operation_id': 'scores_student_uuid_period_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -2404,7 +2400,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/scores/{student_uuid}/{period_uuid}',
+                'endpoint_path': '/scores/{student_uuid}/{period_uuid}/',
                 'operation_id': 'scores_student_uuid_period_uuid_put',
                 'http_method': 'PUT',
                 'servers': None,
@@ -2641,7 +2637,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/specialties/{uuid}',
+                'endpoint_path': '/specialties/{uuid}/',
                 'operation_id': 'specialties_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -2843,7 +2839,7 @@ class InternshipApi(object):
         ):
             """students_affectations_specialty_organization_stats_get  # noqa: E501
 
-            Obtain the list of students affectations  # noqa: E501
+            Obtain the stats of students affectations  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
@@ -3036,7 +3032,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/students_affectations/{uuid}',
+                'endpoint_path': '/students_affectations/{uuid}/',
                 'operation_id': 'students_affectations_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
@@ -3262,7 +3258,7 @@ class InternshipApi(object):
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/students/{uuid}',
+                'endpoint_path': '/students/{uuid}/',
                 'operation_id': 'students_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
