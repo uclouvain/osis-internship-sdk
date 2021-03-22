@@ -22,8 +22,8 @@ Method | HTTP request | Description
 [**periods_get**](InternshipApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid}/ | 
 [**scores_affectation_uuid_validate_post**](InternshipApi.md#scores_affectation_uuid_validate_post) | **POST** /scores/{affectation_uuid}/validate/ | 
-[**scores_student_uuid_period_uuid_get**](InternshipApi.md#scores_student_uuid_period_uuid_get) | **GET** /scores/{student_uuid}/{period_uuid}/ | 
-[**scores_student_uuid_period_uuid_put**](InternshipApi.md#scores_student_uuid_period_uuid_put) | **PUT** /scores/{student_uuid}/{period_uuid}/ | 
+[**scores_uuid_get**](InternshipApi.md#scores_uuid_get) | **GET** /scores/{uuid}/ | 
+[**scores_uuid_put**](InternshipApi.md#scores_uuid_put) | **PUT** /scores/{uuid}/ | 
 [**specialties_get**](InternshipApi.md#specialties_get) | **GET** /specialties | 
 [**specialties_uuid_get**](InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid}/ | 
 [**students_affectations_specialty_organization_get**](InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
@@ -1435,12 +1435,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **scores_student_uuid_period_uuid_get**
-> ScoreGet scores_student_uuid_period_uuid_get(student_uuid, period_uuid)
+# **scores_uuid_get**
+> ScoreGet scores_uuid_get(uuid)
 
 
 
-Get or create information about a specific student's score for a given period
+Get score detail
 
 ### Example
 
@@ -1472,23 +1472,21 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
-    student_uuid = "student_uuid_example" # str | The UUID of the student
-    period_uuid = "period_uuid_example" # str | The UUID of the period
+    uuid = "uuid_example" # str | The UUID of the master
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.scores_student_uuid_period_uuid_get(student_uuid, period_uuid)
+        api_response = api_instance.scores_uuid_get(uuid)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->scores_student_uuid_period_uuid_get: %s\n" % e)
+        print("Exception when calling InternshipApi->scores_uuid_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **student_uuid** | **str**| The UUID of the student |
- **period_uuid** | **str**| The UUID of the period |
+ **uuid** | **str**| The UUID of the master |
 
 ### Return type
 
@@ -1510,8 +1508,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **scores_student_uuid_period_uuid_put**
-> scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get)
+# **scores_uuid_put**
+> scores_uuid_put(uuid, score_get)
 
 
 
@@ -1547,8 +1545,7 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
-    student_uuid = "student_uuid_example" # str | The UUID of the student
-    period_uuid = "period_uuid_example" # str | The UUID of the period
+    uuid = "uuid_example" # str | The UUID of the master
     score_get = ScoreGet(
         uuid="uuid_example",
         cohort="cohort_example",
@@ -1577,17 +1574,16 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_instance.scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get)
+        api_instance.scores_uuid_put(uuid, score_get)
     except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->scores_student_uuid_period_uuid_put: %s\n" % e)
+        print("Exception when calling InternshipApi->scores_uuid_put: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **student_uuid** | **str**| The UUID of the student |
- **period_uuid** | **str**| The UUID of the period |
+ **uuid** | **str**| The UUID of the master |
  **score_get** | [**ScoreGet**](ScoreGet.md)|  |
 
 ### Return type

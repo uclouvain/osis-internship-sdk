@@ -2171,24 +2171,22 @@ class InternshipApi(object):
             callable=__scores_affectation_uuid_validate_post
         )
 
-        def __scores_student_uuid_period_uuid_get(
+        def __scores_uuid_get(
             self,
-            student_uuid,
-            period_uuid,
+            uuid,
             **kwargs
         ):
-            """scores_student_uuid_period_uuid_get  # noqa: E501
+            """scores_uuid_get  # noqa: E501
 
-            Get or create information about a specific student's score for a given period  # noqa: E501
+            Get score detail  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.scores_student_uuid_period_uuid_get(student_uuid, period_uuid, async_req=True)
+            >>> thread = api.scores_uuid_get(uuid, async_req=True)
             >>> result = thread.get()
 
             Args:
-                student_uuid (str): The UUID of the student
-                period_uuid (str): The UUID of the period
+                uuid (str): The UUID of the master
 
             Keyword Args:
                 _return_http_data_only (bool): response data without head status
@@ -2235,31 +2233,27 @@ class InternshipApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
-            kwargs['student_uuid'] = \
-                student_uuid
-            kwargs['period_uuid'] = \
-                period_uuid
+            kwargs['uuid'] = \
+                uuid
             return self.call_with_http_info(**kwargs)
 
-        self.scores_student_uuid_period_uuid_get = _Endpoint(
+        self.scores_uuid_get = _Endpoint(
             settings={
                 'response_type': (ScoreGet,),
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/scores/{student_uuid}/{period_uuid}/',
-                'operation_id': 'scores_student_uuid_period_uuid_get',
+                'endpoint_path': '/scores/{uuid}/',
+                'operation_id': 'scores_uuid_get',
                 'http_method': 'GET',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'student_uuid',
-                    'period_uuid',
+                    'uuid',
                 ],
                 'required': [
-                    'student_uuid',
-                    'period_uuid',
+                    'uuid',
                 ],
                 'nullable': [
                 ],
@@ -2274,18 +2268,14 @@ class InternshipApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'student_uuid':
-                        (str,),
-                    'period_uuid':
+                    'uuid':
                         (str,),
                 },
                 'attribute_map': {
-                    'student_uuid': 'student_uuid',
-                    'period_uuid': 'period_uuid',
+                    'uuid': 'uuid',
                 },
                 'location_map': {
-                    'student_uuid': 'path',
-                    'period_uuid': 'path',
+                    'uuid': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -2297,28 +2287,26 @@ class InternshipApi(object):
                 'content_type': [],
             },
             api_client=api_client,
-            callable=__scores_student_uuid_period_uuid_get
+            callable=__scores_uuid_get
         )
 
-        def __scores_student_uuid_period_uuid_put(
+        def __scores_uuid_put(
             self,
-            student_uuid,
-            period_uuid,
+            uuid,
             score_get,
             **kwargs
         ):
-            """scores_student_uuid_period_uuid_put  # noqa: E501
+            """scores_uuid_put  # noqa: E501
 
             Update a student's score for a given period  # noqa: E501
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.scores_student_uuid_period_uuid_put(student_uuid, period_uuid, score_get, async_req=True)
+            >>> thread = api.scores_uuid_put(uuid, score_get, async_req=True)
             >>> result = thread.get()
 
             Args:
-                student_uuid (str): The UUID of the student
-                period_uuid (str): The UUID of the period
+                uuid (str): The UUID of the master
                 score_get (ScoreGet):
 
             Keyword Args:
@@ -2366,34 +2354,30 @@ class InternshipApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
-            kwargs['student_uuid'] = \
-                student_uuid
-            kwargs['period_uuid'] = \
-                period_uuid
+            kwargs['uuid'] = \
+                uuid
             kwargs['score_get'] = \
                 score_get
             return self.call_with_http_info(**kwargs)
 
-        self.scores_student_uuid_period_uuid_put = _Endpoint(
+        self.scores_uuid_put = _Endpoint(
             settings={
                 'response_type': None,
                 'auth': [
                     'Token'
                 ],
-                'endpoint_path': '/scores/{student_uuid}/{period_uuid}/',
-                'operation_id': 'scores_student_uuid_period_uuid_put',
+                'endpoint_path': '/scores/{uuid}/',
+                'operation_id': 'scores_uuid_put',
                 'http_method': 'PUT',
                 'servers': None,
             },
             params_map={
                 'all': [
-                    'student_uuid',
-                    'period_uuid',
+                    'uuid',
                     'score_get',
                 ],
                 'required': [
-                    'student_uuid',
-                    'period_uuid',
+                    'uuid',
                     'score_get',
                 ],
                 'nullable': [
@@ -2409,20 +2393,16 @@ class InternshipApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'student_uuid':
-                        (str,),
-                    'period_uuid':
+                    'uuid':
                         (str,),
                     'score_get':
                         (ScoreGet,),
                 },
                 'attribute_map': {
-                    'student_uuid': 'student_uuid',
-                    'period_uuid': 'period_uuid',
+                    'uuid': 'uuid',
                 },
                 'location_map': {
-                    'student_uuid': 'path',
-                    'period_uuid': 'path',
+                    'uuid': 'path',
                     'score_get': 'body',
                 },
                 'collection_format_map': {
@@ -2435,7 +2415,7 @@ class InternshipApi(object):
                 ]
             },
             api_client=api_client,
-            callable=__scores_student_uuid_period_uuid_put
+            callable=__scores_uuid_put
         )
 
         def __specialties_get(
