@@ -4,8 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **str** |  | [optional] 
-**student** | [**Student**](Student.md) |  | [optional] 
-**period** | **str** |  | [optional] 
 **cohort** | **str** |  | [optional] 
 **excused** | **bool** |  | [optional] 
 **reason** | **str, none_type** |  | [optional] 

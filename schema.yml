@@ -185,17 +185,6 @@ paths:
         - internship
     post:
       description: Create new internship allocation
-      parameters:
-        - in: path
-          name: organization
-          schema:
-            type: string
-          required: true
-        - in: path
-          name: specialty
-          schema:
-            type: string
-          required: true
       requestBody:
         required: true
         content:
@@ -818,10 +807,6 @@ components:
       properties:
         uuid:
           $ref: '#/components/schemas/Uuid'
-        student:
-          $ref: '#/components/schemas/Student'
-        period:
-          type: string
         cohort:
           type: string
         excused:

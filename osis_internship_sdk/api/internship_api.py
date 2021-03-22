@@ -644,8 +644,6 @@ class InternshipApi(object):
 
         def __masters_allocations_post(
             self,
-            organization,
-            specialty,
             allocation_get,
             **kwargs
         ):
@@ -655,12 +653,10 @@ class InternshipApi(object):
             This method makes a synchronous HTTP request by default. To make an
             asynchronous HTTP request, please pass async_req=True
 
-            >>> thread = api.masters_allocations_post(organization, specialty, allocation_get, async_req=True)
+            >>> thread = api.masters_allocations_post(allocation_get, async_req=True)
             >>> result = thread.get()
 
             Args:
-                organization (str):
-                specialty (str):
                 allocation_get (AllocationGet):
 
             Keyword Args:
@@ -708,10 +704,6 @@ class InternshipApi(object):
                 '_check_return_type', True
             )
             kwargs['_host_index'] = kwargs.get('_host_index')
-            kwargs['organization'] = \
-                organization
-            kwargs['specialty'] = \
-                specialty
             kwargs['allocation_get'] = \
                 allocation_get
             return self.call_with_http_info(**kwargs)
@@ -729,13 +721,9 @@ class InternshipApi(object):
             },
             params_map={
                 'all': [
-                    'organization',
-                    'specialty',
                     'allocation_get',
                 ],
                 'required': [
-                    'organization',
-                    'specialty',
                     'allocation_get',
                 ],
                 'nullable': [
@@ -751,20 +739,12 @@ class InternshipApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'organization':
-                        (str,),
-                    'specialty':
-                        (str,),
                     'allocation_get':
                         (AllocationGet,),
                 },
                 'attribute_map': {
-                    'organization': 'organization',
-                    'specialty': 'specialty',
                 },
                 'location_map': {
-                    'organization': 'path',
-                    'specialty': 'path',
                     'allocation_get': 'body',
                 },
                 'collection_format_map': {

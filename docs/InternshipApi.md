@@ -403,7 +403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_allocations_post**
-> AllocationGet masters_allocations_post(organization, specialty, allocation_get)
+> AllocationGet masters_allocations_post(allocation_get)
 
 
 
@@ -439,8 +439,6 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
-    organization = "organization_example" # str | 
-    specialty = "specialty_example" # str | 
     allocation_get = AllocationGet(
         url="url_example",
         uuid="uuid_example",
@@ -509,7 +507,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.masters_allocations_post(organization, specialty, allocation_get)
+        api_response = api_instance.masters_allocations_post(allocation_get)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_allocations_post: %s\n" % e)
@@ -519,8 +517,6 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **organization** | **str**|  |
- **specialty** | **str**|  |
  **allocation_get** | [**AllocationGet**](AllocationGet.md)|  |
 
 ### Return type
@@ -1555,12 +1551,6 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     period_uuid = "period_uuid_example" # str | The UUID of the period
     score_get = ScoreGet(
         uuid="uuid_example",
-        student=Student(
-            uuid="uuid_example",
-            first_name="first_name_example",
-            last_name="last_name_example",
-        ),
-        period="period_example",
         cohort="cohort_example",
         excused=True,
         reason="reason_example",
