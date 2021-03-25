@@ -111,13 +111,13 @@ Class | Method | HTTP request | Description
 *InternshipApi* | [**cohorts_uuid_get**](docs/InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid}/ | 
 *InternshipApi* | [**internships_get**](docs/InternshipApi.md#internships_get) | **GET** /internships | 
 *InternshipApi* | [**internships_uuid_get**](docs/InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid}/ | 
+*InternshipApi* | [**masters_activate_account_uuid_put**](docs/InternshipApi.md#masters_activate_account_uuid_put) | **PUT** /masters/activate_account/{uuid} | 
 *InternshipApi* | [**masters_allocations_get**](docs/InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations | 
 *InternshipApi* | [**masters_allocations_post**](docs/InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations | 
 *InternshipApi* | [**masters_allocations_uuid_delete**](docs/InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid}/ | 
 *InternshipApi* | [**masters_allocations_uuid_get**](docs/InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid}/ | 
 *InternshipApi* | [**masters_get**](docs/InternshipApi.md#masters_get) | **GET** /masters | 
 *InternshipApi* | [**masters_post**](docs/InternshipApi.md#masters_post) | **POST** /masters | 
-*InternshipApi* | [**masters_uuid_activate_account_post**](docs/InternshipApi.md#masters_uuid_activate_account_post) | **POST** /masters/{uuid}/activate_account/ | 
 *InternshipApi* | [**masters_uuid_allocations_get**](docs/InternshipApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations | 
 *InternshipApi* | [**masters_uuid_get**](docs/InternshipApi.md#masters_uuid_get) | **GET** /masters/{uuid}/ | 
 *InternshipApi* | [**organizations_get**](docs/InternshipApi.md#organizations_get) | **GET** /organizations | 

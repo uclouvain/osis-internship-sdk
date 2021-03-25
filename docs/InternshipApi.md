@@ -8,13 +8,13 @@ Method | HTTP request | Description
 [**cohorts_uuid_get**](InternshipApi.md#cohorts_uuid_get) | **GET** /cohorts/{uuid}/ | 
 [**internships_get**](InternshipApi.md#internships_get) | **GET** /internships | 
 [**internships_uuid_get**](InternshipApi.md#internships_uuid_get) | **GET** /internships/{uuid}/ | 
+[**masters_activate_account_uuid_put**](InternshipApi.md#masters_activate_account_uuid_put) | **PUT** /masters/activate_account/{uuid} | 
 [**masters_allocations_get**](InternshipApi.md#masters_allocations_get) | **GET** /masters_allocations | 
 [**masters_allocations_post**](InternshipApi.md#masters_allocations_post) | **POST** /masters_allocations | 
 [**masters_allocations_uuid_delete**](InternshipApi.md#masters_allocations_uuid_delete) | **DELETE** /masters_allocations/{uuid}/ | 
 [**masters_allocations_uuid_get**](InternshipApi.md#masters_allocations_uuid_get) | **GET** /masters_allocations/{uuid}/ | 
 [**masters_get**](InternshipApi.md#masters_get) | **GET** /masters | 
 [**masters_post**](InternshipApi.md#masters_post) | **POST** /masters | 
-[**masters_uuid_activate_account_post**](InternshipApi.md#masters_uuid_activate_account_post) | **POST** /masters/{uuid}/activate_account/ | 
 [**masters_uuid_allocations_get**](InternshipApi.md#masters_uuid_allocations_get) | **GET** /masters/{uuid}/allocations | 
 [**masters_uuid_get**](InternshipApi.md#masters_uuid_get) | **GET** /masters/{uuid}/ | 
 [**organizations_get**](InternshipApi.md#organizations_get) | **GET** /organizations | 
@@ -314,6 +314,79 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successful get of an internship&#39;s data. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **masters_activate_account_uuid_put**
+> MasterGet masters_activate_account_uuid_put(uuid)
+
+
+
+Set master account activation status to ACTIVE
+
+### Example
+
+* Api Key Authentication (Token):
+```python
+import time
+import osis_internship_sdk
+from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.master_get import MasterGet
+from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Token
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = internship_api.InternshipApi(api_client)
+    uuid = "uuid_example" # str | The UUID of the master
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.masters_activate_account_uuid_put(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->masters_activate_account_uuid_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uuid** | **str**| The UUID of the master |
+
+### Return type
+
+[**MasterGet**](MasterGet.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful master&#39;s account status update. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -842,79 +915,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully created an internship master |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **masters_uuid_activate_account_post**
-> MasterGet masters_uuid_activate_account_post(uuid)
-
-
-
-Set master account activation status to ACTIVE
-
-### Example
-
-* Api Key Authentication (Token):
-```python
-import time
-import osis_internship_sdk
-from osis_internship_sdk.api import internship_api
-from osis_internship_sdk.model.master_get import MasterGet
-from pprint import pprint
-# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
-# See configuration.py for a list of all supported configuration parameters.
-configuration = osis_internship_sdk.Configuration(
-    host = "https://dev.osis.uclouvain.be/api/v1/internship"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Token
-configuration.api_key['Token'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with osis_internship_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = internship_api.InternshipApi(api_client)
-    uuid = "uuid_example" # str | The UUID of the master
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_response = api_instance.masters_uuid_activate_account_post(uuid)
-        pprint(api_response)
-    except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->masters_uuid_activate_account_post: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uuid** | **str**| The UUID of the master |
-
-### Return type
-
-[**MasterGet**](MasterGet.md)
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful master&#39;s account status update. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
