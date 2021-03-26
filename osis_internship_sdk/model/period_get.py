@@ -77,7 +77,7 @@ class PeriodGet(ModelNormal):
         """
         lazy_import()
         return {
-            'url': (str,),  # noqa: E501
+            'url': (str, none_type,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'date_start': (str,),  # noqa: E501
@@ -145,7 +145,7 @@ class PeriodGet(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            url (str): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             date_start (str): [optional]  # noqa: E501

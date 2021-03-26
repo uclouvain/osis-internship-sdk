@@ -72,7 +72,7 @@ class Country(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'url': (str,),  # noqa: E501
+            'url': (str, none_type,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
             'iso_code': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -138,7 +138,7 @@ class Country(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            url (str): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             iso_code (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501

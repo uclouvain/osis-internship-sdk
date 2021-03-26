@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **str** |  | [optional] 
+**url** | **str, none_type** |  | [optional] 
 **uuid** | **str** |  | [optional] 
 **master** | [**MasterGet**](MasterGet.md) |  | [optional] 
 **organization** | [**OrganizationGet**](OrganizationGet.md) |  | [optional] 

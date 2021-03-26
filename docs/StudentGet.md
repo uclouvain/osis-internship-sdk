@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **str** |  | [optional] 
+**url** | **str, none_type** |  | [optional] 
 **uuid** | **str** |  | [optional] 
 **person** | [**Person**](Person.md) |  | [optional] 
 **location** | **str, none_type** |  | [optional] 

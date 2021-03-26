@@ -79,7 +79,7 @@ class StudentGet(ModelNormal):
         """
         lazy_import()
         return {
-            'url': (str,),  # noqa: E501
+            'url': (str, none_type,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
             'person': (Person,),  # noqa: E501
             'location': (str, none_type,),  # noqa: E501
@@ -161,7 +161,7 @@ class StudentGet(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            url (str): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             person (Person): [optional]  # noqa: E501
             location (str, none_type): [optional]  # noqa: E501

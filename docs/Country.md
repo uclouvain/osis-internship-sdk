@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**url** | **str** |  | [optional] 
+**url** | **str, none_type** |  | [optional] 
 **uuid** | **str** |  | [optional] 
 **iso_code** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

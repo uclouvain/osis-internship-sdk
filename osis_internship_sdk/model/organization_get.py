@@ -79,7 +79,7 @@ class OrganizationGet(ModelNormal):
         """
         lazy_import()
         return {
-            'url': (str,),  # noqa: E501
+            'url': (str, none_type,),  # noqa: E501
             'uuid': (str,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'acronym': (str,),  # noqa: E501
@@ -159,7 +159,7 @@ class OrganizationGet(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            url (str): [optional]  # noqa: E501
+            url (str, none_type): [optional]  # noqa: E501
             uuid (str): [optional]  # noqa: E501
             name (str): [optional]  # noqa: E501
             acronym (str): [optional]  # noqa: E501
