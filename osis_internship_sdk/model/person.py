@@ -77,7 +77,7 @@ class Person(ModelNormal):
             'last_name': (str,),  # noqa: E501
             'email': (str, none_type,),  # noqa: E501
             'gender': (str, none_type,),  # noqa: E501
-            'birth_date': (date, none_type,),  # noqa: E501
+            'birth_date': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -145,7 +145,7 @@ class Person(ModelNormal):
             last_name (str): [optional]  # noqa: E501
             email (str, none_type): [optional]  # noqa: E501
             gender (str, none_type): [optional]  # noqa: E501
-            birth_date (date, none_type): [optional]  # noqa: E501
+            birth_date (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
