@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **masters_allocations_uuid_delete**
-> AllocationGet masters_allocations_uuid_delete(uuid)
+> masters_allocations_uuid_delete(uuid)
 
 
 
@@ -553,7 +553,6 @@ Delete a master allocation
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
-from osis_internship_sdk.model.allocation_get import AllocationGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -580,8 +579,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 
     # example passing only required values which don't have defaults set
     try:
-        api_response = api_instance.masters_allocations_uuid_delete(uuid)
-        pprint(api_response)
+        api_instance.masters_allocations_uuid_delete(uuid)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_allocations_uuid_delete: %s\n" % e)
 ```
@@ -594,7 +592,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AllocationGet**](AllocationGet.md)
+void (empty response body)
 
 ### Authorization
 
@@ -603,12 +601,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successful delete of a master allocation&#39;s data. |  -  |
+**204** | Successful delete of a master allocation&#39;s data. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

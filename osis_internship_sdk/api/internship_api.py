@@ -801,7 +801,7 @@ class InternshipApi(object):
                 async_req (bool): execute request asynchronously
 
             Returns:
-                AllocationGet
+                None
                     If the method is called asynchronously, returns the request
                     thread.
             """
@@ -830,7 +830,7 @@ class InternshipApi(object):
 
         self.masters_allocations_uuid_delete = _Endpoint(
             settings={
-                'response_type': (AllocationGet,),
+                'response_type': None,
                 'auth': [
                     'Token'
                 ],
@@ -872,9 +872,7 @@ class InternshipApi(object):
                 }
             },
             headers_map={
-                'accept': [
-                    'application/json'
-                ],
+                'accept': [],
                 'content_type': [],
             },
             api_client=api_client,
