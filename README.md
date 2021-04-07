@@ -124,9 +124,9 @@ Class | Method | HTTP request | Description
 *InternshipApi* | [**organizations_uuid_get**](docs/InternshipApi.md#organizations_uuid_get) | **GET** /organizations/{uuid}/ | 
 *InternshipApi* | [**periods_get**](docs/InternshipApi.md#periods_get) | **GET** /periods | 
 *InternshipApi* | [**periods_uuid_get**](docs/InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid}/ | 
+*InternshipApi* | [**scores_affectation_uuid_get**](docs/InternshipApi.md#scores_affectation_uuid_get) | **GET** /scores/{affectation_uuid}/ | 
+*InternshipApi* | [**scores_affectation_uuid_put**](docs/InternshipApi.md#scores_affectation_uuid_put) | **PUT** /scores/{affectation_uuid}/ | 
 *InternshipApi* | [**scores_affectation_uuid_validate_post**](docs/InternshipApi.md#scores_affectation_uuid_validate_post) | **POST** /scores/{affectation_uuid}/validate/ | 
-*InternshipApi* | [**scores_uuid_get**](docs/InternshipApi.md#scores_uuid_get) | **GET** /scores/{uuid}/ | 
-*InternshipApi* | [**scores_uuid_put**](docs/InternshipApi.md#scores_uuid_put) | **PUT** /scores/{uuid}/ | 
 *InternshipApi* | [**specialties_get**](docs/InternshipApi.md#specialties_get) | **GET** /specialties | 
 *InternshipApi* | [**specialties_uuid_get**](docs/InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid}/ | 
 *InternshipApi* | [**students_affectations_specialty_organization_get**](docs/InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 

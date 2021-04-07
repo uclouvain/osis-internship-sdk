@@ -21,9 +21,9 @@ Method | HTTP request | Description
 [**organizations_uuid_get**](InternshipApi.md#organizations_uuid_get) | **GET** /organizations/{uuid}/ | 
 [**periods_get**](InternshipApi.md#periods_get) | **GET** /periods | 
 [**periods_uuid_get**](InternshipApi.md#periods_uuid_get) | **GET** /periods/{uuid}/ | 
+[**scores_affectation_uuid_get**](InternshipApi.md#scores_affectation_uuid_get) | **GET** /scores/{affectation_uuid}/ | 
+[**scores_affectation_uuid_put**](InternshipApi.md#scores_affectation_uuid_put) | **PUT** /scores/{affectation_uuid}/ | 
 [**scores_affectation_uuid_validate_post**](InternshipApi.md#scores_affectation_uuid_validate_post) | **POST** /scores/{affectation_uuid}/validate/ | 
-[**scores_uuid_get**](InternshipApi.md#scores_uuid_get) | **GET** /scores/{uuid}/ | 
-[**scores_uuid_put**](InternshipApi.md#scores_uuid_put) | **PUT** /scores/{uuid}/ | 
 [**specialties_get**](InternshipApi.md#specialties_get) | **GET** /specialties | 
 [**specialties_uuid_get**](InternshipApi.md#specialties_uuid_get) | **GET** /specialties/{uuid}/ | 
 [**students_affectations_specialty_organization_get**](InternshipApi.md#students_affectations_specialty_organization_get) | **GET** /students_affectations/{specialty}/{organization} | 
@@ -1361,6 +1361,177 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **scores_affectation_uuid_get**
+> ScoreGet scores_affectation_uuid_get(affectation_uuid)
+
+
+
+Get score detail
+
+### Example
+
+* Api Key Authentication (Token):
+```python
+import time
+import osis_internship_sdk
+from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.score_get import ScoreGet
+from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Token
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = internship_api.InternshipApi(api_client)
+    affectation_uuid = "affectation_uuid_example" # str | The UUID of the affectation
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_response = api_instance.scores_affectation_uuid_get(affectation_uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->scores_affectation_uuid_get: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **affectation_uuid** | **str**| The UUID of the affectation |
+
+### Return type
+
+[**ScoreGet**](ScoreGet.md)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Successful get or create of a student&#39;s score for a given period. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **scores_affectation_uuid_put**
+> scores_affectation_uuid_put(affectation_uuid, score_get)
+
+
+
+Update a student's score for a given period
+
+### Example
+
+* Api Key Authentication (Token):
+```python
+import time
+import osis_internship_sdk
+from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.score_get import ScoreGet
+from pprint import pprint
+# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
+# See configuration.py for a list of all supported configuration parameters.
+configuration = osis_internship_sdk.Configuration(
+    host = "https://dev.osis.uclouvain.be/api/v1/internship"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Token
+configuration.api_key['Token'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Token'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with osis_internship_sdk.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = internship_api.InternshipApi(api_client)
+    affectation_uuid = "affectation_uuid_example" # str | The UUID of the affectation
+    score_get = ScoreGet(
+        uuid="uuid_example",
+        cohort="cohort_example",
+        excused=True,
+        reason="reason_example",
+        score=3.14,
+        comments={},
+        objectives={},
+        validated=True,
+        apd_1="apd_1_example",
+        apd_2="apd_2_example",
+        apd_3="apd_3_example",
+        apd_4="apd_4_example",
+        apd_5="apd_5_example",
+        apd_6="apd_6_example",
+        apd_7="apd_7_example",
+        apd_8="apd_8_example",
+        apd_9="apd_9_example",
+        apd_10="apd_10_example",
+        apd_11="apd_11_example",
+        apd_12="apd_12_example",
+        apd_13="apd_13_example",
+        apd_14="apd_14_example",
+        apd_15="apd_15_example",
+    ) # ScoreGet | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        api_instance.scores_affectation_uuid_put(affectation_uuid, score_get)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->scores_affectation_uuid_put: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **affectation_uuid** | **str**| The UUID of the affectation |
+ **score_get** | [**ScoreGet**](ScoreGet.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Token](../README.md#Token)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | Successful update of a score for a given period |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **scores_affectation_uuid_validate_post**
 > scores_affectation_uuid_validate_post(affectation_uuid)
 
@@ -1430,177 +1601,6 @@ void (empty response body)
 |-------------|-------------|------------------|
 **204** | Successfully validated an internship score |  -  |
 **404** | Affectation or score not found, validation aborted |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **scores_uuid_get**
-> ScoreGet scores_uuid_get(uuid)
-
-
-
-Get score detail
-
-### Example
-
-* Api Key Authentication (Token):
-```python
-import time
-import osis_internship_sdk
-from osis_internship_sdk.api import internship_api
-from osis_internship_sdk.model.score_get import ScoreGet
-from pprint import pprint
-# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
-# See configuration.py for a list of all supported configuration parameters.
-configuration = osis_internship_sdk.Configuration(
-    host = "https://dev.osis.uclouvain.be/api/v1/internship"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Token
-configuration.api_key['Token'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with osis_internship_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = internship_api.InternshipApi(api_client)
-    uuid = "uuid_example" # str | The UUID of the master
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_response = api_instance.scores_uuid_get(uuid)
-        pprint(api_response)
-    except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->scores_uuid_get: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uuid** | **str**| The UUID of the master |
-
-### Return type
-
-[**ScoreGet**](ScoreGet.md)
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | Successful get or create of a student&#39;s score for a given period. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **scores_uuid_put**
-> scores_uuid_put(uuid, score_get)
-
-
-
-Update a student's score for a given period
-
-### Example
-
-* Api Key Authentication (Token):
-```python
-import time
-import osis_internship_sdk
-from osis_internship_sdk.api import internship_api
-from osis_internship_sdk.model.score_get import ScoreGet
-from pprint import pprint
-# Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
-# See configuration.py for a list of all supported configuration parameters.
-configuration = osis_internship_sdk.Configuration(
-    host = "https://dev.osis.uclouvain.be/api/v1/internship"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Token
-configuration.api_key['Token'] = 'YOUR_API_KEY'
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with osis_internship_sdk.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = internship_api.InternshipApi(api_client)
-    uuid = "uuid_example" # str | The UUID of the master
-    score_get = ScoreGet(
-        uuid="uuid_example",
-        cohort="cohort_example",
-        excused=True,
-        reason="reason_example",
-        score=3.14,
-        comments={},
-        objectives={},
-        validated=True,
-        apd_1="apd_1_example",
-        apd_2="apd_2_example",
-        apd_3="apd_3_example",
-        apd_4="apd_4_example",
-        apd_5="apd_5_example",
-        apd_6="apd_6_example",
-        apd_7="apd_7_example",
-        apd_8="apd_8_example",
-        apd_9="apd_9_example",
-        apd_10="apd_10_example",
-        apd_11="apd_11_example",
-        apd_12="apd_12_example",
-        apd_13="apd_13_example",
-        apd_14="apd_14_example",
-        apd_15="apd_15_example",
-    ) # ScoreGet | 
-
-    # example passing only required values which don't have defaults set
-    try:
-        api_instance.scores_uuid_put(uuid, score_get)
-    except osis_internship_sdk.ApiException as e:
-        print("Exception when calling InternshipApi->scores_uuid_put: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **uuid** | **str**| The UUID of the master |
- **score_get** | [**ScoreGet**](ScoreGet.md)|  |
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Token](../README.md#Token)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** | Successful update of a score for a given period |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
