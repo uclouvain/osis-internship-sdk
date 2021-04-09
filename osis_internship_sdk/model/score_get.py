@@ -95,6 +95,7 @@ class ScoreGet(ModelNormal):
             'apd_13': (str, none_type,),  # noqa: E501
             'apd_14': (str, none_type,),  # noqa: E501
             'apd_15': (str, none_type,),  # noqa: E501
+            'student_presence': (bool, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -126,6 +127,7 @@ class ScoreGet(ModelNormal):
         'apd_13': 'APD_13',  # noqa: E501
         'apd_14': 'APD_14',  # noqa: E501
         'apd_15': 'APD_15',  # noqa: E501
+        'student_presence': 'student_presence',  # noqa: E501
     }
 
     _composed_schemas = {}
@@ -197,6 +199,7 @@ class ScoreGet(ModelNormal):
             apd_13 (str, none_type): [optional]  # noqa: E501
             apd_14 (str, none_type): [optional]  # noqa: E501
             apd_15 (str, none_type): [optional]  # noqa: E501
+            student_presence (bool, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

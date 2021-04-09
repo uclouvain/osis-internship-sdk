@@ -1496,6 +1496,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         apd_13="apd_13_example",
         apd_14="apd_14_example",
         apd_15="apd_15_example",
+        student_presence=True,
     ) # ScoreGet | 
 
     # example passing only required values which don't have defaults set
