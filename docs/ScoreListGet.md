@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **apd_13** | **str, none_type** |  | [optional] 
 **apd_14** | **str, none_type** |  | [optional] 
 **apd_15** | **str, none_type** |  | [optional] 
+**student_presence** | **bool, none_type** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
