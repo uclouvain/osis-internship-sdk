@@ -9,6 +9,7 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.allocation_get import AllocationGet
 from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from osis_internship_sdk.model.cohort_get import CohortGet

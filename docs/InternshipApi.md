@@ -47,6 +47,7 @@ Obtain the list of cohorts
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.cohort_paging import CohortPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -70,17 +71,30 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.cohorts_get()
+        api_response = api_instance.cohorts_get(accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->cohorts_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -116,6 +130,7 @@ Obtain information about a specific cohort
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.cohort_get import CohortGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -140,10 +155,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the cohort
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.cohorts_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->cohorts_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.cohorts_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->cohorts_uuid_get: %s\n" % e)
@@ -154,6 +182,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the cohort |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -189,6 +222,7 @@ Obtain the list of internships
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.internship_paging import InternshipPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -212,17 +246,30 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.internships_get()
+        api_response = api_instance.internships_get(accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->internships_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -258,6 +305,7 @@ Obtain information about a specific internship
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.internship_get import InternshipGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -282,10 +330,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the internship
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.internships_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->internships_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.internships_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->internships_uuid_get: %s\n" % e)
@@ -296,6 +357,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the internship |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -331,6 +397,7 @@ Obtain the list of master allocations filtered by specialty and organization
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -357,6 +424,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     organization = "organization_example" # str | 
     specialty = "specialty_example" # str | 
     role = "all" # str |  (optional) if omitted the server will use the default value of "all"
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -368,7 +440,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.masters_allocations_get(organization, specialty, role=role)
+        api_response = api_instance.masters_allocations_get(organization, specialty, role=role, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_allocations_get: %s\n" % e)
@@ -381,6 +453,11 @@ Name | Type | Description  | Notes
  **organization** | **str**|  |
  **specialty** | **str**|  |
  **role** | **str**|  | [optional] if omitted the server will use the default value of "all"
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -416,6 +493,7 @@ Create new internship allocation
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.allocation_get import AllocationGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -504,10 +582,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         ),
         role="MASTER",
     ) # AllocationGet | 
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.masters_allocations_post(allocation_get)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->masters_allocations_post: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_allocations_post(allocation_get, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_allocations_post: %s\n" % e)
@@ -518,6 +609,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allocation_get** | [**AllocationGet**](AllocationGet.md)|  |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -553,6 +649,7 @@ Delete a master allocation
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -576,10 +673,22 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the master allocation
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_instance.masters_allocations_uuid_delete(uuid)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->masters_allocations_uuid_delete: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.masters_allocations_uuid_delete(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_allocations_uuid_delete: %s\n" % e)
 ```
@@ -589,6 +698,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the master allocation |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -624,6 +738,7 @@ Obtain information about a specific master allocation
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.allocation_get import AllocationGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -648,10 +763,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the master allocation
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.masters_allocations_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->masters_allocations_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_allocations_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_allocations_uuid_get: %s\n" % e)
@@ -662,6 +790,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the master allocation |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -698,6 +831,7 @@ import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
 from osis_internship_sdk.model.master_paging import MasterPaging
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -721,11 +855,16 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     search = "search_example" # str |  (optional)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.masters_get(search=search)
+        api_response = api_instance.masters_get(search=search, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_get: %s\n" % e)
@@ -736,6 +875,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **search** | **str**|  | [optional]
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -771,6 +915,7 @@ Create new internship master
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.master_get import MasterGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -808,10 +953,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         civility="DOCTOR",
         user_account_status="ACTIVE",
     ) # MasterGet | 
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.masters_post(master_get)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->masters_post: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_post(master_get, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_post: %s\n" % e)
@@ -822,6 +980,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **master_get** | [**MasterGet**](MasterGet.md)|  |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -857,6 +1020,7 @@ Set master account activation status to ACTIVE
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.master_get import MasterGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -881,10 +1045,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the master
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.masters_uuid_activate_account_post(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->masters_uuid_activate_account_post: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_uuid_activate_account_post(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_uuid_activate_account_post: %s\n" % e)
@@ -895,6 +1072,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the master |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -930,6 +1112,7 @@ Obtain the list of internship-master allocations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.allocation_paging import AllocationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -955,6 +1138,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the master
     current = True # bool |  (optional)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -966,7 +1154,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.masters_uuid_allocations_get(uuid, current=current)
+        api_response = api_instance.masters_uuid_allocations_get(uuid, current=current, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_uuid_allocations_get: %s\n" % e)
@@ -978,6 +1166,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the master |
  **current** | **bool**|  | [optional]
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1013,6 +1206,7 @@ Obtain information about a specific master
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.master_get import MasterGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1037,10 +1231,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the master
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.masters_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->masters_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.masters_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->masters_uuid_get: %s\n" % e)
@@ -1051,6 +1258,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the master |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1086,6 +1298,7 @@ Obtain the list of organizations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.organization_paging import OrganizationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1109,17 +1322,30 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.organizations_get()
+        api_response = api_instance.organizations_get(accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->organizations_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1155,6 +1381,7 @@ Obtain information about a specific organization
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.organization_get import OrganizationGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1179,10 +1406,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the organization
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.organizations_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->organizations_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.organizations_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->organizations_uuid_get: %s\n" % e)
@@ -1193,6 +1433,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the organization |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1228,6 +1473,7 @@ Obtain the list of periods
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.period_paging import PeriodPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1252,11 +1498,16 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     active = True # bool |  (optional)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.periods_get(active=active)
+        api_response = api_instance.periods_get(active=active, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->periods_get: %s\n" % e)
@@ -1267,6 +1518,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **active** | **bool**|  | [optional]
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1302,6 +1558,7 @@ Obtain information about a specific period
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.period_get import PeriodGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1326,10 +1583,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the period
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.periods_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->periods_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.periods_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->periods_uuid_get: %s\n" % e)
@@ -1340,6 +1610,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the period |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1375,6 +1650,7 @@ Get score detail
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.score_get import ScoreGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1399,10 +1675,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     affectation_uuid = "affectation_uuid_example" # str | The UUID of the affectation
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.scores_affectation_uuid_get(affectation_uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->scores_affectation_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.scores_affectation_uuid_get(affectation_uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->scores_affectation_uuid_get: %s\n" % e)
@@ -1413,6 +1702,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **affectation_uuid** | **str**| The UUID of the affectation |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1448,6 +1742,7 @@ Update a student's score for a given period
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.score_get import ScoreGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1498,10 +1793,22 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         apd_15="apd_15_example",
         student_presence=True,
     ) # ScoreGet | 
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_instance.scores_affectation_uuid_put(affectation_uuid, score_get)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->scores_affectation_uuid_put: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.scores_affectation_uuid_put(affectation_uuid, score_get, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->scores_affectation_uuid_put: %s\n" % e)
 ```
@@ -1512,6 +1819,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **affectation_uuid** | **str**| The UUID of the affectation |
  **score_get** | [**ScoreGet**](ScoreGet.md)|  |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1547,6 +1859,7 @@ Validate a score
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1570,10 +1883,22 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     affectation_uuid = "affectation_uuid_example" # str | The UUID of the period
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_instance.scores_affectation_uuid_validate_post(affectation_uuid)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->scores_affectation_uuid_validate_post: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_instance.scores_affectation_uuid_validate_post(affectation_uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->scores_affectation_uuid_validate_post: %s\n" % e)
 ```
@@ -1583,6 +1908,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **affectation_uuid** | **str**| The UUID of the period |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1620,6 +1950,7 @@ import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
 from osis_internship_sdk.model.specialty_paging import SpecialtyPaging
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
 # See configuration.py for a list of all supported configuration parameters.
@@ -1642,17 +1973,30 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.specialties_get()
+        api_response = api_instance.specialties_get(accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->specialties_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1688,6 +2032,7 @@ Obtain information about a specific specialty
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.specialty_get import SpecialtyGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1712,10 +2057,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the specialty
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.specialties_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->specialties_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.specialties_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->specialties_uuid_get: %s\n" % e)
@@ -1726,6 +2084,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the specialty |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1761,6 +2124,7 @@ Obtain the list of students affectations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.student_affectation_paging import StudentAffectationPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1789,6 +2153,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     period = "all" # str |  (optional) if omitted the server will use the default value of "all"
     limit = 1 # int |  (optional)
     offset = 1 # int |  (optional)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1800,7 +2169,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, limit=limit, offset=offset)
+        api_response = api_instance.students_affectations_specialty_organization_get(organization, specialty, period=period, limit=limit, offset=offset, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->students_affectations_specialty_organization_get: %s\n" % e)
@@ -1815,6 +2184,11 @@ Name | Type | Description  | Notes
  **period** | **str**|  | [optional] if omitted the server will use the default value of "all"
  **limit** | **int**|  | [optional]
  **offset** | **int**|  | [optional]
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1850,6 +2224,7 @@ Obtain the stats of students affectations
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.inline_response200 import InlineResponse200
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1875,10 +2250,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     api_instance = internship_api.InternshipApi(api_client)
     organization = "organization_example" # str | 
     specialty = "specialty_example" # str | 
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.students_affectations_specialty_organization_stats_get(organization, specialty)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->students_affectations_specialty_organization_stats_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.students_affectations_specialty_organization_stats_get(organization, specialty, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->students_affectations_specialty_organization_stats_get: %s\n" % e)
@@ -1890,6 +2278,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organization** | **str**|  |
  **specialty** | **str**|  |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1925,6 +2318,7 @@ Obtain information about a specific student's affectation
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.student_affectation_get import StudentAffectationGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -1949,10 +2343,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the student's affectation
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.students_affectations_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->students_affectations_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.students_affectations_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->students_affectations_uuid_get: %s\n" % e)
@@ -1963,6 +2370,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the student&#39;s affectation |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -1998,6 +2410,7 @@ Obtain the list of students
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.student_paging import StudentPaging
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -2021,17 +2434,30 @@ configuration.api_key['Token'] = 'YOUR_API_KEY'
 with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
-    # example, this endpoint has no required or optional parameters
+    # example passing only required values which don't have defaults set
+    # and optional values
     try:
-        api_response = api_instance.students_get()
+        api_response = api_instance.students_get(accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->students_get: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
@@ -2067,6 +2493,7 @@ Obtain information about a specific internship student
 import time
 import osis_internship_sdk
 from osis_internship_sdk.api import internship_api
+from osis_internship_sdk.model.accepted_language_enum import AcceptedLanguageEnum
 from osis_internship_sdk.model.student_get import StudentGet
 from pprint import pprint
 # Defining the host is optional and defaults to https://dev.osis.uclouvain.be/api/v1/internship
@@ -2091,10 +2518,23 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = internship_api.InternshipApi(api_client)
     uuid = "uuid_example" # str | The UUID of the internship student
+    accept_language = AcceptedLanguageEnum("en") # AcceptedLanguageEnum | The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  (optional)
+    x_user_first_name = "X-User-FirstName_example" # str |  (optional)
+    x_user_last_name = "X-User-LastName_example" # str |  (optional)
+    x_user_email = "X-User-Email_example" # str |  (optional)
+    x_user_global_id = "X-User-GlobalID_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         api_response = api_instance.students_uuid_get(uuid)
+        pprint(api_response)
+    except osis_internship_sdk.ApiException as e:
+        print("Exception when calling InternshipApi->students_uuid_get: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        api_response = api_instance.students_uuid_get(uuid, accept_language=accept_language, x_user_first_name=x_user_first_name, x_user_last_name=x_user_last_name, x_user_email=x_user_email, x_user_global_id=x_user_global_id)
         pprint(api_response)
     except osis_internship_sdk.ApiException as e:
         print("Exception when calling InternshipApi->students_uuid_get: %s\n" % e)
@@ -2105,6 +2545,11 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **uuid** | **str**| The UUID of the internship student |
+ **accept_language** | **AcceptedLanguageEnum**| The header advertises which languages the client is able to understand, and which locale variant is preferred. (By languages, we mean natural languages, such as English, and not programming languages.)  | [optional]
+ **x_user_first_name** | **str**|  | [optional]
+ **x_user_last_name** | **str**|  | [optional]
+ **x_user_email** | **str**|  | [optional]
+ **x_user_global_id** | **str**|  | [optional]
 
 ### Return type
 
