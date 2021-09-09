@@ -86,6 +86,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->cohorts_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -108,6 +109,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -177,6 +179,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->cohorts_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -200,6 +203,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -261,6 +265,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->internships_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -283,6 +288,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -352,6 +358,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->internships_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -375,6 +382,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -446,6 +454,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_allocations_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -471,6 +480,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -528,7 +538,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
                 first_name="Dupont",
                 last_name="Jacques",
                 email="jacques.dupont@mail.xyz",
-                gender="M",
+                gender="H",
                 birth_date="1989-01-01",
             ),
             civility="DOCTOR",
@@ -604,6 +614,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_allocations_post: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -627,6 +638,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -693,6 +705,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_allocations_uuid_delete: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -716,6 +729,7 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -785,6 +799,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_allocations_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -808,6 +823,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -870,6 +886,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -893,6 +910,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -947,7 +965,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
             first_name="Dupont",
             last_name="Jacques",
             email="jacques.dupont@mail.xyz",
-            gender="M",
+            gender="H",
             birth_date="1989-01-01",
         ),
         civility="DOCTOR",
@@ -975,6 +993,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_post: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -998,6 +1017,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1067,6 +1087,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_uuid_activate_account_post: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1090,6 +1111,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1160,6 +1182,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_uuid_allocations_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1184,6 +1207,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1253,6 +1277,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->masters_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1276,6 +1301,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1337,6 +1363,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->organizations_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1359,6 +1386,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1428,6 +1456,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->organizations_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1451,6 +1480,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1513,6 +1543,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->periods_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1536,6 +1567,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1605,6 +1637,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->periods_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1628,6 +1661,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1697,6 +1731,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->scores_affectation_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1720,6 +1755,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1813,6 +1849,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->scores_affectation_uuid_put: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1837,6 +1874,7 @@ void (empty response body)
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1903,6 +1941,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->scores_affectation_uuid_validate_post: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -1926,6 +1965,7 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1988,6 +2028,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->specialties_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2010,6 +2051,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2079,6 +2121,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->specialties_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2102,6 +2145,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2175,6 +2219,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->students_affectations_specialty_organization_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2202,6 +2247,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2272,6 +2318,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->students_affectations_specialty_organization_stats_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2296,6 +2343,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2365,6 +2413,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->students_affectations_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2388,6 +2437,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2449,6 +2499,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->students_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2471,6 +2522,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2540,6 +2592,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling InternshipApi->students_uuid_get: %s\n" % e)
 ```
 
+
 ### Parameters
 
 Name | Type | Description  | Notes
@@ -2563,6 +2616,7 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
