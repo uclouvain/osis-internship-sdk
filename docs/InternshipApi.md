@@ -559,7 +559,8 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
                 url="url_example",
                 uuid="uuid_example",
                 iso_code="BE",
-                name="Belgium",
+                name="Belgique",
+                name_en="Belgium",
                 nationality="Belgian",
             ),
             cohort=CohortGet(
@@ -589,6 +590,7 @@ with osis_internship_sdk.ApiClient(configuration) as api_client:
                 subscription_end_date="01/03/2020",
             ),
             selectable=True,
+            parent=SpecialtyGet(),
         ),
         role="MASTER",
     ) # AllocationGet | 
